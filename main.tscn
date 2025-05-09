@@ -1,0 +1,296 @@
+[gd_scene load_steps=7 format=3 uid="uid://th7k2rmqv11e"]
+
+[ext_resource type="Script" uid="uid://demsqkgknwykg" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://fpeb3g5fgnbo" path="res://ScreenEdge.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://b4b1fgb2jwuda" path="res://icon.svg" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://4lwm7j875810" path="res://pickable_body.gd" id="3_1bvp3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(50, 100)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0xm2m")
+
+[node name="Icon" type="Sprite2D" parent="."]
+z_index = -70
+position = Vector2(94, 124)
+texture = ExtResource("2_h2yge")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+z_index = -70
+position = Vector2(810, 303)
+rotation = -1.54213
+scale = Vector2(3.80289, 1.66068)
+texture = ExtResource("2_h2yge")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+z_index = -70
+position = Vector2(332, 454)
+rotation = -2.85578
+scale = Vector2(3.80289, 1.66068)
+texture = ExtResource("2_h2yge")
+
+[node name="Button" type="Button" parent="."]
+z_index = -70
+offset_left = 1054.0
+offset_top = 175.0
+offset_right = 1282.0
+offset_bottom = 378.0
+
+[node name="Button2" type="Button" parent="."]
+z_index = -70
+offset_left = 448.0
+offset_top = 67.0
+offset_right = 676.0
+offset_bottom = 270.0
+
+[node name="PickableBody" type="RigidBody2D" parent="."]
+position = Vector2(170, 136)
+input_pickable = true
+freeze_mode = 1
+linear_damp = 4.0
+angular_damp = 4.0
+script = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickableBody"]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Icon4" type="Sprite2D" parent="PickableBody"]
+z_index = -95
+scale = Vector2(0.373913, 0.741582)
+texture = ExtResource("2_h2yge")
+
+[node name="Line2D" type="Line2D" parent="PickableBody"]
+position = Vector2(-170, -136)
+points = PackedVector2Array(0, 0, 0, 0)
+
+[node name="PickableBody2" type="RigidBody2D" parent="."]
+position = Vector2(286, 136)
+input_pickable = true
+freeze_mode = 1
+linear_damp = 4.0
+angular_damp = 4.0
+script = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickableBody2"]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Icon4" type="Sprite2D" parent="PickableBody2"]
+z_index = -95
+scale = Vector2(0.373913, 0.741582)
+texture = ExtResource("2_h2yge")
+
+[node name="Line2D" type="Line2D" parent="PickableBody2"]
+position = Vector2(-170, -136)
+points = PackedVector2Array(0, 0, 0, 0)
+
+[node name="PickableBody3" type="RigidBody2D" parent="."]
+position = Vector2(393, 139)
+input_pickable = true
+freeze_mode = 1
+linear_damp = 4.0
+angular_damp = 4.0
+script = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickableBody3"]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Icon4" type="Sprite2D" parent="PickableBody3"]
+z_index = -95
+scale = Vector2(0.373913, 0.741582)
+texture = ExtResource("2_h2yge")
+
+[node name="Line2D" type="Line2D" parent="PickableBody3"]
+position = Vector2(-170, -136)
+points = PackedVector2Array(0, 0, 0, 0)
+
+[node name="PickableBody4" type="RigidBody2D" parent="."]
+position = Vector2(519, 126)
+input_pickable = true
+freeze_mode = 1
+linear_damp = 4.0
+angular_damp = 4.0
+script = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickableBody4"]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Icon4" type="Sprite2D" parent="PickableBody4"]
+z_index = -95
+scale = Vector2(0.373913, 0.741582)
+texture = ExtResource("2_h2yge")
+
+[node name="Line2D" type="Line2D" parent="PickableBody4"]
+position = Vector2(-170, -136)
+points = PackedVector2Array(0, 0, 0, 0)
+
+[node name="PickableBody5" type="RigidBody2D" parent="."]
+position = Vector2(463, 242)
+input_pickable = true
+freeze_mode = 1
+linear_damp = 4.0
+angular_damp = 4.0
+script = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickableBody5"]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Icon4" type="Sprite2D" parent="PickableBody5"]
+z_index = -95
+scale = Vector2(0.373913, 0.741582)
+texture = ExtResource("2_h2yge")
+
+[node name="Line2D" type="Line2D" parent="PickableBody5"]
+position = Vector2(-170, -136)
+points = PackedVector2Array(0, 0, 0, 0)
+
+[node name="PickableBody6" type="RigidBody2D" parent="."]
+position = Vector2(334, 292)
+input_pickable = true
+freeze_mode = 1
+linear_damp = 4.0
+angular_damp = 4.0
+script = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickableBody6"]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Icon4" type="Sprite2D" parent="PickableBody6"]
+z_index = -95
+scale = Vector2(0.373913, 0.741582)
+texture = ExtResource("2_h2yge")
+
+[node name="Line2D" type="Line2D" parent="PickableBody6"]
+position = Vector2(-170, -136)
+points = PackedVector2Array(0, 0, 0, 0)
+
+[node name="PickableBody7" type="RigidBody2D" parent="."]
+position = Vector2(210, 274)
+input_pickable = true
+freeze_mode = 1
+linear_damp = 4.0
+angular_damp = 4.0
+script = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickableBody7"]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Icon4" type="Sprite2D" parent="PickableBody7"]
+z_index = -95
+scale = Vector2(0.373913, 0.741582)
+texture = ExtResource("2_h2yge")
+
+[node name="Line2D" type="Line2D" parent="PickableBody7"]
+position = Vector2(-170, -136)
+points = PackedVector2Array(0, 0, 0, 0)
+
+[node name="PickableBody8" type="RigidBody2D" parent="."]
+position = Vector2(266, 394)
+input_pickable = true
+freeze_mode = 1
+linear_damp = 4.0
+angular_damp = 4.0
+script = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickableBody8"]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Icon4" type="Sprite2D" parent="PickableBody8"]
+z_index = -95
+scale = Vector2(0.373913, 0.741582)
+texture = ExtResource("2_h2yge")
+
+[node name="Line2D" type="Line2D" parent="PickableBody8"]
+position = Vector2(-170, -136)
+points = PackedVector2Array(0, 0, 0, 0)
+
+[node name="PickableBody9" type="RigidBody2D" parent="."]
+position = Vector2(420, 394)
+input_pickable = true
+freeze_mode = 1
+linear_damp = 4.0
+angular_damp = 4.0
+script = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickableBody9"]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Icon4" type="Sprite2D" parent="PickableBody9"]
+z_index = -95
+scale = Vector2(0.373913, 0.741582)
+texture = ExtResource("2_h2yge")
+
+[node name="Line2D" type="Line2D" parent="PickableBody9"]
+position = Vector2(-170, -136)
+points = PackedVector2Array(0, 0, 0, 0)
+
+[node name="PickableBody10" type="RigidBody2D" parent="."]
+position = Vector2(420, 394)
+input_pickable = true
+freeze_mode = 1
+linear_damp = 4.0
+angular_damp = 4.0
+script = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickableBody10"]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Icon4" type="Sprite2D" parent="PickableBody10"]
+z_index = -95
+scale = Vector2(0.373913, 0.741582)
+texture = ExtResource("2_h2yge")
+
+[node name="Line2D" type="Line2D" parent="PickableBody10"]
+position = Vector2(-170, -136)
+points = PackedVector2Array(0, 0, 0, 0)
+
+[node name="StaticBody2D" type="CharacterBody2D" parent="."]
+process_priority = 30
+process_physics_priority = 100
+disable_mode = 2
+motion_mode = 1
+script = ExtResource("1_ig7tw")
+
+[node name="Bottom" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(436, 650)
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="Top" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(553, 0)
+rotation = -3.14159
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="Left" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 307)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="Right" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1155, 357)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="Camera2D" type="Camera2D" parent="StaticBody2D"]
+
+[connection signal="mouse_entered" from="PickableBody" to="PickableBody" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PickableBody" to="PickableBody" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PickableBody2" to="PickableBody2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PickableBody2" to="PickableBody2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PickableBody3" to="PickableBody3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PickableBody3" to="PickableBody3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PickableBody4" to="PickableBody4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PickableBody4" to="PickableBody4" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PickableBody5" to="PickableBody5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PickableBody5" to="PickableBody5" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PickableBody6" to="PickableBody6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PickableBody6" to="PickableBody6" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PickableBody7" to="PickableBody7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PickableBody7" to="PickableBody7" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PickableBody8" to="PickableBody8" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PickableBody8" to="PickableBody8" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PickableBody9" to="PickableBody9" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PickableBody9" to="PickableBody9" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PickableBody10" to="PickableBody10" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PickableBody10" to="PickableBody10" method="_on_mouse_exited"]
