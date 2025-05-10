@@ -8,6 +8,11 @@ extends Line2D
 @export var sine_width : float = 3.0
 @export var sine_bend : float = 1.0
 @export var sine_influence_curve : Curve
+@export var arm_tip : Node2D 
+@export var arm_sine_bend = 1.0
+@export var arm_progress : float = 1.2
+@export var otherLines : Array[Line2D]
+@export var arm_tip_index : int = 18
 
 var sine_time : float = 0.0
 
@@ -40,7 +45,16 @@ func move_line_points() -> void:
 		
 		last_position = new_point
 		last_direction = new_direction
+		
+		if i == line_points - arm_tip_index - 1:
+			if is_instance_valid(arm_tip):
+				arm_tip.position = last_position
+				arm_tip.rotation = last_direction.angle() + sin( (sine_time * TAU) + arm_progress * sine_width) * arm_sine_bend
 	
 	var packed_points_array : PackedVector2Array = PackedVector2Array(points_array)
 	points = packed_points_array
+	for line in otherLines:
+		line.points = packed_points_array
+	
+	
 	pass

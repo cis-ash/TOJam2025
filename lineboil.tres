@@ -28,7 +28,7 @@ void fragment(){
 
 [sub_resource type="FastNoiseLite" id="20"]
 frequency = 0.005
-fractal_octaves = 3
+fractal_octaves = 2
 fractal_weighted_strength = 0.5
 
 [sub_resource type="NoiseTexture2D" id="21"]
@@ -39,7 +39,7 @@ noise = SubResource("20")
 
 [resource]
 shader = SubResource("19")
-shader_parameter/offset_amp = Vector2(1, 1)
+shader_parameter/offset_amp = Vector2(0.5, 0.5)
 shader_parameter/noise_texture = SubResource("21")
-shader_parameter/fps = 6.0
+shader_parameter/fps = 8.0
 shader_parameter/tex_scale = Vector2(3, 3)

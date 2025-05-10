@@ -41,8 +41,8 @@ noise = SubResource("20")
 
 [resource]
 shader = SubResource("19")
-shader_parameter/offset_amp = Vector2(1, 1)
+shader_parameter/offset_amp = Vector2(0.2, 0.2)
 shader_parameter/noise_texture = SubResource("21")
 shader_parameter/fps = 6.0
 shader_parameter/tex_scale = Vector2(3, 3)
-shader_parameter/offset = 0.0
+shader_parameter/offset = -2.575
