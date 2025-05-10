@@ -1,9 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://th7k2rmqv11e"]
+[gd_scene load_steps=16 format=3 uid="uid://th7k2rmqv11e"]
 
+[ext_resource type="Script" uid="uid://p1aneh43gu6k" path="res://wobble_manager.gd" id="1_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://b4b1fgb2jwuda" path="res://icon.svg" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://dqgvpkfhpvx7h" path="res://wobbly_hand.gd" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://c2uuvtrvsyxv0" path="res://assets/tes.jpg" id="3_efxa6"]
 [ext_resource type="Texture2D" uid="uid://y8gn1rin4bu6" path="res://assets/sketch/sidebars.jpg" id="4_dg77c"]
+[ext_resource type="Material" uid="uid://bgwexps04l20a" path="res://lineboil.tres" id="5_dg77c"]
 [ext_resource type="Texture2D" uid="uid://buvptmpexvwov" path="res://assets/sketch/artistsketch.jpg" id="5_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://stvvrohn8q0" path="res://assets/sketch/floorplanesketch.jpg" id="6_w48qg"]
 [ext_resource type="Texture2D" uid="uid://brrha6sumcurk" path="res://assets/sketch/interactsketch.jpg" id="7_vivmo"]
@@ -21,8 +23,11 @@ blend_mode = 3
 
 [node name="Node2D" type="Node2D"]
 
+[node name="WobbleManager" type="Node2D" parent="."]
+script = ExtResource("1_ycdy4")
+
 [node name="WobblyHand" type="Line2D" parent="."]
-points = PackedVector2Array(39.6748, -5.09016, 78.8297, -13.2691, 116.603, -26.4296, 149.523, -49.1502, 171.482, -82.584, 180.416, -121.574, 183.51, -161.454, 191.992, -200.544, 212.167, -235.083, 240.184, -263.633, 266.334, -293.901, 276.567, -332.57, 259.817, -368.894, 225.182, -388.904, 186.717, -399.879, 151.494, -418.836, 129.774, -452.425, 124.385, -492.06, 120.85, -531.904, 100.103, -566.103, 61.2619, -575.66, 26.215, -556.381, 0.02561, -526.146, -30.8435, -500.708, -70.3097, -494.195)
+points = PackedVector2Array(39.6748, -5.09016, 78.455, -14.893, 117.018, -25.5166, 156.251, -33.3159, 195.792, -39.3561, 234.113, -50.8236, 265.276, -75.9009, 279.429, -113.313, 276.047, -153.17, 267.028, -192.14, 266.648, -232.138, 282.434, -268.891, 308.615, -299.133, 332.676, -331.087, 338.152, -370.71, 315.018, -403.341, 276.859, -415.339, 236.946, -417.974, 198.936, -430.432, 172.685, -460.613, 162.272, -499.234, 153.236, -538.2, 127.242, -568.602, 87.3218, -571.133, 56.2091, -545.993)
 width = 100.0
 texture = ExtResource("2_0xm2m")
 texture_mode = 2
@@ -42,13 +47,19 @@ position = Vector2(960, 540)
 texture = ExtResource("3_efxa6")
 
 [node name="Sketch" type="Node2D" parent="CentreFrame"]
-visible = false
 
 [node name="Sidebars" type="Sprite2D" parent="CentreFrame/Sketch"]
 texture = ExtResource("4_dg77c")
 
 [node name="Artistsketch" type="Sprite2D" parent="CentreFrame/Sketch"]
+material = ExtResource("5_dg77c")
+position = Vector2(2009, 4)
 texture = ExtResource("5_ycdy4")
+
+[node name="Artistsketch2" type="Sprite2D" parent="CentreFrame/Sketch"]
+material = ExtResource("5_dg77c")
+position = Vector2(2115, 131)
+texture = ExtResource("2_0xm2m")
 
 [node name="Floorplanesketch" type="Sprite2D" parent="CentreFrame/Sketch"]
 texture = ExtResource("6_w48qg")
