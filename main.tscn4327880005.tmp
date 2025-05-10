@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://th7k2rmqv11e"]
+[gd_scene load_steps=70 format=3 uid="uid://th7k2rmqv11e"]
 
 [ext_resource type="Script" uid="uid://p1aneh43gu6k" path="res://wobble_manager.gd" id="1_ycdy4"]
 [ext_resource type="Script" uid="uid://dqgvpkfhpvx7h" path="res://wobbly_hand.gd" id="2_h2yge"]
@@ -63,7 +63,6 @@
 [ext_resource type="Texture2D" uid="uid://c5wek3qn28pey" path="res://assets/artist/2 head/r eye/R eyebrow.png" id="48_ppx11"]
 [ext_resource type="Texture2D" uid="uid://ds2vgau4hxb0j" path="res://assets/artist/2 head/r eye/R eyefill.png" id="49_1yv1y"]
 [ext_resource type="Texture2D" uid="uid://bqhlo60d227q8" path="res://assets/artist/2 head/r eye/R tiredblink.png" id="50_5yh34"]
-[ext_resource type="Script" uid="uid://bppv0l17y0q1g" path="res://mouth.gd" id="50_rqtf5"]
 [ext_resource type="Texture2D" uid="uid://dyrtapa5vfoad" path="res://assets/artist/2 head/mouth/crazymouth.png" id="51_pjuso"]
 [ext_resource type="Texture2D" uid="uid://be6gr4tu21of" path="res://assets/artist/2 head/mouth/mouth.png" id="53_swlj1"]
 [ext_resource type="Texture2D" uid="uid://dqyeelo88dxtm" path="res://assets/artist/2 head/mouth/pensive mouth.png" id="54_yysqy"]
@@ -165,7 +164,7 @@ texture = ExtResource("18_f6a44")
 [node name="LArm" type="Line2D" parent="Artist/LArm" node_paths=PackedStringArray("arm_tip", "otherLines")]
 position = Vector2(-77, -214)
 scale = Vector2(-1, 1)
-points = PackedVector2Array(10.8606, 0.362155, 21.7049, 1.05973, 32.5252, 2.0622, 43.3167, 3.33807, 54.0766, 4.85759, 64.8035, 6.59512, 75.4963, 8.53113, 86.1536, 10.6537, 96.7728, 12.9597, 107.349, 15.4551, 117.875, 18.1549, 128.34, 21.083, 138.728, 24.2705, 149.021, 27.7546, 159.194, 31.5762, 169.215, 35.778, 179.049, 40.4014, 188.654, 45.484, 197.983, 51.0573, 206.985, 57.1439, 215.608, 63.7559, 223.802, 70.8935, 231.518, 78.5452, 238.715, 86.6875, 245.358, 95.2867, 251.427, 104.301, 256.909, 113.683, 261.81, 123.382, 266.142, 133.348, 269.935, 143.531)
+points = PackedVector2Array(10.8606, 0.362155, 21.7019, 1.10396, 32.5099, 2.23225, 43.271, 3.74306, 53.974, 5.62224, 64.6105, 7.84665, 75.1763, 10.3859, 85.6711, 13.2045, 96.0982, 16.2639, 106.464, 19.5248, 116.777, 22.9492, 127.046, 26.503, 137.28, 30.1567, 147.486, 33.888, 157.669, 37.6822, 167.83, 41.5338, 177.968, 45.4464, 188.077, 49.4329, 198.147, 53.5157, 208.166, 57.725, 218.113, 62.0985, 227.968, 66.679, 237.7, 71.513, 247.277, 76.6479, 256.659, 82.13, 265.803, 88.0013, 274.66, 94.298, 283.176, 101.047, 291.298, 108.266, 298.972, 115.96)
 default_color = Color(1, 1, 1, 0)
 script = ExtResource("2_h2yge")
 line_points = 30
@@ -180,8 +179,8 @@ otherLines = [NodePath("ArmFill"), NodePath("ArmLine")]
 arm_tip_index = 1
 
 [node name="ArmTip" type="Node2D" parent="Artist/LArm/LArm"]
-position = Vector2(266.142, 133.348)
-rotation = 1.16069
+position = Vector2(291.298, 108.266)
+rotation = 0.726576
 scale = Vector2(-1, 1)
 
 [node name="LHandfill" type="Sprite2D" parent="Artist/LArm/LArm/ArmTip"]
@@ -196,7 +195,7 @@ texture = ExtResource("21_uypp3")
 
 [node name="ArmFill" type="Line2D" parent="Artist/LArm/LArm"]
 material = ExtResource("8_w48qg")
-points = PackedVector2Array(10.8606, 0.362155, 21.7049, 1.05973, 32.5252, 2.0622, 43.3167, 3.33807, 54.0766, 4.85759, 64.8035, 6.59512, 75.4963, 8.53113, 86.1536, 10.6537, 96.7728, 12.9597, 107.349, 15.4551, 117.875, 18.1549, 128.34, 21.083, 138.728, 24.2705, 149.021, 27.7546, 159.194, 31.5762, 169.215, 35.778, 179.049, 40.4014, 188.654, 45.484, 197.983, 51.0573, 206.985, 57.1439, 215.608, 63.7559, 223.802, 70.8935, 231.518, 78.5452, 238.715, 86.6875, 245.358, 95.2867, 251.427, 104.301, 256.909, 113.683, 261.81, 123.382, 266.142, 133.348, 269.935, 143.531)
+points = PackedVector2Array(10.8606, 0.362155, 21.7019, 1.10396, 32.5099, 2.23225, 43.271, 3.74306, 53.974, 5.62224, 64.6105, 7.84665, 75.1763, 10.3859, 85.6711, 13.2045, 96.0982, 16.2639, 106.464, 19.5248, 116.777, 22.9492, 127.046, 26.503, 137.28, 30.1567, 147.486, 33.888, 157.669, 37.6822, 167.83, 41.5338, 177.968, 45.4464, 188.077, 49.4329, 198.147, 53.5157, 208.166, 57.725, 218.113, 62.0985, 227.968, 66.679, 237.7, 71.513, 247.277, 76.6479, 256.659, 82.13, 265.803, 88.0013, 274.66, 94.298, 283.176, 101.047, 291.298, 108.266, 298.972, 115.96)
 width = 195.0
 texture = ExtResource("21_rqtf5")
 texture_mode = 2
@@ -204,7 +203,7 @@ texture_mode = 2
 [node name="ArmLine" type="Line2D" parent="Artist/LArm/LArm"]
 material = ExtResource("5_dg77c")
 position = Vector2(1, 0)
-points = PackedVector2Array(10.8606, 0.362155, 21.7049, 1.05973, 32.5252, 2.0622, 43.3167, 3.33807, 54.0766, 4.85759, 64.8035, 6.59512, 75.4963, 8.53113, 86.1536, 10.6537, 96.7728, 12.9597, 107.349, 15.4551, 117.875, 18.1549, 128.34, 21.083, 138.728, 24.2705, 149.021, 27.7546, 159.194, 31.5762, 169.215, 35.778, 179.049, 40.4014, 188.654, 45.484, 197.983, 51.0573, 206.985, 57.1439, 215.608, 63.7559, 223.802, 70.8935, 231.518, 78.5452, 238.715, 86.6875, 245.358, 95.2867, 251.427, 104.301, 256.909, 113.683, 261.81, 123.382, 266.142, 133.348, 269.935, 143.531)
+points = PackedVector2Array(10.8606, 0.362155, 21.7019, 1.10396, 32.5099, 2.23225, 43.271, 3.74306, 53.974, 5.62224, 64.6105, 7.84665, 75.1763, 10.3859, 85.6711, 13.2045, 96.0982, 16.2639, 106.464, 19.5248, 116.777, 22.9492, 127.046, 26.503, 137.28, 30.1567, 147.486, 33.888, 157.669, 37.6822, 167.83, 41.5338, 177.968, 45.4464, 188.077, 49.4329, 198.147, 53.5157, 208.166, 57.725, 218.113, 62.0985, 227.968, 66.679, 237.7, 71.513, 247.277, 76.6479, 256.659, 82.13, 265.803, 88.0013, 274.66, 94.298, 283.176, 101.047, 291.298, 108.266, 298.972, 115.96)
 width = 195.0
 texture = ExtResource("22_1vm84")
 texture_mode = 2
@@ -214,7 +213,7 @@ texture_mode = 2
 [node name="RArm" type="Line2D" parent="Artist/RArm" node_paths=PackedStringArray("arm_tip", "otherLines")]
 position = Vector2(-72, -223)
 rotation = 0.785397
-points = PackedVector2Array(13.0583, -0.468122, 26.0857, -1.48007, 39.0516, -3.09981, 51.9189, -5.37382, 64.6474, -8.32696, 77.1988, -11.9601, 89.5412, -16.2501, 101.654, -21.151, 113.531, -26.5977, 125.184, -32.5103, 136.638, -38.7981, 147.935, -45.3645, 159.125, -52.111, 170.265, -58.9404, 181.411, -65.76, 192.615, -72.4844, 203.919, -79.0385, 215.354, -85.3602, 226.939, -91.404, 238.678, -97.1434, 250.563, -102.573, 262.577, -107.712, 274.694, -112.602, 286.884, -117.308, 299.111, -121.916, 311.336, -126.53, 323.514, -131.267, 335.592, -136.252, 347.507, -141.615, 359.184, -147.48)
+points = PackedVector2Array(13.0583, -0.468122, 26.0967, -1.32709, 39.1098, -2.50908, 52.0955, -3.96109, 65.0527, -5.64898, 77.9789, -7.5601, 90.8684, -9.70449, 103.711, -12.1148, 116.489, -14.8444, 129.178, -17.9649, 141.74, -21.5614, 154.125, -25.727, 166.266, -30.5561, 178.081, -36.137, 189.469, -42.544, 200.316, -49.8297, 210.498, -58.0186, 219.891, -67.1028, 228.375, -77.0407, 235.848, -87.7592, 242.235, -99.1587, 247.491, -111.121, 251.61, -123.522, 254.621, -136.237, 256.589, -149.155, 257.609, -162.181, 257.798, -175.247, 257.291, -188.304, 256.231, -201.327, 254.762, -214.311)
 default_color = Color(1, 1, 1, 0)
 script = ExtResource("2_h2yge")
 line_points = 30
@@ -231,8 +230,8 @@ otherLines = [NodePath("ArmFill"), NodePath("ArmLine"), NodePath("ArmSplat")]
 arm_tip_index = 0
 
 [node name="ArmTip" type="Node2D" parent="Artist/RArm/RArm"]
-position = Vector2(359.184, -147.48)
-rotation = -0.597601
+position = Vector2(254.762, -214.311)
+rotation = -1.56767
 
 [node name="Brushtip" type="Sprite2D" parent="Artist/RArm/RArm/ArmTip"]
 material = ExtResource("5_dg77c")
@@ -256,21 +255,21 @@ texture = ExtResource("25_4w656")
 
 [node name="ArmFill" type="Line2D" parent="Artist/RArm/RArm"]
 material = ExtResource("8_w48qg")
-points = PackedVector2Array(13.0583, -0.468122, 26.0857, -1.48007, 39.0516, -3.09981, 51.9189, -5.37382, 64.6474, -8.32696, 77.1988, -11.9601, 89.5412, -16.2501, 101.654, -21.151, 113.531, -26.5977, 125.184, -32.5103, 136.638, -38.7981, 147.935, -45.3645, 159.125, -52.111, 170.265, -58.9404, 181.411, -65.76, 192.615, -72.4844, 203.919, -79.0385, 215.354, -85.3602, 226.939, -91.404, 238.678, -97.1434, 250.563, -102.573, 262.577, -107.712, 274.694, -112.602, 286.884, -117.308, 299.111, -121.916, 311.336, -126.53, 323.514, -131.267, 335.592, -136.252, 347.507, -141.615, 359.184, -147.48)
+points = PackedVector2Array(13.0583, -0.468122, 26.0967, -1.32709, 39.1098, -2.50908, 52.0955, -3.96109, 65.0527, -5.64898, 77.9789, -7.5601, 90.8684, -9.70449, 103.711, -12.1148, 116.489, -14.8444, 129.178, -17.9649, 141.74, -21.5614, 154.125, -25.727, 166.266, -30.5561, 178.081, -36.137, 189.469, -42.544, 200.316, -49.8297, 210.498, -58.0186, 219.891, -67.1028, 228.375, -77.0407, 235.848, -87.7592, 242.235, -99.1587, 247.491, -111.121, 251.61, -123.522, 254.621, -136.237, 256.589, -149.155, 257.609, -162.181, 257.798, -175.247, 257.291, -188.304, 256.231, -201.327, 254.762, -214.311)
 width = 198.0
 texture = ExtResource("30_cyx1q")
 texture_mode = 2
 
 [node name="ArmLine" type="Line2D" parent="Artist/RArm/RArm"]
 position = Vector2(1, 0)
-points = PackedVector2Array(13.0583, -0.468122, 26.0857, -1.48007, 39.0516, -3.09981, 51.9189, -5.37382, 64.6474, -8.32696, 77.1988, -11.9601, 89.5412, -16.2501, 101.654, -21.151, 113.531, -26.5977, 125.184, -32.5103, 136.638, -38.7981, 147.935, -45.3645, 159.125, -52.111, 170.265, -58.9404, 181.411, -65.76, 192.615, -72.4844, 203.919, -79.0385, 215.354, -85.3602, 226.939, -91.404, 238.678, -97.1434, 250.563, -102.573, 262.577, -107.712, 274.694, -112.602, 286.884, -117.308, 299.111, -121.916, 311.336, -126.53, 323.514, -131.267, 335.592, -136.252, 347.507, -141.615, 359.184, -147.48)
+points = PackedVector2Array(13.0583, -0.468122, 26.0967, -1.32709, 39.1098, -2.50908, 52.0955, -3.96109, 65.0527, -5.64898, 77.9789, -7.5601, 90.8684, -9.70449, 103.711, -12.1148, 116.489, -14.8444, 129.178, -17.9649, 141.74, -21.5614, 154.125, -25.727, 166.266, -30.5561, 178.081, -36.137, 189.469, -42.544, 200.316, -49.8297, 210.498, -58.0186, 219.891, -67.1028, 228.375, -77.0407, 235.848, -87.7592, 242.235, -99.1587, 247.491, -111.121, 251.61, -123.522, 254.621, -136.237, 256.589, -149.155, 257.609, -162.181, 257.798, -175.247, 257.291, -188.304, 256.231, -201.327, 254.762, -214.311)
 width = 198.0
 texture = ExtResource("32_jx0wj")
 texture_mode = 2
 
 [node name="ArmSplat" type="Line2D" parent="Artist/RArm/RArm"]
 position = Vector2(1, 0)
-points = PackedVector2Array(13.0583, -0.468122, 26.0857, -1.48007, 39.0516, -3.09981, 51.9189, -5.37382, 64.6474, -8.32696, 77.1988, -11.9601, 89.5412, -16.2501, 101.654, -21.151, 113.531, -26.5977, 125.184, -32.5103, 136.638, -38.7981, 147.935, -45.3645, 159.125, -52.111, 170.265, -58.9404, 181.411, -65.76, 192.615, -72.4844, 203.919, -79.0385, 215.354, -85.3602, 226.939, -91.404, 238.678, -97.1434, 250.563, -102.573, 262.577, -107.712, 274.694, -112.602, 286.884, -117.308, 299.111, -121.916, 311.336, -126.53, 323.514, -131.267, 335.592, -136.252, 347.507, -141.615, 359.184, -147.48)
+points = PackedVector2Array(13.0583, -0.468122, 26.0967, -1.32709, 39.1098, -2.50908, 52.0955, -3.96109, 65.0527, -5.64898, 77.9789, -7.5601, 90.8684, -9.70449, 103.711, -12.1148, 116.489, -14.8444, 129.178, -17.9649, 141.74, -21.5614, 154.125, -25.727, 166.266, -30.5561, 178.081, -36.137, 189.469, -42.544, 200.316, -49.8297, 210.498, -58.0186, 219.891, -67.1028, 228.375, -77.0407, 235.848, -87.7592, 242.235, -99.1587, 247.491, -111.121, 251.61, -123.522, 254.621, -136.237, 256.589, -149.155, 257.609, -162.181, 257.798, -175.247, 257.291, -188.304, 256.231, -201.327, 254.762, -214.311)
 width = 198.0
 texture = ExtResource("31_0dhbp")
 texture_mode = 2
@@ -287,10 +286,6 @@ texture = ExtResource("30_ruth0")
 
 [node name="Head" type="Node2D" parent="Artist"]
 
-[node name="Beret" type="Sprite2D" parent="Artist/Head"]
-material = ExtResource("5_dg77c")
-texture = ExtResource("32_1vm84")
-
 [node name="Headfill" type="Sprite2D" parent="Artist/Head"]
 material = ExtResource("8_w48qg")
 texture = ExtResource("34_cyx1q")
@@ -299,17 +294,12 @@ texture = ExtResource("34_cyx1q")
 material = ExtResource("5_dg77c")
 texture = ExtResource("33_wu3dr")
 
-[node name="LEye" type="Node2D" parent="Artist/Head" node_paths=PackedStringArray("open_eye", "closed_eye", "eyebag", "calm_eye", "crazy_eye", "tired_eye", "eyebrow", "eyeball")]
+[node name="Beret" type="Sprite2D" parent="Artist/Head"]
+material = ExtResource("5_dg77c")
+texture = ExtResource("32_1vm84")
+
+[node name="LEye" type="Node2D" parent="Artist/Head"]
 script = ExtResource("33_uatky")
-eye_state = 1
-open_eye = NodePath("Open")
-closed_eye = NodePath("Blink")
-eyebag = NodePath("LEyebag")
-calm_eye = NodePath("Blink/LCalmblink")
-crazy_eye = NodePath("Blink/LCrazyblink")
-tired_eye = NodePath("Blink/LTiredblink")
-eyebrow = NodePath("LEyebrow")
-eyeball = NodePath("Open/LEyeball")
 
 [node name="Open" type="Node2D" parent="Artist/Head/LEye"]
 
@@ -329,7 +319,6 @@ texture = ExtResource("39_c2n8d")
 visible = false
 
 [node name="LCalmblink" type="Sprite2D" parent="Artist/Head/LEye/Blink"]
-visible = false
 material = ExtResource("5_dg77c")
 texture = ExtResource("35_0dhbp")
 
@@ -338,78 +327,55 @@ material = ExtResource("5_dg77c")
 texture = ExtResource("36_jx0wj")
 
 [node name="LTiredblink" type="Sprite2D" parent="Artist/Head/LEye/Blink"]
-visible = false
 material = ExtResource("5_dg77c")
 texture = ExtResource("42_5dllo")
 
 [node name="LEyebag" type="Sprite2D" parent="Artist/Head/LEye"]
-modulate = Color(1, 1, 1, 0)
 material = ExtResource("5_dg77c")
 texture = ExtResource("38_34ol3")
 
 [node name="LEyebrow" type="Sprite2D" parent="Artist/Head/LEye"]
 material = ExtResource("5_dg77c")
-position = Vector2(-139, -342)
 texture = ExtResource("40_wy5fy")
-offset = Vector2(139, 342)
 
-[node name="REye" type="Node2D" parent="Artist/Head" node_paths=PackedStringArray("open_eye", "closed_eye", "eyebag", "calm_eye", "crazy_eye", "tired_eye", "eyebrow", "eyeball")]
-script = ExtResource("33_uatky")
-eye_state = 1
-open_eye = NodePath("Open")
-closed_eye = NodePath("Blink")
-eyebag = NodePath("REyebag")
-calm_eye = NodePath("Blink/RCalmblink")
-crazy_eye = NodePath("Blink/RCrazyblink")
-tired_eye = NodePath("Blink/RTiredblink")
-eyebrow = NodePath("REyebrow")
-eyeball = NodePath("Open/REyeball")
-flip_eyebrow = true
+[node name="REye" type="Node2D" parent="Artist/Head"]
 
-[node name="Open" type="Node2D" parent="Artist/Head/REye"]
-
-[node name="REyefill" type="Sprite2D" parent="Artist/Head/REye/Open"]
+[node name="REyefill" type="Sprite2D" parent="Artist/Head/REye"]
 material = ExtResource("8_w48qg")
 texture = ExtResource("49_1yv1y")
 
-[node name="REye" type="Sprite2D" parent="Artist/Head/REye/Open"]
+[node name="REye" type="Sprite2D" parent="Artist/Head/REye"]
 material = ExtResource("5_dg77c")
 texture = ExtResource("45_f1p13")
 
-[node name="REyeball" type="Sprite2D" parent="Artist/Head/REye/Open"]
+[node name="REyeball" type="Sprite2D" parent="Artist/Head/REye"]
 material = ExtResource("5_dg77c")
 texture = ExtResource("47_ovcoh")
 
-[node name="Blink" type="Node2D" parent="Artist/Head/REye"]
-visible = false
-
-[node name="RCalmblink" type="Sprite2D" parent="Artist/Head/REye/Blink"]
-visible = false
-material = ExtResource("5_dg77c")
-texture = ExtResource("43_phcyf")
-
-[node name="RCrazyblink" type="Sprite2D" parent="Artist/Head/REye/Blink"]
-material = ExtResource("5_dg77c")
-texture = ExtResource("44_birbe")
-
-[node name="RTiredblink" type="Sprite2D" parent="Artist/Head/REye/Blink"]
-visible = false
-material = ExtResource("5_dg77c")
-texture = ExtResource("50_5yh34")
-
 [node name="REyebag" type="Sprite2D" parent="Artist/Head/REye"]
-modulate = Color(1, 1, 1, 0)
 material = ExtResource("5_dg77c")
 texture = ExtResource("46_4obbf")
 
 [node name="REyebrow" type="Sprite2D" parent="Artist/Head/REye"]
 material = ExtResource("5_dg77c")
-position = Vector2(-51, -340)
 texture = ExtResource("48_ppx11")
-offset = Vector2(51, 340)
+
+[node name="RCalmblink" type="Sprite2D" parent="Artist/Head/REye"]
+visible = false
+material = ExtResource("5_dg77c")
+texture = ExtResource("43_phcyf")
+
+[node name="RCrazyblink" type="Sprite2D" parent="Artist/Head/REye"]
+visible = false
+material = ExtResource("5_dg77c")
+texture = ExtResource("44_birbe")
+
+[node name="RTiredblink" type="Sprite2D" parent="Artist/Head/REye"]
+visible = false
+material = ExtResource("5_dg77c")
+texture = ExtResource("50_5yh34")
 
 [node name="Mouth" type="Node2D" parent="Artist/Head"]
-script = ExtResource("50_rqtf5")
 
 [node name="Crazymouth" type="Sprite2D" parent="Artist/Head/Mouth"]
 visible = false
@@ -418,9 +384,7 @@ texture = ExtResource("51_pjuso")
 
 [node name="Mouth2" type="Sprite2D" parent="Artist/Head/Mouth"]
 material = ExtResource("5_dg77c")
-position = Vector2(-97, -290)
 texture = ExtResource("53_swlj1")
-offset = Vector2(97, 290)
 
 [node name="PensiveMouth" type="Sprite2D" parent="Artist/Head/Mouth"]
 visible = false
