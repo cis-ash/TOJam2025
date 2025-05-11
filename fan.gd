@@ -1,9 +1,11 @@
 @tool
 extends Node2D
+class_name Fan
 @export var spinning : bool = false
 @onready var spinny: Node2D = $Spinny/Blades
 @export var top_speed : float = 10.0
 @export var speed : float = 0.0
+@onready var toggle: SpringyScale = $DangleToggle/Toggle
 
 func _process(delta: float) -> void:
 	if spinning:
@@ -20,4 +22,6 @@ func _process(delta: float) -> void:
 
 
 func _on_toggle_fan_toggled(toggled_on: bool) -> void:
+	spinning = !spinning
+	toggle.scale_speed -= 50.0
 	pass # Replace with function body.

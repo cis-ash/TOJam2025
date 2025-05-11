@@ -11,6 +11,8 @@ var time = 0.0
 @export var rot_speed : float = 0.5
 @onready var def_scale = scale
 @onready var def_pos = position
+@onready var def_rot = rotation
+@export var use_def_rot = false
 
 
 func _ready():
@@ -30,5 +32,5 @@ func _process(delta):
 	position.x = def_pos.x + noise.get_noise_2d(time * pos_speed, 100) * pos_wobble.x
 	position.y = def_pos.y + noise.get_noise_2d(100, time * pos_speed) * pos_wobble.y
 	
-	rotation = noise.get_noise_2d(200, time * rot_speed) * rot_wobble
+	rotation = noise.get_noise_2d(200, time * rot_speed) * rot_wobble + (def_rot if use_def_rot else 0.0)
 	pass
