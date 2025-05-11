@@ -23,8 +23,10 @@ void fragment(){
 	noise_coordinate.y = modf(noise_coordinate.y, one);
 	vec2 random_off = texture(noise_texture, noise_coordinate).rg - vec2(0.5);
 	float original_alpha = COLOR.a;
+	//COLOR.rg = random_off + vec2(0.5);
 	COLOR.rgb = texture(TEXTURE, UV + random_off * offset_amp).rgb;
-	//COLOR.a = texture(TEXTURE, UV + random_off * offset_amp).a * original_alpha;
+	//COLOR.ba = vec2(1.0);
+	COLOR.a = texture(TEXTURE, UV + random_off * offset_amp).a;
 	//vec2 random_offset = random(vec2(0.0, TIME))
 }"
 
