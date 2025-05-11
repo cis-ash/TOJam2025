@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceklb1qo0i2e6"
-path="res://.godot/imported/vase.png-a22c431d22414c78209e6c361e6717ae.ctex"
+uid="uid://oownmflhr476"
+path="res://.godot/imported/petaltwo fill.png-e47464d34faff324d01fd28dd23406d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/props/vase/vase.png"
-dest_files=["res://.godot/imported/vase.png-a22c431d22414c78209e6c361e6717ae.ctex"]
+source_file="res://assets/props/vase/petaltwo fill.png"
+dest_files=["res://.godot/imported/petaltwo fill.png-e47464d34faff324d01fd28dd23406d2.ctex"]
 
 [params]
 

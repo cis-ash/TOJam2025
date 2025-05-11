@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7daujuiw5g7k"
-path="res://.godot/imported/vase back.png-b2b82d0fa7018f4ed689e08725cbdf03.ctex"
+path="res://.godot/imported/vase back.png-e84363515fc3c54cb445675d1f903a82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg/vase/vase back.png"
-dest_files=["res://.godot/imported/vase back.png-b2b82d0fa7018f4ed689e08725cbdf03.ctex"]
+source_file="res://assets/props/vase/vase back.png"
+dest_files=["res://.godot/imported/vase back.png-e84363515fc3c54cb445675d1f903a82.ctex"]
 
 [params]
 

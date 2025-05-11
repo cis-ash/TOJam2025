@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceklb1qo0i2e6"
-path="res://.godot/imported/vase.png-a22c431d22414c78209e6c361e6717ae.ctex"
+uid="uid://b0rmu1a6tsjha"
+path="res://.godot/imported/off.png-48cba8368d9601c18727f9a4263feacb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/props/vase/vase.png"
-dest_files=["res://.godot/imported/vase.png-a22c431d22414c78209e6c361e6717ae.ctex"]
+source_file="res://assets/props/lightbulb/off.png"
+dest_files=["res://.godot/imported/off.png-48cba8368d9601c18727f9a4263feacb.ctex"]
 
 [params]
 

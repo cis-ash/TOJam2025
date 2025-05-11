@@ -8,11 +8,14 @@ extends Line2D
 @export var sine_width : float = 3.0
 @export var sine_bend : float = 1.0
 @export var sine_influence_curve : Curve
+@export var bend_over_distance : Curve
 @export var arm_tip : Node2D 
 @export var arm_sine_bend = 1.0
 @export var arm_progress : float = 1.2
 @export var otherLines : Array[Line2D]
 @export var arm_tip_index : int = 18
+@export var midpoint : Node2D
+@export var midpoint_tip_index : int = 10
 
 var sine_time : float = 0.0
 
@@ -35,8 +38,9 @@ func move_line_points() -> void:
 	var segment_sine_bend = sine_bend / float(line_points)
 	for i in range(line_points):
 		var line_progress : float = float(i) / float(line_points)
-		var new_direction : Vector2 = last_direction.rotated(segment_bend).rotated(
-				(sin( (sine_time * TAU) + line_progress * sine_width)) 
+		var bend_by : float = bend_over_distance.sample(line_progress) if is_instance_valid(bend_over_distance) else 1.0
+		var new_direction : Vector2 = last_direction.rotated(segment_bend * bend_by).rotated(
+				bend_by * (sin( (sine_time * TAU) + line_progress * sine_width)) 
 				* segment_sine_bend * sine_influence_curve.sample(line_progress))
 		var new_segment : Vector2 = new_direction * segment_length 
 		var new_point : Vector2 = last_position + new_segment;
@@ -50,6 +54,10 @@ func move_line_points() -> void:
 			if is_instance_valid(arm_tip):
 				arm_tip.position = last_position
 				arm_tip.rotation = last_direction.angle() + sin( (sine_time * TAU) + arm_progress * sine_width) * arm_sine_bend
+		if i == line_points - midpoint_tip_index - 1:
+			if is_instance_valid(midpoint):
+				midpoint.position = last_position
+				midpoint.rotation = last_direction.angle()
 	
 	var packed_points_array : PackedVector2Array = PackedVector2Array(points_array)
 	points = packed_points_array

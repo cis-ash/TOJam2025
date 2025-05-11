@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceklb1qo0i2e6"
-path="res://.godot/imported/vase.png-a22c431d22414c78209e6c361e6717ae.ctex"
+uid="uid://bhhl1dxuqfh1"
+path="res://.godot/imported/mug fill.png-2406731d8a605cbed847d91c953c0744.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/props/vase/vase.png"
-dest_files=["res://.godot/imported/vase.png-a22c431d22414c78209e6c361e6717ae.ctex"]
+source_file="res://assets/props/fuel/mug fill.png"
+dest_files=["res://.godot/imported/mug fill.png-2406731d8a605cbed847d91c953c0744.ctex"]
 
 [params]
 
