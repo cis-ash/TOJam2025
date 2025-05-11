@@ -30,7 +30,14 @@ var leg_spd : float = 0.0
 @onready var body_start_pos : Vector2 = body.global_position
 
 @export var shivering = false
+@onready var start_pos : Vector2 = global_position
 func _process(delta: float) -> void:
+	var shiver_offset = Vector2.ZERO
+	if shivering:
+		shiver_offset = Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)) 
+		shiver_offset *= 2.0
+	
+	global_position = start_pos + shiver_offset
 	time += delta
 	
 	# breathing
@@ -54,7 +61,7 @@ func _process(delta: float) -> void:
 	leg_bop += leg_spd * delta
 	
 	# apply to body
-	body.global_position = body_sway_position + Vector2.DOWN * leg_bop
+	body.global_position = body_sway_position + Vector2.DOWN * leg_bop + shiver_offset
 	
 	# legs stay put after body moves
 	var current_leg_to_floor = floor.global_position - legs.global_position
@@ -124,8 +131,8 @@ func distact():
 func refocus():
 	distracted = false
 	leg_spd -= 50.0
-	arm_r.rotation_speed -= 5.0
-	arm_l.rotation_speed -= 5.0
+	#arm_r.rotation_speed -= 5.0
+	#arm_l.rotation_speed -= 5.0
 	body.scale_speed -= 15.0
 	head.scale_speed += 10.0
 	pass

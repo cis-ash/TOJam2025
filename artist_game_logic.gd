@@ -33,7 +33,7 @@ class_name GameLogic
 @export var distracted : bool = false
 
 @export var time_to_refocus : float = 2.0
-@export var time_since_distraction : float = 0.0
+@export var time_since_distraction : float = 6.0
 
 var playing = true
 
@@ -41,21 +41,22 @@ func _ready() -> void:
 	# body loop
 	snack_and_sip()
 	randomize_temperature()
+	time_logic.ticking = true
 	pass
 
 func snack_and_sip():
 	while playing:
 		await get_tree().create_timer(1.0 if hungry or thirsty else randf_range(10.0, 20.0)).timeout
-		if hungry or (not thirsty): await try_to_snack()
+		await try_to_snack()
 		await get_tree().create_timer(1.0 if hungry or thirsty else randf_range(10.0, 20.0)).timeout
-		if thirsty or (not hungry): await try_to_drink()
+		await try_to_drink()
 		pass
 	pass
 
 func randomize_temperature():
 	while playing:
 		await get_tree().create_timer(randf_range(10.0, 20.0)).timeout
-		wants_fan = bool(randi() % 2)
+		wants_fan = randf() > 0.5
 		pass
 	pass
 
@@ -97,12 +98,15 @@ var sippy_size = 0.3
 func try_to_drink():
 	artist.arm_target_drink()
 	await get_tree().create_timer(0.5).timeout
+	print("try to drink")
 	if tea_logic.fullness > sippy_size * 0.5:
 		thirsty = false
 		tea_logic.fullness = max(tea_logic.fullness - sippy_size, 0.0)
 		tea_logic.scale = 0.8 * Vector2.ONE
+		print("drinked")
 		# gulp
 	else:
+		print("thirsty")
 		thirsty = true
 		# aww
 	await get_tree().create_timer(0.5).timeout
