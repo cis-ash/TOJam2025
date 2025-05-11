@@ -24,7 +24,7 @@ void fragment(){
 	vec2 random_off = texture(noise_texture, noise_coordinate).rg - vec2(0.5);
 	float original_alpha = COLOR.a;
 	COLOR.rgb = texture(TEXTURE, UV + random_off * offset_amp).rgb;
-	COLOR.a = texture(TEXTURE, UV + random_off * offset_amp).a * original_alpha;
+	//COLOR.a = texture(TEXTURE, UV + random_off * offset_amp).a * original_alpha;
 	//vec2 random_offset = random(vec2(0.0, TIME))
 }"
 
@@ -41,7 +41,7 @@ noise = SubResource("20")
 
 [resource]
 shader = SubResource("19")
-shader_parameter/offset_amp = Vector2(0, 0)
+shader_parameter/offset_amp = Vector2(0.795, 0.795)
 shader_parameter/noise_texture = SubResource("21")
 shader_parameter/fps = 6.0
 shader_parameter/tex_scale = Vector2(3, 3)
