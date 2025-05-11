@@ -15,6 +15,32 @@ func _ready() -> void:
 	instance = self
 	leg_to_floor = floor.global_position - legs.global_position
 	arm_target_neutral()
+	blink_loop()
+	pass
+
+
+@onready var l_eye: Eye = $Head/IdleHeadMotion/LEye
+@onready var r_eye: Eye = $Head/IdleHeadMotion/REye
+
+var tiredness : float = 0.0
+
+func blink_loop():
+	while true:
+		await get_tree().create_timer(randf_range(3.0, 7.0)).timeout
+		var left = randf() > 0.5
+		if left:
+			l_eye.blinking = true
+		else:
+			r_eye.blinking = true
+		await get_tree().create_timer(randf_range(0.05, 0.2) * tiredness).timeout
+		if not left:
+			l_eye.blinking = true
+		else:
+			r_eye.blinking = true
+		
+		await get_tree().create_timer(0.15).timeout
+		l_eye.blinking = false
+		r_eye.blinking = false
 	pass
 
 var time : float = 0.0
@@ -31,6 +57,8 @@ var leg_spd : float = 0.0
 
 @export var shivering = false
 @onready var start_pos : Vector2 = global_position
+@onready var body_wiggle: WobblyLine = $"Shirt-Body/BodyWiggle"
+
 func _process(delta: float) -> void:
 	var shiver_offset = Vector2.ZERO
 	if shivering:
@@ -77,8 +105,25 @@ func _process(delta: float) -> void:
 	# left arm
 	l_arm.line_length = Interpolator.good_lerp(l_arm.line_length, l_target_length, 0.01, delta)
 	l_arm.total_bend = Interpolator.good_lerp(l_arm.total_bend, l_target_bend, 0.005, delta)
+	
+	if not distracted:
+		drawing_speed += delta / 5.0
+		drawing_speed = clamp(drawing_speed, 0.0, 4.0)
+	else:
+		drawing_speed = 0.0
+	
+	
+	r_arm.sine_speed = Interpolator.good_lerp(r_arm.sine_speed, -drawing_speed, 0.1, delta)
+	r_arm.total_bend = Interpolator.good_lerp(r_arm.total_bend, r_target_bend, 0.2, delta)
+	r_arm.sine_bend = Interpolator.good_lerp(r_arm.sine_bend, r_sine_bend, 0.1, delta)
+	r_arm.arm_sine_bend = r_arm.sine_bend * 0.25
+	
+	body_wiggle.total_bend = Interpolator.good_lerp(body_wiggle.total_bend, tiredness * 1.5, 0.2, delta)
+	l_eye.tiredness = tiredness
+	r_eye.tiredness = tiredness
 	pass
 
+var drawing_speed = 0.5
 #func bop_head():
 	#head.scale_speed += 10.0
 	#pass
@@ -101,6 +146,9 @@ func _process(delta: float) -> void:
 
 var l_target_length : float = 326.0
 var l_target_bend : float = 2.0
+
+var r_target_bend : float = -1.0
+var r_sine_bend : float = 2.0
 
 func arm_target_drink():
 	l_target_length = 600.0
@@ -126,6 +174,8 @@ func distact():
 	arm_l.rotation_speed += 5.0
 	body.scale_speed += 15.0
 	head.scale_speed -= 10.0
+	r_target_bend = -0.5
+	r_sine_bend = 0.0
 	pass
 
 func refocus():
@@ -135,4 +185,6 @@ func refocus():
 	#arm_l.rotation_speed -= 5.0
 	body.scale_speed -= 15.0
 	head.scale_speed += 10.0
+	r_target_bend = -1.0
+	r_sine_bend = 2.0
 	pass

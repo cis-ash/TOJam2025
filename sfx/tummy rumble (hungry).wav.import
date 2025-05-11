@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://by4ga5s5bx056"
+path="res://.godot/imported/tummy rumble (hungry).wav-f7ae2a077f823e15917c272ff0c0f13d.sample"
+
+[deps]
+
+source_file="res://sfx/tummy rumble (hungry).wav"
+dest_files=["res://.godot/imported/tummy rumble (hungry).wav-f7ae2a077f823e15917c272ff0c0f13d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

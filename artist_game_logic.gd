@@ -79,6 +79,45 @@ func _process(delta: float) -> void:
 		artist.refocus()
 	
 	_was_distracted = distracted
+	
+	if comfy_temperature:
+		body_stat += delta * 0.025
+	else:
+		body_stat -= delta * 0.1
+	
+	if subject_well_lit:
+		enviornment_stat += delta * 0.025
+	else:
+		enviornment_stat -= delta * 0.1
+	
+	if hungry:
+		body_stat -= delta * 0.1
+	else:
+		body_stat += delta * 0.025
+	
+	if thirsty:
+		body_stat -= delta * 0.1
+	else:
+		body_stat += delta * 0.025
+	
+	if flower_ok:
+		enviornment_stat += delta * 0.025
+	else:
+		enviornment_stat -= delta * 0.05
+	
+	if not flower_alive:
+		enviornment_stat -= delta * 0.2
+	
+	enviornment_stat = clamp(enviornment_stat, 0.0, 1.0)
+	body_stat = clamp(body_stat, 0.0, 1.0)
+	
+	#mind_stat = Interpolator.good_lerp(mind_stat, (body_stat + enviornment_stat) * 0.5, 0.1, delta)
+	mind_stat += (body_stat - 0.7) * delta * 0.2
+	mind_stat += (enviornment_stat - 0.7) * delta * 0.2
+	mind_stat = clamp(mind_stat, 0.0, 1.0)
+	artist.tiredness = 1.0 - mind_stat
+	painting_tip.modulate = lerp(Color.RED, Color.BLUE, mind_stat)
+	painting_tip.visible = not distracted
 	pass
 
 func update_needs():

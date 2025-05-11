@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://da7cc2u831fcr"
+path="res://.godot/imported/apple bite.mp3-11a89ba2506b85fbdcf735ed31540695.mp3str"
+
+[deps]
+
+source_file="res://sfx/apple bite.mp3"
+dest_files=["res://.godot/imported/apple bite.mp3-11a89ba2506b85fbdcf735ed31540695.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
