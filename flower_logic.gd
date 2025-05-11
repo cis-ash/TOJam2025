@@ -4,8 +4,11 @@ class_name Flower
 
 @export_range(0.0, 1.0) var freshness = 1.0
 @export var being_watered : bool = false
+@export var sad : bool = false
+@export var very_sad : bool = false
 
 @export var time_to_hydrate : float = 2.0
+@export var time_to_wilt : float = 30.0
 @export_range(0.0, 1.0) var first_petal_threshold = 0.7
 @export_range(0.0, 1.0) var second_petal_threshold = 0.9
 
@@ -18,7 +21,12 @@ class_name Flower
 func _physics_process(delta: float) -> void:
 	if being_watered:
 		freshness += delta / time_to_hydrate
+	else:
+		freshness -= delta / time_to_wilt
+	freshness = clamp(freshness, 0.0, 1.0)
 	update_flower_visual(delta)
+	sad = freshness < first_petal_threshold
+	very_sad = freshness < second_petal_threshold
 	pass
 
 func update_flower_visual(delta : float):
