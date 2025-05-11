@@ -1,5 +1,6 @@
 @tool
 extends Line2D
+class_name WobblyLine
 
 @export var line_points : int = 20
 @export var line_length : float = 500.0
