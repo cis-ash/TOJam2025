@@ -11,4 +11,5 @@ func _on_button_toggled(toggled_on: bool) -> void:
 	lights_on = !lights_on
 	on.visible = lights_on
 	toggle.scale_speed -= 30.0
+	%ArtistGameLogic.distract()
 	pass # Replace with function body.

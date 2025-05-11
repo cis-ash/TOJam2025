@@ -7,9 +7,15 @@ class_name Tea
 @onready var tea: Sprite2D = $Tea
 @export var refilling : bool = false
 
+func _ready() -> void:
+	fullness = 1.0
+
 func _process(delta: float) -> void:
 	if (refilling):
+		%ArtistGameLogic.distract()
 		fullness = clamp(fullness + delta / time_to_refill, 0.0, 1.0)
+	
+	scale = Interpolator.good_lerp_vector(scale, Vector2.ONE, 0.1, delta)
 	update_tea_fill()
 	pass
 
