@@ -9,6 +9,9 @@ class_name ApplePlate
 @onready var apple_3: Node2D = $WigglingApple3/AppleContainer3
 @onready var plate: Sprite2D = $Plate
 
+func _ready() -> void:
+	apple_count = 3
+
 func _process(delta: float) -> void:
 	update_apples(delta)
 	plate.scale = Interpolator.good_lerp_vector(plate.scale, Vector2.ONE * 0.865, 0.001, delta)
@@ -29,6 +32,7 @@ func _on_refill_button_pressed() -> void:
 	apple_count += 1
 	apple_count = clamp(apple_count, 0, 3)
 	bop_plate()
+	%ArtistGameLogic.distract()
 	pass # Replace with function body.
 
 func bop_plate():

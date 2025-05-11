@@ -18,8 +18,12 @@ class_name Flower
 @onready var petal_1: Sprite2D = $"../Stem/FlowerTip/PetaloneFill"
 @onready var petal_2: Sprite2D = $"../Stem/FlowerTip/PetaltwoFill"
 
+func _ready() -> void:
+	freshness = 1.0
+
 func _physics_process(delta: float) -> void:
 	if being_watered:
+		%ArtistGameLogic.distract()
 		freshness += delta / time_to_hydrate
 	else:
 		freshness -= delta / time_to_wilt

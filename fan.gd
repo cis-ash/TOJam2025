@@ -24,4 +24,5 @@ func _process(delta: float) -> void:
 func _on_toggle_fan_toggled(toggled_on: bool) -> void:
 	spinning = !spinning
 	toggle.scale_speed -= 50.0
+	%ArtistGameLogic.distract()
 	pass # Replace with function body.
