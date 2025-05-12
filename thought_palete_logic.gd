@@ -1,6 +1,6 @@
 @tool
 extends Node2D
-class_name ThoughtPalete
+class_name ThoughtPaleteLogic
 
 @onready var blue_paint: Sprite2D = $"../ThoughtPalette/ThoughtPalette2/BluePaint"
 @onready var red_paint: Sprite2D = $"../ThoughtPalette/ThoughtPalette2/RedPaint"

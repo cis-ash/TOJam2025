@@ -26,9 +26,11 @@ func update_tea_fill():
 
 func _on_refill_button_down() -> void:
 	refilling = true
+	$TeaRefill.playing = true
 	pass # Replace with function body.
 
 
 func _on_refill_button_up() -> void:
 	refilling = false
+	$TeaRefill.playing = false
 	pass # Replace with function body.

@@ -8,7 +8,7 @@ class_name GameLogic
 @onready var light_bulb_logic: LightBulb = %LightBulbLogic # used
 @onready var flower_logic: Flower = %FlowerLogic # used
 @onready var painting_tip: Sprite2D = %PaintingTip # should be affected by state
-@onready var thought_palete_logic: ThoughtPalete = %ThoughtPaleteLogic # used
+@onready var thought_palete_logic: ThoughtPaleteLogic = %ThoughtPaleteLogic
 @onready var wobble_manager: Node2D = %WobbleManager # should be affected by state
 @onready var time_logic: TimeLogic = %TimeLogic # used
 @onready var sweat: Sweat = $"../Artist/Head/IdleHeadMotion/Sweat" # used
@@ -126,8 +126,8 @@ func update_needs():
 	artist.shivering = (not wants_fan) and fan_logic.spinning
 	wants_light = time_logic.night_time
 	
-	flower_ok = !flower_logic.sad
-	flower_alive = !flower_logic.very_sad
+	flower_ok = not flower_logic.sad
+	flower_alive = not flower_logic.very_sad
 	subject_well_lit = wants_light == light_bulb_logic.lights_on
 	
 	distracted = time_since_distraction < time_to_refocus
@@ -143,10 +143,12 @@ func try_to_drink():
 		tea_logic.fullness = max(tea_logic.fullness - sippy_size, 0.0)
 		tea_logic.scale = 0.8 * Vector2.ONE
 		print("drinked")
+		$"Gulp(drinkTea)".play()
 		# gulp
 	else:
 		print("thirsty")
 		thirsty = true
+		$Thirsty.play()
 		# aww
 	await get_tree().create_timer(0.5).timeout
 	artist.arm_target_neutral()
@@ -159,9 +161,11 @@ func try_to_snack():
 		apple_plate_logic.apple_count -= 1
 		apple_plate_logic.bop_plate()
 		hungry = false
+		$AppleBite.play()
 		# nom
 	else:
 		hungry = true
+		$"TummyRumble(hungry)".play()
 		# tummy rumble
 	await get_tree().create_timer(0.5).timeout
 	artist.arm_target_neutral()

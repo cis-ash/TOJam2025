@@ -1,0 +1,1764 @@
+[gd_scene load_steps=158 format=3 uid="uid://th7k2rmqv11e"]
+
+[ext_resource type="Script" uid="uid://p1aneh43gu6k" path="res://wobble_manager.gd" id="1_ycdy4"]
+[ext_resource type="Script" uid="uid://dqgvpkfhpvx7h" path="res://wobbly_hand.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://pdq83124mdur" path="res://artist_game_logic.gd" id="4_vjgyh"]
+[ext_resource type="Script" uid="uid://ctsi1p0pbaa87" path="res://time_logic.gd" id="5_3exxq"]
+[ext_resource type="Material" uid="uid://bgwexps04l20a" path="res://lineboil.tres" id="5_dg77c"]
+[ext_resource type="AudioStream" uid="uid://da7cc2u831fcr" path="res://sfx/apple bite.mp3" id="5_oosfy"]
+[ext_resource type="Texture2D" uid="uid://bcipbl11dpd27" path="res://assets/bg/sidebars.png" id="6_41lik"]
+[ext_resource type="AudioStream" uid="uid://ce17rqgb3te3v" path="res://sfx/attempt jamsong ashykento.wav" id="6_nf4f2"]
+[ext_resource type="AudioStream" uid="uid://dmrr6mwwilxn8" path="res://sfx/gulp (drink tea).wav" id="7_xkvoa"]
+[ext_resource type="Texture2D" uid="uid://cfb371pxm7wmm" path="res://assets/props/timer plate.png" id="8_ppx11"]
+[ext_resource type="AudioStream" uid="uid://chf6b0wsn60qp" path="res://sfx/thirsty.mp3" id="8_t5kpo"]
+[ext_resource type="Material" uid="uid://b4nkphxws6l05" path="res://fillboil.tres" id="8_w48qg"]
+[ext_resource type="Texture2D" uid="uid://cthpp2nwguyp5" path="res://assets/bg/bg/wall.png" id="9_phcyf"]
+[ext_resource type="AudioStream" uid="uid://by4ga5s5bx056" path="res://sfx/tummy rumble (hungry).wav" id="9_pw0td"]
+[ext_resource type="Texture2D" uid="uid://dmtc65yxl5fvu" path="res://assets/cat/catbod.jpg" id="9_yaehf"]
+[ext_resource type="Texture2D" uid="uid://8cfjhrmaneou" path="res://assets/cat/cathead.jpg" id="10_074og"]
+[ext_resource type="Texture2D" uid="uid://c1p2ui3ckmwyr" path="res://assets/bg/bg/floor.png" id="10_birbe"]
+[ext_resource type="Texture2D" uid="uid://ckf0fw470blkr" path="res://assets/cat/cattail.jpg" id="11_cegan"]
+[ext_resource type="Texture2D" uid="uid://br3y87qub2wfs" path="res://assets/bg/easel/easel.png" id="11_f1p13"]
+[ext_resource type="Texture2D" uid="uid://u5jv1kqf140x" path="res://assets/bg/easel/canvas placehold.png" id="12_4obbf"]
+[ext_resource type="Script" uid="uid://d368y5pglr3m6" path="res://wibbler.gd" id="13_birbe"]
+[ext_resource type="Texture2D" uid="uid://cjgpfn8b8j3aj" path="res://assets/placements.jpg" id="13_jbvwl"]
+[ext_resource type="Texture2D" uid="uid://b7glheaax1cqq" path="res://assets/bg/still life goat (squash it up).png" id="13_ovcoh"]
+[ext_resource type="Texture2D" uid="uid://ceklb1qo0i2e6" path="res://assets/props/vase/vase.png" id="14_ppx11"]
+[ext_resource type="Texture2D" uid="uid://crtydvd8tk4ym" path="res://assets/artist/0 feet/L foot fill.png" id="15_0n3wm"]
+[ext_resource type="Texture2D" uid="uid://7daujuiw5g7k" path="res://assets/props/vase/vase back.png" id="15_1yv1y"]
+[ext_resource type="Texture2D" uid="uid://yemcmjicrkeb" path="res://assets/props/vase/stem.png" id="15_23xmf"]
+[ext_resource type="Texture2D" uid="uid://dw21gndbw7itk" path="res://assets/bg/foodtable.png" id="16_5yh34"]
+[ext_resource type="Texture2D" uid="uid://cyqelom7js8ok" path="res://assets/artist/0 feet/L foot.png" id="16_qnost"]
+[ext_resource type="Texture2D" uid="uid://dda8qqh5n3p1r" path="res://assets/props/droplets/droplet2_white.png" id="16_qwt6e"]
+[ext_resource type="Shader" uid="uid://biwbtgr0xectw" path="res://easel.gdshader" id="16_tttfs"]
+[ext_resource type="Texture2D" uid="uid://bb1io62uab2n1" path="res://assets/paintings/GOOD PAINT.PNG" id="17_g5xqc"]
+[ext_resource type="Script" uid="uid://bxa3g5tc8jk5h" path="res://PaintSploot.gd" id="17_off2o"]
+[ext_resource type="Texture2D" uid="uid://c3d2octclk8dm" path="res://assets/artist/0 feet/R foot fill.png" id="17_wnkbs"]
+[ext_resource type="Texture2D" uid="uid://di76grppopa2w" path="res://assets/bg/window/window.png" id="18_23xmf"]
+[ext_resource type="Texture2D" uid="uid://b0fperwf6kixi" path="res://assets/artist/0 feet/R foot.png" id="18_f6a44"]
+[ext_resource type="Texture2D" uid="uid://d2lmbr7o43wg2" path="res://assets/paintings/BAD PAINT.PNG" id="18_s4o1y"]
+[ext_resource type="Script" uid="uid://x7vynf24kdku" path="res://flower_logic.gd" id="19_smeu8"]
+[ext_resource type="Texture2D" uid="uid://oukvyw7y4351" path="res://assets/props/vase/petal cluster fill.png" id="19_sn1fb"]
+[ext_resource type="Texture2D" uid="uid://dmrvwa3lsegut" path="res://assets/bg/window/window shadow.png" id="19_swlj1"]
+[ext_resource type="Texture2D" uid="uid://ib05o8jh04f6" path="res://assets/props/vase/petalone fill.png" id="20_yvsr8"]
+[ext_resource type="Texture2D" uid="uid://ctttilm6iatov" path="res://assets/bg/window/timer border.png" id="20_yysqy"]
+[ext_resource type="Texture2D" uid="uid://x7d5fret1u81" path="res://assets/artist/0 L arm/L arm fill wobbly.png" id="21_rqtf5"]
+[ext_resource type="Texture2D" uid="uid://d2seek15js2bf" path="res://assets/props/droplets/droplet1_white.png" id="21_s4o1y"]
+[ext_resource type="Texture2D" uid="uid://ceywrvev3n3rq" path="res://assets/artist/0 L arm/L hand.png" id="21_uypp3"]
+[ext_resource type="Texture2D" uid="uid://oownmflhr476" path="res://assets/props/vase/petaltwo fill.png" id="21_vieuh"]
+[ext_resource type="Texture2D" uid="uid://bn5xk36dm1mou" path="res://assets/artist/0 L arm/L arm wobbly.png" id="22_1vm84"]
+[ext_resource type="Script" uid="uid://hp1ko5opacog" path="res://body_animator.gd" id="22_5yh34"]
+[ext_resource type="Texture2D" uid="uid://b7ue6i3wovoux" path="res://assets/artist/0 L arm/L handfill.png" id="22_blkrb"]
+[ext_resource type="Texture2D" uid="uid://db7cgjf6wqgjy" path="res://assets/props/vase/leaf.png" id="23_yjja3"]
+[ext_resource type="Texture2D" uid="uid://cqrm0wig4um8m" path="res://assets/artist/0 R arm/brushtip.png" id="24_6iyjs"]
+[ext_resource type="Texture2D" uid="uid://x3ehn333b7y2" path="res://assets/artist/0 R arm/hand splat.png" id="25_4w656"]
+[ext_resource type="Texture2D" uid="uid://bo458buygcum" path="res://assets/props/vase/watering can.png" id="25_l0gw7"]
+[ext_resource type="Script" uid="uid://gvjdvmcws36u" path="res://watering_can_logic.gd" id="26_rt5wr"]
+[ext_resource type="Script" uid="uid://wpxnu1fhbl0v" path="res://springy_rotate.gd" id="27_23xmf"]
+[ext_resource type="Texture2D" uid="uid://dcn3e5fu1ccap" path="res://assets/props/droplets/droplet1.png" id="27_u81y6"]
+[ext_resource type="Texture2D" uid="uid://bhhl1dxuqfh1" path="res://assets/props/fuel/mug fill.png" id="27_yvsr8"]
+[ext_resource type="Texture2D" uid="uid://sktvt2u46lav" path="res://assets/props/fuel/tea.png" id="28_l0gw7"]
+[ext_resource type="Texture2D" uid="uid://h20f5pqk0tu1" path="res://assets/props/droplets/droplet2.png" id="28_rt5wr"]
+[ext_resource type="Texture2D" uid="uid://bslicj8xnodkd" path="res://assets/props/fuel/mug.png" id="28_vieuh"]
+[ext_resource type="Texture2D" uid="uid://deuapxq3vqkbw" path="res://assets/artist/0 R arm/R hand fill.png" id="28_vke2r"]
+[ext_resource type="Texture2D" uid="uid://rtpgtoocn1bf" path="res://assets/props/droplets/droplet.png" id="29_mnw77"]
+[ext_resource type="Texture2D" uid="uid://n1lwjggatxov" path="res://assets/artist/0 R arm/R hand.png" id="29_uit24"]
+[ext_resource type="Texture2D" uid="uid://2ta3afnkjhe2" path="res://assets/artist/0 R arm/arm fill wibbly.png" id="30_cyx1q"]
+[ext_resource type="Texture2D" uid="uid://baf68a4al7i54" path="res://assets/props/fuel/appy.png" id="30_inymm"]
+[ext_resource type="Texture2D" uid="uid://doiwqfyl66wxh" path="res://assets/artist/1 skirt/skirt.png" id="30_ruth0"]
+[ext_resource type="Texture2D" uid="uid://cw4mp8sah2fey" path="res://assets/artist/0 R arm/arm splat wibbly.png" id="31_0dhbp"]
+[ext_resource type="Texture2D" uid="uid://3b057vehp0mn" path="res://assets/props/fuel/plate.png" id="31_jcxqu"]
+[ext_resource type="Texture2D" uid="uid://be32t6cdr2gn7" path="res://assets/artist/1 skirt/skirtfill.png" id="31_rm4vd"]
+[ext_resource type="Texture2D" uid="uid://kmiqlst1lsow" path="res://assets/artist/2 head/beret.png" id="32_1vm84"]
+[ext_resource type="Script" uid="uid://rvkfxc1g4tws" path="res://tea_logic.gd" id="32_asu84"]
+[ext_resource type="Texture2D" uid="uid://c1jbcoi4xj8dy" path="res://assets/artist/0 R arm/arm wibbly.png" id="32_jx0wj"]
+[ext_resource type="Script" uid="uid://ctv4k0nqwck2y" path="res://fan.gd" id="33_0arob"]
+[ext_resource type="Texture2D" uid="uid://dqlq8ve6hfr34" path="res://assets/props/fuel/tea mask.png" id="33_d5iia"]
+[ext_resource type="Texture2D" uid="uid://x087u6apmfcr" path="res://assets/props/fan/toggle.png" id="33_jcxqu"]
+[ext_resource type="Script" uid="uid://by26q1y3g0oq6" path="res://eye.gd" id="33_uatky"]
+[ext_resource type="Texture2D" uid="uid://cdrjfv675l2cn" path="res://assets/artist/2 head/head.png" id="33_wu3dr"]
+[ext_resource type="Texture2D" uid="uid://da1rtic72rjal" path="res://assets/props/fan/base.png" id="34_0arob"]
+[ext_resource type="Texture2D" uid="uid://um0pndbebrq4" path="res://assets/artist/3 L braid/L braid fill.png" id="34_b17eg"]
+[ext_resource type="Texture2D" uid="uid://bufmegb1hjq4o" path="res://assets/artist/2 head/headfill.png" id="34_cyx1q"]
+[ext_resource type="Texture2D" uid="uid://bvjoyrrumg032" path="res://assets/artist/2 head/L eye/L calmblink.png" id="35_0dhbp"]
+[ext_resource type="Texture2D" uid="uid://c4ugcjikdt2jw" path="res://assets/artist/3 L braid/L braid splat.png" id="35_ntx8l"]
+[ext_resource type="Texture2D" uid="uid://dstnij5bef2be" path="res://assets/artist/2 head/L eye/L crazyblink.png" id="36_jx0wj"]
+[ext_resource type="Texture2D" uid="uid://cypwjeoeova48" path="res://assets/artist/3 L braid/L braid.png" id="36_uatky"]
+[ext_resource type="Texture2D" uid="uid://yydwiripkata" path="res://assets/props/lightbulb/bulb.png" id="36_ywjan"]
+[ext_resource type="Texture2D" uid="uid://cvgx6biypi48t" path="res://assets/artist/2 head/L eye/L eye.png" id="37_kkkcx"]
+[ext_resource type="Texture2D" uid="uid://b0rmu1a6tsjha" path="res://assets/props/lightbulb/off.png" id="37_m74q3"]
+[ext_resource type="Script" uid="uid://chstf31ljehej" path="res://apple_plate_logic.gd" id="37_qwt6e"]
+[ext_resource type="Texture2D" uid="uid://3gg6dlpp8xmi" path="res://assets/artist/3 R braid/R braid fill.png" id="37_rqtf5"]
+[ext_resource type="Texture2D" uid="uid://bgwe3t7maifv4" path="res://assets/artist/3 R braid/R braid splat.png" id="38_1vm84"]
+[ext_resource type="Texture2D" uid="uid://dtqbvn10mlprg" path="res://assets/artist/2 head/L eye/L eyebag.png" id="38_34ol3"]
+[ext_resource type="Texture2D" uid="uid://dxp78l6gjm18m" path="res://assets/props/lightbulb/on!.png" id="38_tko6h"]
+[ext_resource type="Texture2D" uid="uid://cmv4vruvrn72x" path="res://assets/props/lightbulb/toggle 2.png" id="39_am8a1"]
+[ext_resource type="Texture2D" uid="uid://mdabgssnstpo" path="res://assets/artist/2 head/L eye/L eyeball.png" id="39_c2n8d"]
+[ext_resource type="Texture2D" uid="uid://c0k1wsvj5808e" path="res://assets/artist/3 R braid/R braid.png" id="39_wu3dr"]
+[ext_resource type="AudioStream" uid="uid://bjysxmxh2yl3o" path="res://sfx/watering can watering (continuous).wav" id="40_37eu1"]
+[ext_resource type="Texture2D" uid="uid://bkl3jgclg7wy0" path="res://assets/artist/4 apron/apron splat.png" id="40_cyx1q"]
+[ext_resource type="Texture2D" uid="uid://c1i1riovm0djg" path="res://assets/artist/2 head/L eye/L eyebrow.png" id="40_wy5fy"]
+[ext_resource type="Texture2D" uid="uid://bbdocgqeyjvnw" path="res://assets/artist/4 apron/apron.png" id="41_0dhbp"]
+[ext_resource type="Texture2D" uid="uid://do6jyv6u2dkp1" path="res://assets/artist/2 head/L eye/L eyefill.png" id="41_gx4rg"]
+[ext_resource type="Script" uid="uid://n03d5ttne20u" path="res://springy_scale.gd" id="41_pjuso"]
+[ext_resource type="Texture2D" uid="uid://cdb3jsqdq0s2i" path="res://assets/artist/2 head/L eye/L tiredblink.png" id="42_5dllo"]
+[ext_resource type="Texture2D" uid="uid://cikcps4b1h2ff" path="res://assets/artist/4 apron/apronfill.png" id="42_jx0wj"]
+[ext_resource type="Script" uid="uid://c8cml2b6hr4ab" path="res://light_bulb_logic.gd" id="42_mnw77"]
+[ext_resource type="Texture2D" uid="uid://c5qxy12x8ebhf" path="res://assets/artist/4 bandana/bandana splat.png" id="43_kkkcx"]
+[ext_resource type="Texture2D" uid="uid://bd5pnlni6svey" path="res://assets/artist/2 head/r eye/R calmblink.png" id="43_phcyf"]
+[ext_resource type="Texture2D" uid="uid://c14bm5we58dry" path="res://assets/artist/4 bandana/bandana.png" id="44_34ol3"]
+[ext_resource type="Texture2D" uid="uid://cwitxpap7xdx3" path="res://assets/artist/2 head/r eye/R crazyblink.png" id="44_birbe"]
+[ext_resource type="Texture2D" uid="uid://mrde58m81onb" path="res://assets/artist/4 bandana/bandanafill.png" id="45_c2n8d"]
+[ext_resource type="Texture2D" uid="uid://ctxtld4gcqele" path="res://assets/artist/2 head/r eye/R eye.png" id="45_f1p13"]
+[ext_resource type="Texture2D" uid="uid://cwbdu5avvw24h" path="res://assets/artist/2 head/r eye/R eyebag.png" id="46_4obbf"]
+[ext_resource type="AudioStream" uid="uid://yalwdqc1b2le" path="res://sfx/tea refill.wav" id="47_0wkqm"]
+[ext_resource type="Texture2D" uid="uid://bfnnsyvyglgbm" path="res://assets/artist/2 head/r eye/R eyeball.png" id="47_ovcoh"]
+[ext_resource type="Texture2D" uid="uid://c5wek3qn28pey" path="res://assets/artist/2 head/r eye/R eyebrow.png" id="48_ppx11"]
+[ext_resource type="Texture2D" uid="uid://ds2vgau4hxb0j" path="res://assets/artist/2 head/r eye/R eyefill.png" id="49_1yv1y"]
+[ext_resource type="Texture2D" uid="uid://bqhlo60d227q8" path="res://assets/artist/2 head/r eye/R tiredblink.png" id="50_5yh34"]
+[ext_resource type="Script" uid="uid://bppv0l17y0q1g" path="res://mouth.gd" id="50_rqtf5"]
+[ext_resource type="Texture2D" uid="uid://dyrtapa5vfoad" path="res://assets/artist/2 head/mouth/crazymouth.png" id="51_pjuso"]
+[ext_resource type="Texture2D" uid="uid://be6gr4tu21of" path="res://assets/artist/2 head/mouth/mouth.png" id="53_swlj1"]
+[ext_resource type="AudioStream" uid="uid://b5ho66s8o3bfh" path="res://sfx/add apple.wav" id="53_ve5sr"]
+[ext_resource type="Texture2D" uid="uid://dqyeelo88dxtm" path="res://assets/artist/2 head/mouth/pensive mouth.png" id="54_yysqy"]
+[ext_resource type="AudioStream" uid="uid://ck0xq1w356v7d" path="res://sfx/fan whir.wav" id="60_5s44m"]
+[ext_resource type="Texture2D" uid="uid://bvok18cdap074" path="res://assets/artist/2 shirt/wiggly shirt fill.png" id="69_yysqy"]
+[ext_resource type="Texture2D" uid="uid://devxcml50b6gh" path="res://assets/artist/2 shirt/wiggly shirt.png" id="70_n5t1e"]
+[ext_resource type="Script" uid="uid://c8hm8aj0pu7rh" path="res://average_rotation.gd" id="78_23xmf"]
+[ext_resource type="Texture2D" uid="uid://cbp68uriynrc7" path="res://assets/props/thought palette/thought palette.png" id="79_5yh34"]
+[ext_resource type="Texture2D" uid="uid://b2lo4wi100lif" path="res://assets/props/thought palette/blue paint.png" id="80_pjuso"]
+[ext_resource type="Texture2D" uid="uid://ce5litqp285dw" path="res://assets/props/thought palette/red paint.png" id="81_23xmf"]
+[ext_resource type="Texture2D" uid="uid://cmo728562t7k" path="res://assets/props/thought palette/yellow paint.png" id="82_swlj1"]
+[ext_resource type="Texture2D" uid="uid://bbwniog2lhx3a" path="res://assets/props/thought palette/bub big.png" id="83_yysqy"]
+[ext_resource type="Texture2D" uid="uid://c13w415bmrsrn" path="res://assets/props/thought palette/bub small.png" id="84_n5t1e"]
+[ext_resource type="PackedScene" uid="uid://bdt7pdkgy6der" path="res://shadow.tscn" id="91_jbvwl"]
+[ext_resource type="Script" uid="uid://b460o3456m3f1" path="res://sweat.gd" id="102_7mmqq"]
+[ext_resource type="Script" uid="uid://dci2d4oq5c380" path="res://thought_palete_logic.gd" id="102_htgcl"]
+[ext_resource type="Shader" uid="uid://bafilljpupf5t" path="res://palete_desaturate.gdshader" id="104_m74q3"]
+[ext_resource type="Texture2D" uid="uid://dmip1jva8g4af" path="res://assets/props/thought palette/blue paint overlay.png" id="105_tko6h"]
+[ext_resource type="Texture2D" uid="uid://cpxjm04s0ck1i" path="res://assets/props/thought palette/red paint overlay.png" id="108_smeu8"]
+[ext_resource type="Texture2D" uid="uid://sr17q1n2aivp" path="res://assets/props/thought palette/yellow paint overlay.png" id="110_f3y11"]
+[ext_resource type="FontFile" uid="uid://cgsrwdkufra6g" path="res://gill-sans-ultra-bold.ttf" id="124_3exxq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1iygd"]
+shader = ExtResource("16_tttfs")
+shader_parameter/red_canvas = ExtResource("18_s4o1y")
+shader_parameter/blue_canvas = ExtResource("17_g5xqc")
+
+[sub_resource type="Curve" id="Curve_7mmqq"]
+_data = [Vector2(0, 0.370787), 0.0, 3.64282, 0, 0, Vector2(1, 0), -2.586, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_s4o1y"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+
+[sub_resource type="Curve" id="Curve_smeu8"]
+_data = [Vector2(0, 1), 0.0, -1.9313, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_41lik"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_jbvwl"]
+_data = [Vector2(0, 0), 0.0, 3.44648, 0, 0, Vector2(1, 0), -4.62708, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_vjgyh"]
+_limits = [-12.1348, 2.0, 0.0, 1.0]
+_data = [Vector2(0, -0.69991), 0.0, 0.0, 0, 0, Vector2(0.982954, 1.20591), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_d5iia"]
+_data = [Vector2(0, 0), 0.0, 18.7865, 0, 0, Vector2(0.164773, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -4.32127, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Shader" id="Shader_asu84"]
+code = "shader_type canvas_item;
+uniform sampler2D mask_texture;
+uniform float fraction = 0.0;
+uniform float margin = 0.1;
+
+void fragment() {
+	float original_alpha = texture(TEXTURE, UV).a;
+	float mask = texture(mask_texture, UV).r;
+	float mix_amount = smoothstep(mask - margin, mask + margin, fraction);
+	COLOR.a = min(original_alpha, mix_amount);
+
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qwt6e"]
+shader = SubResource("Shader_asu84")
+shader_parameter/mask_texture = ExtResource("33_d5iia")
+shader_parameter/fraction = 1.0
+shader_parameter/margin = 0.05
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vjgyh"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_82xsv"]
+blend_mode = 3
+
+[sub_resource type="Curve" id="Curve_kkkcx"]
+_data = [Vector2(0, 0), 0.0, 2.74607, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_7mmqq"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+
+[sub_resource type="Curve" id="Curve_23xmf"]
+_data = [Vector2(0, 0.134832), 0.0, 2.82976, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -5.11841, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tko6h"]
+shader = ExtResource("104_m74q3")
+shader_parameter/mask_texture = ExtResource("105_tko6h")
+shader_parameter/fraction = 1.0
+shader_parameter/margin = 0.05
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cpm2s"]
+shader = ExtResource("104_m74q3")
+shader_parameter/mask_texture = ExtResource("108_smeu8")
+shader_parameter/fraction = 1.0
+shader_parameter/margin = 0.05
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u81y6"]
+shader = ExtResource("104_m74q3")
+shader_parameter/mask_texture = ExtResource("110_f3y11")
+shader_parameter/fraction = 1.0
+shader_parameter/margin = 0.05
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WobbleManager" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_ycdy4")
+fill_material = ExtResource("8_w48qg")
+line_material = ExtResource("5_dg77c")
+line_boil = 1.0
+
+[node name="ArtistGameLogic" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_vjgyh")
+body_stat = null
+mind_stat = 1.0
+enviornment_stat = 1.0
+painting_progress = null
+wants_fan = null
+wants_light = null
+comfy_temperature = null
+hungry = null
+thirsty = null
+flower_ok = null
+flower_alive = null
+subject_well_lit = null
+distracted = null
+time_to_refocus = 1.0
+time_since_distraction = 6.47
+
+[node name="AppleBite" type="AudioStreamPlayer2D" parent="ArtistGameLogic"]
+position = Vector2(482, 500)
+stream = ExtResource("5_oosfy")
+
+[node name="AttemptJamsongAshykento" type="AudioStreamPlayer2D" parent="ArtistGameLogic"]
+position = Vector2(482, 500)
+stream = ExtResource("6_nf4f2")
+autoplay = true
+
+[node name="Gulp(drinkTea)" type="AudioStreamPlayer2D" parent="ArtistGameLogic"]
+position = Vector2(482, 500)
+stream = ExtResource("7_xkvoa")
+
+[node name="Thirsty" type="AudioStreamPlayer2D" parent="ArtistGameLogic"]
+position = Vector2(482, 500)
+stream = ExtResource("8_t5kpo")
+
+[node name="TummyRumble(hungry)" type="AudioStreamPlayer2D" parent="ArtistGameLogic"]
+position = Vector2(482, 500)
+stream = ExtResource("9_pw0td")
+
+[node name="CentreFrame" type="Node2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="Camera2D" type="Camera2D" parent="CentreFrame"]
+
+[node name="Background" type="Node2D" parent="CentreFrame"]
+
+[node name="TimeLogic" type="Node2D" parent="CentreFrame/Background"]
+unique_name_in_owner = true
+script = ExtResource("5_3exxq")
+seconds_in_a_day = 60.0
+
+[node name="Wall" type="Sprite2D" parent="CentreFrame/Background"]
+texture = ExtResource("9_phcyf")
+
+[node name="Floor" type="Sprite2D" parent="CentreFrame/Background"]
+texture = ExtResource("10_birbe")
+
+[node name="Sidebars" type="Sprite2D" parent="CentreFrame/Background"]
+texture = ExtResource("6_41lik")
+
+[node name="Window" type="Sprite2D" parent="CentreFrame/Background"]
+texture = ExtResource("18_23xmf")
+
+[node name="SubViewportContainer" type="Control" parent="CentreFrame/Background/Window"]
+show_behind_parent = true
+clip_contents = true
+custom_minimum_size = Vector2(261, 361)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 338.0
+offset_top = -486.0
+offset_right = 599.0
+offset_bottom = -125.0
+
+[node name="TimerPlate" type="Sprite2D" parent="CentreFrame/Background/Window/SubViewportContainer"]
+position = Vector2(118, 361)
+scale = Vector2(1.60181, 1.60181)
+texture = ExtResource("8_ppx11")
+
+[node name="WindowShadow" type="Sprite2D" parent="CentreFrame/Background/Window"]
+show_behind_parent = true
+texture = ExtResource("19_swlj1")
+
+[node name="TimerBorder" type="Sprite2D" parent="CentreFrame/Background/Window"]
+visible = false
+show_behind_parent = true
+texture = ExtResource("20_yysqy")
+
+[node name="Placements" type="Sprite2D" parent="CentreFrame/Background"]
+visible = false
+texture = ExtResource("13_jbvwl")
+
+[node name="Easel" type="Sprite2D" parent="CentreFrame/Background"]
+texture = ExtResource("11_f1p13")
+
+[node name="Shadow" parent="CentreFrame/Background/Easel" instance=ExtResource("91_jbvwl")]
+
+[node name="CanvasPlacehold" type="Sprite2D" parent="CentreFrame/Background/Easel"]
+position = Vector2(175, -65)
+texture = ExtResource("12_4obbf")
+
+[node name="Shadow" parent="CentreFrame/Background/Easel/CanvasPlacehold" instance=ExtResource("91_jbvwl")]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CentreFrame/Background/Easel/CanvasPlacehold"]
+material = SubResource("ShaderMaterial_1iygd")
+custom_minimum_size = Vector2(463, 515)
+offset_left = -231.0
+offset_top = -257.0
+offset_right = 232.0
+offset_bottom = 258.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="CentreFrame/Background/Easel/CanvasPlacehold/SubViewportContainer"]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(463, 515)
+render_target_clear_mode = 1
+render_target_update_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="CentreFrame/Background/Easel/CanvasPlacehold/SubViewportContainer/SubViewport"]
+visible = false
+offset_right = 551.0
+offset_bottom = 505.0
+color = Color(0, 1, 0, 1)
+
+[node name="PaintingTip" type="Sprite2D" parent="CentreFrame/Background/Easel/CanvasPlacehold/SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 1)
+position = Vector2(33.9482, 202.146)
+rotation = -0.638762
+texture = ExtResource("16_qwt6e")
+script = ExtResource("17_off2o")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="CentreFrame/Background/Easel/CanvasPlacehold/SubViewportContainer/SubViewport/PaintingTip"]
+texture = ExtResource("21_s4o1y")
+lifetime = 0.4
+randomness = 0.44
+lifetime_randomness = 0.9
+fract_delta = false
+spread = 180.0
+initial_velocity_min = 232.32
+initial_velocity_max = 666.67
+angular_velocity_min = -433.57
+angular_velocity_max = 378.18
+damping_max = 50.0
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_7mmqq")
+color_ramp = SubResource("Gradient_s4o1y")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="GoatOrigin" type="Node2D" parent="CentreFrame/Background"]
+position = Vector2(712, 417)
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.05, 0.05)
+scale_speed = 0.5
+pos_wobble = Vector2(0, 0)
+pos_speed = 0.0
+rot_wobble = 0.25
+rot_speed = 1.0
+
+[node name="StillLifeGoat(squashItUp)" type="Sprite2D" parent="CentreFrame/Background/GoatOrigin"]
+position = Vector2(-35, -198)
+scale = Vector2(0.835, 0.4)
+texture = ExtResource("13_ovcoh")
+
+[node name="MoveVase" type="RemoteTransform2D" parent="CentreFrame/Background/GoatOrigin"]
+position = Vector2(1, -314)
+remote_path = NodePath("../../WobbleVase")
+update_rotation = false
+update_scale = false
+
+[node name="MoveWateringCan" type="RemoteTransform2D" parent="CentreFrame/Background/GoatOrigin"]
+position = Vector2(-150, -384)
+remote_path = NodePath("../../WobbleWateringCan")
+update_rotation = false
+update_scale = false
+
+[node name="WobbleVase" type="Node2D" parent="CentreFrame/Background"]
+position = Vector2(713, 103)
+script = ExtResource("13_birbe")
+pos_wobble = Vector2(0, 0)
+pos_speed = 0.0
+rot_wobble = 0.25
+
+[node name="Vase" type="Sprite2D" parent="CentreFrame/Background/WobbleVase"]
+position = Vector2(5, -85)
+texture = ExtResource("14_ppx11")
+
+[node name="VaseBack" type="Sprite2D" parent="CentreFrame/Background/WobbleVase/Vase"]
+show_behind_parent = true
+position = Vector2(-732, -14)
+texture = ExtResource("15_1yv1y")
+
+[node name="FlowerLogic" type="Node2D" parent="CentreFrame/Background/WobbleVase/Vase"]
+unique_name_in_owner = true
+position = Vector2(-5, 85)
+script = ExtResource("19_smeu8")
+freshness = 0.0
+sad = true
+very_sad = true
+time_to_wilt = 40.0
+first_petal_threshold = 0.3
+second_petal_threshold = 0.1
+fresh_bend_curve = SubResource("Curve_smeu8")
+
+[node name="Stem" type="Line2D" parent="CentreFrame/Background/WobbleVase/Vase" node_paths=PackedStringArray("arm_tip", "midpoint")]
+show_behind_parent = true
+material = ExtResource("5_dg77c")
+position = Vector2(7, -30)
+rotation = -1.4344
+points = PackedVector2Array(9.4, 0, 18.7948, 0.311495, 28.1516, 1.21227, 37.3925, 2.93439, 46.3885, 5.66041, 54.9552, 9.52986, 62.8405, 14.6467, 69.7047, 21.0688, 75.1082, 28.7605, 78.5415, 37.511, 79.5314, 46.8588, 77.8143, 56.1006, 73.4899, 64.4468, 67.0301, 71.2755, 59.1081, 76.3353, 50.3574, 79.7685, 41.219, 81.9705, 31.9286, 83.4016, 22.5867, 84.4452, 13.2303, 85.35)
+width = 51.0
+texture = ExtResource("15_23xmf")
+texture_mode = 2
+script = ExtResource("2_h2yge")
+line_length = 188.0
+total_bend = 4.0
+sine_speed = -0.1
+sine_width = 7.0
+sine_bend = 3.0
+sine_influence_curve = SubResource("Curve_41lik")
+bend_over_distance = SubResource("Curve_jbvwl")
+arm_tip = NodePath("FlowerTip")
+arm_sine_bend = 0.0
+arm_progress = 0.0
+arm_tip_index = 2
+midpoint = NodePath("Midpoint")
+
+[node name="FlowerTip" type="Node2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem"]
+show_behind_parent = true
+use_parent_material = true
+position = Vector2(31.9286, 83.4016)
+rotation = 2.98875
+
+[node name="PetalClusterFill" type="Sprite2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem/FlowerTip"]
+show_behind_parent = true
+use_parent_material = true
+position = Vector2(28.3208, -17.0166)
+rotation = 1.43063
+texture = ExtResource("19_sn1fb")
+
+[node name="PetaloneFill" type="Sprite2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem/FlowerTip"]
+show_behind_parent = true
+use_parent_material = true
+position = Vector2(-0.0371933, -0.474365)
+rotation = 1.45442
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("20_yvsr8")
+offset = Vector2(34.2549, 38.978)
+
+[node name="PetaltwoFill" type="Sprite2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem/FlowerTip"]
+show_behind_parent = true
+use_parent_material = true
+position = Vector2(0.624746, -0.332924)
+rotation = 1.43508
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("21_vieuh")
+offset = Vector2(54.2349, -3.74451)
+
+[node name="Midpoint" type="Node2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem"]
+show_behind_parent = true
+use_parent_material = true
+position = Vector2(78.5415, 37.511)
+rotation = 1.1969
+
+[node name="Leaf" type="Sprite2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem/Midpoint"]
+use_parent_material = true
+position = Vector2(-4.48623, -24.3985)
+rotation = 1.43431
+texture = ExtResource("23_yjja3")
+
+[node name="WobbleWateringCan" type="Node2D" parent="CentreFrame/Background"]
+position = Vector2(562, 33)
+script = ExtResource("13_birbe")
+pos_wobble = Vector2(0, 0)
+pos_speed = 0.0
+rot_wobble = 0.5
+rot_speed = 2.0
+
+[node name="WateringCanLogic" type="Node2D" parent="CentreFrame/Background/WobbleWateringCan"]
+unique_name_in_owner = true
+script = ExtResource("26_rt5wr")
+
+[node name="WateringCanWatering(continuous)" type="AudioStreamPlayer2D" parent="CentreFrame/Background/WobbleWateringCan/WateringCanLogic"]
+position = Vector2(-1040, -73)
+stream = ExtResource("40_37eu1")
+
+[node name="Button" type="Button" parent="CentreFrame/Background/WobbleWateringCan/WateringCanLogic"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -105.0
+offset_top = -221.0
+offset_right = 95.0
+offset_bottom = -2.0
+
+[node name="WateringCan" type="Sprite2D" parent="CentreFrame/Background/WobbleWateringCan"]
+material = ExtResource("5_dg77c")
+position = Vector2(-6, -98)
+rotation = 0.719938
+texture = ExtResource("25_l0gw7")
+
+[node name="Drop1" type="CPUParticles2D" parent="CentreFrame/Background/WobbleWateringCan"]
+position = Vector2(-53, -191)
+emitting = false
+texture = ExtResource("27_u81y6")
+emission_shape = 1
+emission_sphere_radius = 20.0
+direction = Vector2(0.5, -1)
+spread = 15.0
+initial_velocity_min = 500.0
+initial_velocity_max = 500.0
+angle_min = -90.0
+angle_max = -90.0
+angle_curve = SubResource("Curve_vjgyh")
+scale_amount_curve = SubResource("Curve_d5iia")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="Drop2" type="CPUParticles2D" parent="CentreFrame/Background/WobbleWateringCan"]
+position = Vector2(-53, -191)
+emitting = false
+texture = ExtResource("28_rt5wr")
+emission_shape = 1
+emission_sphere_radius = 20.0
+direction = Vector2(0.5, -1)
+spread = 15.0
+initial_velocity_min = 500.0
+initial_velocity_max = 500.0
+angle_min = -90.0
+angle_max = -90.0
+angle_curve = SubResource("Curve_vjgyh")
+scale_amount_curve = SubResource("Curve_d5iia")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="Drop3" type="CPUParticles2D" parent="CentreFrame/Background/WobbleWateringCan"]
+position = Vector2(-53, -191)
+emitting = false
+texture = ExtResource("29_mnw77")
+emission_shape = 1
+emission_sphere_radius = 20.0
+direction = Vector2(0.5, -1)
+spread = 15.0
+initial_velocity_min = 500.0
+initial_velocity_max = 500.0
+angle_min = -90.0
+angle_max = -90.0
+angle_curve = SubResource("Curve_vjgyh")
+scale_amount_curve = SubResource("Curve_d5iia")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="Foodtable" type="Sprite2D" parent="CentreFrame/Background"]
+texture = ExtResource("16_5yh34")
+
+[node name="TeaLogic" type="Node2D" parent="CentreFrame/Background/Foodtable"]
+unique_name_in_owner = true
+position = Vector2(-708, 208)
+script = ExtResource("32_asu84")
+
+[node name="TeaRefill" type="AudioStreamPlayer2D" parent="CentreFrame/Background/Foodtable/TeaLogic"]
+position = Vector2(230, -248)
+stream = ExtResource("47_0wkqm")
+
+[node name="MugFill" type="Sprite2D" parent="CentreFrame/Background/Foodtable/TeaLogic"]
+material = ExtResource("8_w48qg")
+position = Vector2(8, -55)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("27_yvsr8")
+
+[node name="Tea" type="Sprite2D" parent="CentreFrame/Background/Foodtable/TeaLogic"]
+material = SubResource("ShaderMaterial_qwt6e")
+position = Vector2(-9, -54)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("28_l0gw7")
+
+[node name="Mug" type="Sprite2D" parent="CentreFrame/Background/Foodtable/TeaLogic"]
+material = ExtResource("5_dg77c")
+position = Vector2(3, -55)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("28_vieuh")
+
+[node name="Refill" type="Button" parent="CentreFrame/Background/Foodtable/TeaLogic"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -76.0
+offset_top = -132.0
+offset_right = 64.0
+offset_bottom = 23.0
+
+[node name="ApplePlateLogic" type="Node2D" parent="CentreFrame/Background/Foodtable"]
+unique_name_in_owner = true
+position = Vector2(-559, 194)
+script = ExtResource("37_qwt6e")
+apple_count = 3
+
+[node name="AddApple" type="AudioStreamPlayer2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic"]
+position = Vector2(81, -234)
+stream = ExtResource("53_ve5sr")
+
+[node name="Plate" type="Sprite2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic"]
+position = Vector2(0.999939, -2)
+rotation = 0.0889026
+scale = Vector2(0.865, 0.865)
+texture = ExtResource("31_jcxqu")
+
+[node name="WigglingApple1" type="Node2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic"]
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 1.0
+pos_wobble = Vector2(0, 0)
+pos_speed = 0.0
+rot_wobble = 0.5
+rot_speed = 2.0
+
+[node name="AppleContainer1" type="Node2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic/WigglingApple1"]
+
+[node name="NextApple" type="RemoteTransform2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic/WigglingApple1/AppleContainer1"]
+position = Vector2(2, -81)
+remote_path = NodePath("../../../WigglingApple2")
+update_rotation = false
+update_scale = false
+
+[node name="Apple1" type="Sprite2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic/WigglingApple1/AppleContainer1"]
+material = ExtResource("5_dg77c")
+position = Vector2(4, -44)
+scale = Vector2(0.86564, 0.86564)
+texture = ExtResource("30_inymm")
+
+[node name="WigglingApple2" type="Node2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic"]
+position = Vector2(2, -81)
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 1.0
+pos_wobble = Vector2(0, 0)
+pos_speed = 0.0
+rot_wobble = 0.5
+rot_speed = 2.0
+
+[node name="AppleContainer2" type="Node2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic/WigglingApple2"]
+
+[node name="NextApple" type="RemoteTransform2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic/WigglingApple2/AppleContainer2"]
+position = Vector2(-4, -61.0001)
+remote_path = NodePath("../../../WigglingApple3")
+update_rotation = false
+update_scale = false
+
+[node name="Apple2" type="Sprite2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic/WigglingApple2/AppleContainer2"]
+material = ExtResource("5_dg77c")
+position = Vector2(-1, -38.0001)
+rotation = 2.99494
+scale = Vector2(0.866, -0.866)
+texture = ExtResource("30_inymm")
+
+[node name="WigglingApple3" type="Node2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic"]
+position = Vector2(-2, -142)
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 1.0
+pos_wobble = Vector2(0, 0)
+pos_speed = 0.0
+rot_wobble = 0.5
+rot_speed = 2.0
+
+[node name="AppleContainer3" type="Node2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic/WigglingApple3"]
+
+[node name="Apple3" type="Sprite2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic/WigglingApple3/AppleContainer3"]
+material = ExtResource("5_dg77c")
+position = Vector2(-3, -35)
+rotation = 0.117692
+scale = Vector2(0.86564, 0.86564)
+texture = ExtResource("30_inymm")
+
+[node name="RefillButton" type="Button" parent="CentreFrame/Background/Foodtable/ApplePlateLogic"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -69.0
+offset_top = -245.0
+offset_right = 64.0
+offset_bottom = 8.0
+
+[node name="FanLogic" type="Node2D" parent="CentreFrame/Background"]
+unique_name_in_owner = true
+position = Vector2(-274, -481)
+script = ExtResource("33_0arob")
+
+[node name="Spinny" type="Node2D" parent="CentreFrame/Background/FanLogic"]
+position = Vector2(44, -11)
+scale = Vector2(1, 0.2)
+
+[node name="Blades" type="Sprite2D" parent="CentreFrame/Background/FanLogic/Spinny"]
+material = ExtResource("5_dg77c")
+rotation = 389.405
+texture = ExtResource("34_0arob")
+offset = Vector2(-9, -68)
+
+[node name="DangleToggle" type="Node2D" parent="CentreFrame/Background/FanLogic"]
+position = Vector2(549, -68)
+script = ExtResource("13_birbe")
+scale_speed = 1.0
+pos_wobble = Vector2(5, 0)
+pos_speed = 1.0
+rot_wobble = 0.2
+rot_speed = 1.0
+
+[node name="Toggle" type="Sprite2D" parent="CentreFrame/Background/FanLogic/DangleToggle"]
+texture = ExtResource("33_jcxqu")
+offset = Vector2(0, 77)
+script = ExtResource("41_pjuso")
+scale_power = 1.2
+stiffness = 10.0
+enthusiasm = 0.01
+damping = 0.1
+
+[node name="ToggleFan" type="Button" parent="CentreFrame/Background/FanLogic"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 505.0
+offset_top = -121.0
+offset_right = 598.0
+offset_bottom = 55.0
+toggle_mode = true
+
+[node name="FanWhir" type="AudioStreamPlayer2D" parent="CentreFrame/Background/FanLogic"]
+position = Vector2(-204, 441)
+stream = ExtResource("60_5s44m")
+
+[node name="LightBulbLogic" type="Node2D" parent="CentreFrame/Background"]
+unique_name_in_owner = true
+position = Vector2(712, -540)
+script = ExtResource("42_mnw77")
+
+[node name="Bulb" type="Sprite2D" parent="CentreFrame/Background/LightBulbLogic"]
+position = Vector2(10, 115)
+rotation = 0.116201
+texture = ExtResource("36_ywjan")
+
+[node name="Off" type="Sprite2D" parent="CentreFrame/Background/LightBulbLogic/Bulb"]
+modulate = Color(1, 1, 1, 0.596078)
+show_behind_parent = true
+position = Vector2(1.24193, 77.3932)
+texture = ExtResource("37_m74q3")
+
+[node name="On!" type="Sprite2D" parent="CentreFrame/Background/LightBulbLogic/Bulb"]
+visible = false
+show_behind_parent = true
+position = Vector2(0.944316, 83.4687)
+texture = ExtResource("38_tko6h")
+
+[node name="On!2" type="Sprite2D" parent="CentreFrame/Background/LightBulbLogic/Bulb/On!"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_vjgyh")
+texture = ExtResource("38_tko6h")
+
+[node name="CordWobble" type="Node2D" parent="CentreFrame/Background/LightBulbLogic"]
+position = Vector2(-41, -10)
+rotation = 0.109294
+script = ExtResource("13_birbe")
+pos_wobble = Vector2(5, 5)
+pos_speed = 0.25
+rot_wobble = 0.02
+use_def_rot = true
+
+[node name="Toggle" type="Sprite2D" parent="CentreFrame/Background/LightBulbLogic/CordWobble"]
+position = Vector2(0.21875, -0.116788)
+texture = ExtResource("39_am8a1")
+offset = Vector2(14.4464, 190.793)
+script = ExtResource("41_pjuso")
+scale_power = 1.1
+stiffness = 10.0
+enthusiasm = 0.01
+damping = 0.5
+
+[node name="Button" type="Button" parent="CentreFrame/Background/LightBulbLogic"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -88.0
+offset_top = -9.0
+offset_right = -14.0
+offset_bottom = 380.0
+toggle_mode = true
+
+[node name="Cat" type="Node2D" parent="."]
+visible = false
+position = Vector2(1522, 989)
+
+[node name="Catbod" type="Sprite2D" parent="Cat"]
+material = SubResource("CanvasItemMaterial_82xsv")
+position = Vector2(4.06225, -69.8549)
+rotation = 0.0662065
+texture = ExtResource("9_yaehf")
+
+[node name="Cathead" type="Sprite2D" parent="Cat"]
+material = SubResource("CanvasItemMaterial_82xsv")
+position = Vector2(-136, -179.361)
+texture = ExtResource("10_074og")
+offset = Vector2(-18, -73)
+
+[node name="Cattail" type="Sprite2D" parent="Cat"]
+material = SubResource("CanvasItemMaterial_82xsv")
+position = Vector2(113.612, -89.6507)
+rotation = 0.0662065
+texture = ExtResource("11_cegan")
+offset = Vector2(84, -165)
+
+[node name="Artist" type="Node2D" parent="." node_paths=PackedStringArray("floor", "body", "arm_l", "arm_r", "legs", "head")]
+position = Vector2(773, 600)
+script = ExtResource("22_5yh34")
+floor = NodePath("Floor")
+body = NodePath("Shirt-Body")
+arm_l = NodePath("LArm")
+arm_r = NodePath("RArm")
+legs = NodePath("Feet")
+head = NodePath("Head")
+
+[node name="Feet" type="Node2D" parent="Artist"]
+position = Vector2(-1, 0)
+
+[node name="LFootFill" type="Sprite2D" parent="Artist/Feet"]
+material = ExtResource("8_w48qg")
+position = Vector2(79, 32)
+texture = ExtResource("15_0n3wm")
+
+[node name="RFootFill" type="Sprite2D" parent="Artist/Feet"]
+material = ExtResource("8_w48qg")
+position = Vector2(79, 32)
+texture = ExtResource("17_wnkbs")
+
+[node name="LFoot" type="Sprite2D" parent="Artist/Feet"]
+material = ExtResource("5_dg77c")
+position = Vector2(79, 32)
+texture = ExtResource("16_qnost")
+
+[node name="RFoot" type="Sprite2D" parent="Artist/Feet"]
+material = ExtResource("5_dg77c")
+position = Vector2(79, 32)
+texture = ExtResource("18_f6a44")
+
+[node name="LArm" type="Node2D" parent="Artist"]
+position = Vector2(-42.0527, -184.111)
+script = ExtResource("27_23xmf")
+rotation_multiplier = -1.0
+
+[node name="IdleArmWiggle" type="Node2D" parent="Artist/LArm"]
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0, 0)
+scale_speed = 0.0
+pos_wobble = Vector2(0, 0)
+pos_speed = 0.0
+rot_wobble = 0.5
+rot_speed = 2.0
+
+[node name="LArm" type="Line2D" parent="Artist/LArm/IdleArmWiggle" node_paths=PackedStringArray("arm_tip", "otherLines")]
+position = Vector2(27, 0)
+rotation = -3.14159
+scale = Vector2(1, -1)
+points = PackedVector2Array(10.8531, 0.543107, 21.6656, 1.62713, 32.4098, 3.25371, 43.0568, 5.42758, 53.5755, 8.15542, 63.9324, 11.4446, 74.0915, 15.3016, 84.0146, 19.7308, 93.6616, 24.7327, 102.992, 30.3032, 111.965, 36.4322, 120.543, 43.1037, 128.689, 50.2954, 136.373, 57.979, 143.57, 66.1212, 150.26, 74.6847, 156.43, 83.6293, 162.077, 92.9137, 167.201, 102.496, 171.811, 112.337, 175.919, 122.397, 179.541, 132.642, 182.698, 143.04, 185.409, 153.563, 187.695, 164.187, 189.574, 174.89, 191.064, 185.654, 192.177, 196.463, 192.923, 207.304, 193.306, 218.164)
+default_color = Color(1, 1, 1, 0)
+script = ExtResource("2_h2yge")
+line_points = 30
+line_length = 326.0
+total_bend = 1.5
+sine_speed = 0.25
+sine_width = 5.0
+sine_bend = 0.5
+sine_influence_curve = SubResource("Curve_kkkcx")
+arm_tip = NodePath("ArmTip")
+arm_sine_bend = 0.0
+arm_progress = 1.0
+otherLines = [NodePath("ArmFill"), NodePath("ArmLine")]
+arm_tip_index = 1
+
+[node name="ArmTip" type="Node2D" parent="Artist/LArm/IdleArmWiggle/LArm"]
+position = Vector2(192.923, 207.304)
+rotation = 1.50212
+scale = Vector2(-1, 1)
+
+[node name="LHandfill" type="Sprite2D" parent="Artist/LArm/IdleArmWiggle/LArm/ArmTip"]
+material = ExtResource("8_w48qg")
+position = Vector2(424.279, 173.36)
+texture = ExtResource("22_blkrb")
+
+[node name="LHand" type="Sprite2D" parent="Artist/LArm/IdleArmWiggle/LArm/ArmTip"]
+material = ExtResource("5_dg77c")
+position = Vector2(424.279, 173.36)
+texture = ExtResource("21_uypp3")
+
+[node name="ArmFill" type="Line2D" parent="Artist/LArm/IdleArmWiggle/LArm"]
+material = ExtResource("8_w48qg")
+points = PackedVector2Array(10.8531, 0.543107, 21.6656, 1.62713, 32.4098, 3.25371, 43.0568, 5.42758, 53.5755, 8.15542, 63.9324, 11.4446, 74.0915, 15.3016, 84.0146, 19.7308, 93.6616, 24.7327, 102.992, 30.3032, 111.965, 36.4322, 120.543, 43.1037, 128.689, 50.2954, 136.373, 57.979, 143.57, 66.1212, 150.26, 74.6847, 156.43, 83.6293, 162.077, 92.9137, 167.201, 102.496, 171.811, 112.337, 175.919, 122.397, 179.541, 132.642, 182.698, 143.04, 185.409, 153.563, 187.695, 164.187, 189.574, 174.89, 191.064, 185.654, 192.177, 196.463, 192.923, 207.304, 193.306, 218.164)
+width = 195.0
+texture = ExtResource("21_rqtf5")
+texture_mode = 2
+
+[node name="ArmLine" type="Line2D" parent="Artist/LArm/IdleArmWiggle/LArm"]
+material = ExtResource("5_dg77c")
+position = Vector2(1, 0)
+points = PackedVector2Array(10.8531, 0.543107, 21.6656, 1.62713, 32.4098, 3.25371, 43.0568, 5.42758, 53.5755, 8.15542, 63.9324, 11.4446, 74.0915, 15.3016, 84.0146, 19.7308, 93.6616, 24.7327, 102.992, 30.3032, 111.965, 36.4322, 120.543, 43.1037, 128.689, 50.2954, 136.373, 57.979, 143.57, 66.1212, 150.26, 74.6847, 156.43, 83.6293, 162.077, 92.9137, 167.201, 102.496, 171.811, 112.337, 175.919, 122.397, 179.541, 132.642, 182.698, 143.04, 185.409, 153.563, 187.695, 164.187, 189.574, 174.89, 191.064, 185.654, 192.177, 196.463, 192.923, 207.304, 193.306, 218.164)
+width = 195.0
+texture = ExtResource("22_1vm84")
+texture_mode = 2
+
+[node name="RArm" type="Node2D" parent="Artist"]
+position = Vector2(16.944, -184.733)
+rotation = 1.0472
+scale = Vector2(0.999998, 0.999998)
+script = ExtResource("27_23xmf")
+target_rotation = 1.0
+
+[node name="IdleArmWiggle" type="Node2D" parent="Artist/RArm"]
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0, 0)
+scale_speed = 0.0
+pos_wobble = Vector2(0, 0)
+pos_speed = 0.0
+rot_wobble = 0.5
+rot_speed = 2.0
+
+[node name="RArm" type="Line2D" parent="Artist/RArm/IdleArmWiggle" node_paths=PackedStringArray("arm_tip", "otherLines")]
+position = Vector2(-23, -6)
+points = PackedVector2Array(10.8597, -0.389306, 21.701, -1.13094, 32.5175, -2.17398, 43.308, -3.45872, 54.0757, -4.92198, 64.8268, -6.5022, 75.5687, -8.14405, 86.3081, -9.80255, 97.0497, -11.4465, 107.796, -13.0612, 118.546, -14.6501, 129.296, -16.2359, 140.041, -17.8604, 150.77, -19.5829, 161.47, -21.4788, 172.12, -23.6359, 182.692, -26.1504, 193.144, -29.1225, 203.422, -32.65, 213.456, -36.8227, 223.159, -41.715, 232.432, -47.3804, 241.166, -53.8458, 249.25, -61.1082, 256.576, -69.1338, 263.052, -77.8599, 268.606, -87.1999, 273.194, -97.0504, 276.803, -107.3, 279.452, -117.839)
+default_color = Color(1, 1, 1, 0)
+script = ExtResource("2_h2yge")
+line_points = 30
+line_length = 326.0
+total_bend = -1.075
+sine_speed = -0.5
+sine_width = 5.0
+sine_bend = 2.0
+sine_influence_curve = SubResource("Curve_kkkcx")
+arm_tip = NodePath("ArmTip")
+arm_sine_bend = 0.5
+arm_progress = 1.0
+otherLines = [NodePath("ArmFill"), NodePath("ArmLine"), NodePath("ArmSplat")]
+arm_tip_index = 0
+
+[node name="ArmTip" type="Node2D" parent="Artist/RArm/IdleArmWiggle/RArm"]
+position = Vector2(279.452, -117.839)
+rotation = -1.69868
+
+[node name="Brushtip" type="Sprite2D" parent="Artist/RArm/IdleArmWiggle/RArm/ArmTip"]
+material = ExtResource("5_dg77c")
+position = Vector2(-275, 189)
+texture = ExtResource("24_6iyjs")
+
+[node name="BrushTip" type="Node2D" parent="Artist/RArm/IdleArmWiggle/RArm/ArmTip/Brushtip"]
+position = Vector2(297.336, -361.957)
+
+[node name="RHandFill" type="Sprite2D" parent="Artist/RArm/IdleArmWiggle/RArm/ArmTip"]
+material = ExtResource("8_w48qg")
+position = Vector2(-275, 189)
+texture = ExtResource("28_vke2r")
+
+[node name="RHand" type="Sprite2D" parent="Artist/RArm/IdleArmWiggle/RArm/ArmTip"]
+material = ExtResource("5_dg77c")
+position = Vector2(-275, 189)
+texture = ExtResource("29_uit24")
+
+[node name="HandSplat" type="Sprite2D" parent="Artist/RArm/IdleArmWiggle/RArm/ArmTip"]
+material = ExtResource("8_w48qg")
+position = Vector2(-275, 189)
+texture = ExtResource("25_4w656")
+
+[node name="ArmFill" type="Line2D" parent="Artist/RArm/IdleArmWiggle/RArm"]
+material = ExtResource("8_w48qg")
+points = PackedVector2Array(10.8597, -0.389306, 21.701, -1.13094, 32.5175, -2.17398, 43.308, -3.45872, 54.0757, -4.92198, 64.8268, -6.5022, 75.5687, -8.14405, 86.3081, -9.80255, 97.0497, -11.4465, 107.796, -13.0612, 118.546, -14.6501, 129.296, -16.2359, 140.041, -17.8604, 150.77, -19.5829, 161.47, -21.4788, 172.12, -23.6359, 182.692, -26.1504, 193.144, -29.1225, 203.422, -32.65, 213.456, -36.8227, 223.159, -41.715, 232.432, -47.3804, 241.166, -53.8458, 249.25, -61.1082, 256.576, -69.1338, 263.052, -77.8599, 268.606, -87.1999, 273.194, -97.0504, 276.803, -107.3, 279.452, -117.839)
+width = 198.0
+texture = ExtResource("30_cyx1q")
+texture_mode = 2
+
+[node name="ArmLine" type="Line2D" parent="Artist/RArm/IdleArmWiggle/RArm"]
+position = Vector2(1, 0)
+points = PackedVector2Array(10.8597, -0.389306, 21.701, -1.13094, 32.5175, -2.17398, 43.308, -3.45872, 54.0757, -4.92198, 64.8268, -6.5022, 75.5687, -8.14405, 86.3081, -9.80255, 97.0497, -11.4465, 107.796, -13.0612, 118.546, -14.6501, 129.296, -16.2359, 140.041, -17.8604, 150.77, -19.5829, 161.47, -21.4788, 172.12, -23.6359, 182.692, -26.1504, 193.144, -29.1225, 203.422, -32.65, 213.456, -36.8227, 223.159, -41.715, 232.432, -47.3804, 241.166, -53.8458, 249.25, -61.1082, 256.576, -69.1338, 263.052, -77.8599, 268.606, -87.1999, 273.194, -97.0504, 276.803, -107.3, 279.452, -117.839)
+width = 198.0
+texture = ExtResource("32_jx0wj")
+texture_mode = 2
+
+[node name="ArmSplat" type="Line2D" parent="Artist/RArm/IdleArmWiggle/RArm"]
+position = Vector2(1, 0)
+points = PackedVector2Array(10.8597, -0.389306, 21.701, -1.13094, 32.5175, -2.17398, 43.308, -3.45872, 54.0757, -4.92198, 64.8268, -6.5022, 75.5687, -8.14405, 86.3081, -9.80255, 97.0497, -11.4465, 107.796, -13.0612, 118.546, -14.6501, 129.296, -16.2359, 140.041, -17.8604, 150.77, -19.5829, 161.47, -21.4788, 172.12, -23.6359, 182.692, -26.1504, 193.144, -29.1225, 203.422, -32.65, 213.456, -36.8227, 223.159, -41.715, 232.432, -47.3804, 241.166, -53.8458, 249.25, -61.1082, 256.576, -69.1338, 263.052, -77.8599, 268.606, -87.1999, 273.194, -97.0504, 276.803, -107.3, 279.452, -117.839)
+width = 198.0
+texture = ExtResource("31_0dhbp")
+texture_mode = 2
+
+[node name="Skirt" type="Node2D" parent="Artist"]
+position = Vector2(-1, -22)
+
+[node name="Skirtfill" type="Sprite2D" parent="Artist/Skirt"]
+material = ExtResource("8_w48qg")
+position = Vector2(79, 54)
+texture = ExtResource("31_rm4vd")
+
+[node name="Skirt2" type="Sprite2D" parent="Artist/Skirt"]
+material = ExtResource("5_dg77c")
+position = Vector2(79, 54)
+texture = ExtResource("30_ruth0")
+
+[node name="Head" type="Node2D" parent="Artist"]
+position = Vector2(-24.6547, -241.297)
+script = ExtResource("41_pjuso")
+stiffness = 30.0
+enthusiasm = 0.01
+damping = 0.1
+
+[node name="IdleHeadMotion" type="Node2D" parent="Artist/Head"]
+script = ExtResource("13_birbe")
+scale_speed = 1.0
+pos_speed = 1.0
+rot_wobble = 0.2
+rot_speed = 2.0
+
+[node name="MovePalete" type="RemoteTransform2D" parent="Artist/Head/IdleHeadMotion"]
+position = Vector2(0, -38)
+remote_path = NodePath("../../../ThoughtPalete")
+update_rotation = false
+update_scale = false
+
+[node name="MoveBraidL" type="RemoteTransform2D" parent="Artist/Head/IdleHeadMotion"]
+position = Vector2(-61, -26)
+remote_path = NodePath("../../../LBraid")
+update_rotation = false
+update_scale = false
+
+[node name="MoveBraidR" type="RemoteTransform2D" parent="Artist/Head/IdleHeadMotion"]
+position = Vector2(61, -31)
+remote_path = NodePath("../../../RBraid")
+update_rotation = false
+update_scale = false
+
+[node name="Beret" type="Sprite2D" parent="Artist/Head/IdleHeadMotion"]
+material = ExtResource("5_dg77c")
+position = Vector2(90, 274)
+texture = ExtResource("32_1vm84")
+
+[node name="Headfill" type="Sprite2D" parent="Artist/Head/IdleHeadMotion"]
+material = ExtResource("8_w48qg")
+position = Vector2(90, 274)
+texture = ExtResource("34_cyx1q")
+
+[node name="Head" type="Sprite2D" parent="Artist/Head/IdleHeadMotion"]
+material = ExtResource("5_dg77c")
+position = Vector2(90, 274)
+texture = ExtResource("33_wu3dr")
+
+[node name="Sweat" type="Node2D" parent="Artist/Head/IdleHeadMotion"]
+z_index = 1
+script = ExtResource("102_7mmqq")
+
+[node name="Drop1" type="CPUParticles2D" parent="Artist/Head/IdleHeadMotion/Sweat"]
+position = Vector2(3.75598, -75.4773)
+emitting = false
+amount = 2
+texture = ExtResource("27_u81y6")
+lifetime = 0.5
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0.5, -1)
+spread = 15.0
+angle_min = -90.0
+angle_max = -90.0
+scale_amount_curve = SubResource("Curve_d5iia")
+color_ramp = SubResource("Gradient_7mmqq")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="Drop2" type="CPUParticles2D" parent="Artist/Head/IdleHeadMotion/Sweat"]
+position = Vector2(3.75598, -75.4773)
+emitting = false
+amount = 2
+texture = ExtResource("28_rt5wr")
+lifetime = 0.5
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0.5, -1)
+spread = 15.0
+angle_min = -90.0
+angle_max = -90.0
+scale_amount_curve = SubResource("Curve_d5iia")
+color_ramp = SubResource("Gradient_7mmqq")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="Drop3" type="CPUParticles2D" parent="Artist/Head/IdleHeadMotion/Sweat"]
+position = Vector2(3.75598, -75.4773)
+emitting = false
+amount = 2
+texture = ExtResource("29_mnw77")
+lifetime = 0.5
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0.5, -1)
+spread = 15.0
+angle_min = -90.0
+angle_max = -90.0
+scale_amount_curve = SubResource("Curve_d5iia")
+color_ramp = SubResource("Gradient_7mmqq")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="LEye" type="Node2D" parent="Artist/Head/IdleHeadMotion" node_paths=PackedStringArray("open_eye", "closed_eye", "eyebag", "calm_eye", "crazy_eye", "tired_eye", "eyebrow", "eyeball")]
+z_index = 1
+position = Vector2(90, 274)
+script = ExtResource("33_uatky")
+open_eye = NodePath("Open")
+closed_eye = NodePath("Blink")
+eyebag = NodePath("LEyebag")
+calm_eye = NodePath("Blink/LCalmblink")
+crazy_eye = NodePath("Blink/LCrazyblink")
+tired_eye = NodePath("Blink/LTiredblink")
+eyebrow = NodePath("LEyebrow")
+eyeball = NodePath("Open/LEyeball")
+
+[node name="Open" type="Node2D" parent="Artist/Head/IdleHeadMotion/LEye"]
+
+[node name="LEyefill" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/LEye/Open"]
+material = ExtResource("8_w48qg")
+texture = ExtResource("41_gx4rg")
+
+[node name="LEye2" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/LEye/Open"]
+material = ExtResource("5_dg77c")
+texture = ExtResource("37_kkkcx")
+
+[node name="LEyeball" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/LEye/Open"]
+material = ExtResource("5_dg77c")
+texture = ExtResource("39_c2n8d")
+
+[node name="Blink" type="Node2D" parent="Artist/Head/IdleHeadMotion/LEye"]
+visible = false
+
+[node name="LCalmblink" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/LEye/Blink"]
+material = ExtResource("5_dg77c")
+texture = ExtResource("35_0dhbp")
+
+[node name="LCrazyblink" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/LEye/Blink"]
+visible = false
+material = ExtResource("5_dg77c")
+texture = ExtResource("36_jx0wj")
+
+[node name="LTiredblink" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/LEye/Blink"]
+visible = false
+material = ExtResource("5_dg77c")
+texture = ExtResource("42_5dllo")
+
+[node name="LEyebag" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/LEye"]
+modulate = Color(1, 1, 1, 0)
+material = ExtResource("5_dg77c")
+texture = ExtResource("38_34ol3")
+
+[node name="LEyebrow" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/LEye"]
+material = ExtResource("5_dg77c")
+position = Vector2(-139, -342)
+texture = ExtResource("40_wy5fy")
+offset = Vector2(139, 342)
+
+[node name="REye" type="Node2D" parent="Artist/Head/IdleHeadMotion" node_paths=PackedStringArray("open_eye", "closed_eye", "eyebag", "calm_eye", "crazy_eye", "tired_eye", "eyebrow", "eyeball")]
+z_index = 1
+position = Vector2(90, 274)
+script = ExtResource("33_uatky")
+open_eye = NodePath("Open")
+closed_eye = NodePath("Blink")
+eyebag = NodePath("REyebag")
+calm_eye = NodePath("Blink/RCalmblink")
+crazy_eye = NodePath("Blink/RCrazyblink")
+tired_eye = NodePath("Blink/RTiredblink")
+eyebrow = NodePath("REyebrow")
+eyeball = NodePath("Open/REyeball")
+flip_eyebrow = true
+
+[node name="Open" type="Node2D" parent="Artist/Head/IdleHeadMotion/REye"]
+
+[node name="REyefill" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/REye/Open"]
+material = ExtResource("8_w48qg")
+texture = ExtResource("49_1yv1y")
+
+[node name="REye" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/REye/Open"]
+material = ExtResource("5_dg77c")
+texture = ExtResource("45_f1p13")
+
+[node name="REyeball" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/REye/Open"]
+material = ExtResource("5_dg77c")
+texture = ExtResource("47_ovcoh")
+
+[node name="Blink" type="Node2D" parent="Artist/Head/IdleHeadMotion/REye"]
+visible = false
+
+[node name="RCalmblink" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/REye/Blink"]
+material = ExtResource("5_dg77c")
+texture = ExtResource("43_phcyf")
+
+[node name="RCrazyblink" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/REye/Blink"]
+visible = false
+material = ExtResource("5_dg77c")
+texture = ExtResource("44_birbe")
+
+[node name="RTiredblink" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/REye/Blink"]
+visible = false
+material = ExtResource("5_dg77c")
+texture = ExtResource("50_5yh34")
+
+[node name="REyebag" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/REye"]
+modulate = Color(1, 1, 1, 0)
+material = ExtResource("5_dg77c")
+texture = ExtResource("46_4obbf")
+
+[node name="REyebrow" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/REye"]
+material = ExtResource("5_dg77c")
+position = Vector2(-51, -340)
+texture = ExtResource("48_ppx11")
+offset = Vector2(51, 340)
+
+[node name="Mouth" type="Node2D" parent="Artist/Head/IdleHeadMotion"]
+z_index = 1
+position = Vector2(90, 274)
+script = ExtResource("50_rqtf5")
+
+[node name="PensiveMouth" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/Mouth"]
+visible = false
+material = ExtResource("5_dg77c")
+texture = ExtResource("54_yysqy")
+
+[node name="Crazymouth" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/Mouth"]
+visible = false
+material = ExtResource("5_dg77c")
+texture = ExtResource("51_pjuso")
+
+[node name="Mouth2" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/Mouth"]
+material = ExtResource("5_dg77c")
+position = Vector2(-97, -290)
+texture = ExtResource("53_swlj1")
+offset = Vector2(97, 290)
+
+[node name="Shirt-Body" type="Node2D" parent="Artist"]
+script = ExtResource("41_pjuso")
+stiffness = 20.0
+enthusiasm = 0.01
+damping = 0.2
+
+[node name="Wiggle" type="Node2D" parent="Artist/Shirt-Body"]
+
+[node name="MoveLegs" type="RemoteTransform2D" parent="Artist/Shirt-Body/Wiggle"]
+position = Vector2(-1, 0)
+remote_path = NodePath("../../../Feet")
+update_rotation = false
+update_scale = false
+
+[node name="MoveSkirt" type="RemoteTransform2D" parent="Artist/Shirt-Body/Wiggle"]
+position = Vector2(-1, -22)
+remote_path = NodePath("../../../Skirt")
+update_rotation = false
+update_scale = false
+
+[node name="BodyWiggle" type="Line2D" parent="Artist/Shirt-Body" node_paths=PackedStringArray("arm_tip", "otherLines")]
+position = Vector2(5, 33)
+rotation = -1.57079
+points = PackedVector2Array(13.1, -0.0289818, 26.1996, -0.131686, 39.2976, -0.359035, 52.3915, -0.758855, 65.4774, -1.36692, 78.5509, -2.19962, 91.6087, -3.24927, 104.651, -4.48303, 117.679, -5.84533, 130.702, -7.26388, 143.728, -8.65825, 156.764, -9.94932, 169.816, -11.0671, 182.886, -11.9584, 195.971, -12.5927, 209.065, -12.9668, 222.165, -13.105, 235.265, -13.0554, 248.363, -12.8821, 261.461, -12.6525)
+width = 1.0
+script = ExtResource("2_h2yge")
+line_length = 262.0
+total_bend = 0.0
+sine_speed = -0.1
+sine_width = 5.0
+sine_bend = 0.5
+sine_influence_curve = SubResource("Curve_23xmf")
+arm_tip = NodePath("Shoulders")
+arm_sine_bend = 0.0
+arm_progress = 0.8
+otherLines = [NodePath("ShirtFill"), NodePath("ShirtLines")]
+arm_tip_index = 3
+
+[node name="ShirtFill" type="Line2D" parent="Artist/Shirt-Body/BodyWiggle"]
+material = ExtResource("8_w48qg")
+points = PackedVector2Array(13.1, -0.0289818, 26.1996, -0.131686, 39.2976, -0.359035, 52.3915, -0.758855, 65.4774, -1.36692, 78.5509, -2.19962, 91.6087, -3.24927, 104.651, -4.48303, 117.679, -5.84533, 130.702, -7.26388, 143.728, -8.65825, 156.764, -9.94932, 169.816, -11.0671, 182.886, -11.9584, 195.971, -12.5927, 209.065, -12.9668, 222.165, -13.105, 235.265, -13.0554, 248.363, -12.8821, 261.461, -12.6525)
+width = 202.0
+texture = ExtResource("69_yysqy")
+texture_mode = 2
+
+[node name="ShirtLines" type="Line2D" parent="Artist/Shirt-Body/BodyWiggle"]
+material = ExtResource("5_dg77c")
+points = PackedVector2Array(13.1, -0.0289818, 26.1996, -0.131686, 39.2976, -0.359035, 52.3915, -0.758855, 65.4774, -1.36692, 78.5509, -2.19962, 91.6087, -3.24927, 104.651, -4.48303, 117.679, -5.84533, 130.702, -7.26388, 143.728, -8.65825, 156.764, -9.94932, 169.816, -11.0671, 182.886, -11.9584, 195.971, -12.5927, 209.065, -12.9668, 222.165, -13.105, 235.265, -13.0554, 248.363, -12.8821, 261.461, -12.6525)
+width = 202.0
+texture = ExtResource("70_n5t1e")
+texture_mode = 2
+
+[node name="Shoulders" type="Node2D" parent="Artist/Shirt-Body/BodyWiggle"]
+position = Vector2(222.165, -13.105)
+rotation = -0.0105491
+
+[node name="MoveLArm" type="RemoteTransform2D" parent="Artist/Shirt-Body/BodyWiggle/Shoulders"]
+position = Vector2(-4.69577, -34.0005)
+rotation = 1.57079
+remote_path = NodePath("../../../../LArm")
+update_rotation = false
+update_scale = false
+
+[node name="MoveRArm" type="RemoteTransform2D" parent="Artist/Shirt-Body/BodyWiggle/Shoulders"]
+position = Vector2(-4.69565, 24.9995)
+rotation = 1.57079
+remote_path = NodePath("../../../../RArm")
+update_rotation = false
+update_scale = false
+
+[node name="MoveApron" type="RemoteTransform2D" parent="Artist/Shirt-Body/BodyWiggle/Shoulders"]
+position = Vector2(13.3043, -6.00049)
+rotation = 1.57079
+remote_path = NodePath("../../../../Apron")
+update_rotation = false
+update_scale = false
+
+[node name="MoveBandana" type="RemoteTransform2D" parent="Artist/Shirt-Body/BodyWiggle/Shoulders"]
+position = Vector2(33.3043, -11.0005)
+rotation = 1.57079
+remote_path = NodePath("../../../../Bandana")
+update_rotation = false
+update_scale = false
+
+[node name="MoveHead" type="RemoteTransform2D" parent="Artist/Shirt-Body/BodyWiggle/Shoulders"]
+position = Vector2(52.3043, -16.0006)
+rotation = 1.57079
+remote_path = NodePath("../../../../Head")
+update_rotation = false
+update_scale = false
+
+[node name="ShouldersUpright" type="Node2D" parent="Artist/Shirt-Body/BodyWiggle/Shoulders"]
+position = Vector2(0.299957, -0.000488281)
+rotation = 1.57079
+
+[node name="LBraid" type="Node2D" parent="Artist"]
+position = Vector2(-85.6547, -267.297)
+
+[node name="IdleBraidWiggle" type="Node2D" parent="Artist/LBraid"]
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 1.0
+pos_speed = 1.0
+rot_wobble = 0.5
+rot_speed = 3.0
+
+[node name="LBraidFill" type="Sprite2D" parent="Artist/LBraid/IdleBraidWiggle"]
+material = ExtResource("8_w48qg")
+position = Vector2(151, 300)
+texture = ExtResource("34_b17eg")
+
+[node name="LBraid" type="Sprite2D" parent="Artist/LBraid/IdleBraidWiggle"]
+material = ExtResource("5_dg77c")
+position = Vector2(151, 300)
+texture = ExtResource("36_uatky")
+
+[node name="LBraidSplat" type="Sprite2D" parent="Artist/LBraid/IdleBraidWiggle"]
+material = ExtResource("8_w48qg")
+position = Vector2(151, 300)
+texture = ExtResource("35_ntx8l")
+
+[node name="RBraid" type="Node2D" parent="Artist"]
+position = Vector2(36.3453, -272.297)
+
+[node name="IdleBraidWiggle" type="Node2D" parent="Artist/RBraid"]
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 1.0
+pos_speed = 1.0
+rot_wobble = 0.5
+rot_speed = 3.0
+
+[node name="RBraidFill" type="Sprite2D" parent="Artist/RBraid/IdleBraidWiggle"]
+material = ExtResource("8_w48qg")
+position = Vector2(29, 305)
+texture = ExtResource("37_rqtf5")
+
+[node name="RBraid2" type="Sprite2D" parent="Artist/RBraid/IdleBraidWiggle"]
+material = ExtResource("5_dg77c")
+position = Vector2(29, 305)
+texture = ExtResource("39_wu3dr")
+
+[node name="RBraidSplat" type="Sprite2D" parent="Artist/RBraid/IdleBraidWiggle"]
+material = ExtResource("8_w48qg")
+position = Vector2(29, 305)
+texture = ExtResource("38_1vm84")
+
+[node name="Apron" type="Node2D" parent="Artist" node_paths=PackedStringArray("first", "second")]
+position = Vector2(-14.244, -202.405)
+rotation = -0.00527453
+scale = Vector2(0.999831, 0.999831)
+script = ExtResource("78_23xmf")
+first = NodePath("../Shirt-Body/BodyWiggle/Shoulders/ShouldersUpright")
+second = NodePath("../Shirt-Body")
+blend = 0.5
+
+[node name="Apronfill" type="Sprite2D" parent="Artist/Apron"]
+material = ExtResource("8_w48qg")
+position = Vector2(80, 235)
+texture = ExtResource("42_jx0wj")
+
+[node name="Apron2" type="Sprite2D" parent="Artist/Apron"]
+material = ExtResource("5_dg77c")
+position = Vector2(80, 235)
+texture = ExtResource("41_0dhbp")
+
+[node name="ApronSplat" type="Sprite2D" parent="Artist/Apron"]
+material = ExtResource("8_w48qg")
+position = Vector2(80, 235)
+texture = ExtResource("40_cyx1q")
+
+[node name="Bandana" type="Node2D" parent="Artist" node_paths=PackedStringArray("first", "second")]
+position = Vector2(-19.4546, -222.351)
+rotation = -0.0031647
+scale = Vector2(0.999834, 0.999834)
+script = ExtResource("78_23xmf")
+first = NodePath("../Head")
+second = NodePath("../Shirt-Body/BodyWiggle/Shoulders/ShouldersUpright")
+blend = 0.3
+
+[node name="Bandanafill" type="Sprite2D" parent="Artist/Bandana"]
+material = ExtResource("8_w48qg")
+position = Vector2(80, 248)
+texture = ExtResource("45_c2n8d")
+
+[node name="Bandana2" type="Sprite2D" parent="Artist/Bandana"]
+material = ExtResource("5_dg77c")
+position = Vector2(80, 248)
+texture = ExtResource("44_34ol3")
+
+[node name="BandanaSplat" type="Sprite2D" parent="Artist/Bandana"]
+material = ExtResource("8_w48qg")
+position = Vector2(80, 248)
+texture = ExtResource("43_kkkcx")
+
+[node name="ThoughtPalete" type="Node2D" parent="Artist"]
+position = Vector2(-24.6547, -279.297)
+script = ExtResource("13_birbe")
+rot_wobble = 0.1
+
+[node name="ThoughtPaleteLogic" type="Node2D" parent="Artist/ThoughtPalete"]
+unique_name_in_owner = true
+script = ExtResource("102_htgcl")
+
+[node name="ThoughtPalette" type="Node2D" parent="Artist/ThoughtPalete"]
+position = Vector2(-426, -54)
+script = ExtResource("13_birbe")
+scale_speed = 1.0
+pos_speed = 2.0
+rot_wobble = 0.25
+rot_speed = 1.0
+
+[node name="ThoughtPalette2" type="Sprite2D" parent="Artist/ThoughtPalete/ThoughtPalette"]
+texture = ExtResource("79_5yh34")
+
+[node name="Shadow" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2" instance=ExtResource("91_jbvwl")]
+
+[node name="BluePaint" type="Sprite2D" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2"]
+material = SubResource("ShaderMaterial_tko6h")
+position = Vector2(-15, -125)
+rotation = 0.499164
+texture = ExtResource("80_pjuso")
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 2.0
+pos_speed = 1.0
+rot_wobble = 0.5
+
+[node name="Hungry" type="Node2D" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/BluePaint"]
+modulate = Color(1, 1, 1, 1.4013e-45)
+position = Vector2(15.3862, -2.41839)
+rotation = -0.499164
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.5, 0.5)
+scale_speed = 3.0
+pos_wobble = Vector2(100, 100)
+pos_speed = 4.0
+rot_wobble = 1.0
+rot_speed = 3.0
+
+[node name="Label" type="Label" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/BluePaint/Hungry"]
+custom_minimum_size = Vector2(300, 50)
+offset_left = -150.0
+offset_top = -25.0
+offset_right = 150.0
+offset_bottom = 25.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_font_sizes/font_size = 25
+text = "Hungry"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Thirsty" type="Node2D" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/BluePaint"]
+modulate = Color(1, 1, 1, 1.4013e-45)
+position = Vector2(15.3862, -2.41839)
+rotation = -0.499164
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.5, 0.5)
+scale_speed = 3.0
+pos_wobble = Vector2(100, 100)
+pos_speed = 4.0
+rot_wobble = 1.0
+rot_speed = 3.0
+
+[node name="Label" type="Label" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/BluePaint/Thirsty"]
+custom_minimum_size = Vector2(300, 50)
+offset_left = -150.0
+offset_top = -25.0
+offset_right = 150.0
+offset_bottom = 25.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_font_sizes/font_size = 25
+text = "Thirsty"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cold" type="Node2D" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/BluePaint"]
+position = Vector2(15.3862, -2.41839)
+rotation = -0.499164
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.5, 0.5)
+scale_speed = 3.0
+pos_wobble = Vector2(100, 100)
+pos_speed = 4.0
+rot_wobble = 1.0
+rot_speed = 3.0
+
+[node name="Label" type="Label" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/BluePaint/Cold"]
+custom_minimum_size = Vector2(300, 50)
+offset_left = -150.0
+offset_top = -25.0
+offset_right = 150.0
+offset_bottom = 25.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_font_sizes/font_size = 25
+text = "Cold"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hot" type="Node2D" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/BluePaint"]
+modulate = Color(1, 1, 1, 1.4013e-45)
+position = Vector2(15.3862, -2.41839)
+rotation = -0.499164
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.5, 0.5)
+scale_speed = 3.0
+pos_wobble = Vector2(100, 100)
+pos_speed = 4.0
+rot_wobble = 1.0
+rot_speed = 3.0
+
+[node name="Label" type="Label" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/BluePaint/Hot"]
+custom_minimum_size = Vector2(300, 50)
+offset_left = -150.0
+offset_top = -25.0
+offset_right = 150.0
+offset_bottom = 25.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_font_sizes/font_size = 25
+text = "Hot"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RedPaint" type="Sprite2D" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2"]
+material = SubResource("ShaderMaterial_cpm2s")
+position = Vector2(-148, -3)
+texture = ExtResource("81_23xmf")
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 2.0
+pos_speed = 1.0
+rot_wobble = 0.5
+
+[node name="YellowPaint" type="Sprite2D" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2"]
+material = SubResource("ShaderMaterial_u81y6")
+position = Vector2(-44, 136)
+texture = ExtResource("82_swlj1")
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 2.0
+pos_speed = 1.0
+rot_wobble = 0.5
+
+[node name="TooDark" type="Node2D" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/YellowPaint"]
+modulate = Color(1, 1, 1, 1.4013e-45)
+position = Vector2(15.3862, -2.41839)
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.5, 0.5)
+scale_speed = 3.0
+pos_wobble = Vector2(100, 100)
+pos_speed = 4.0
+rot_wobble = 1.0
+rot_speed = 3.0
+
+[node name="Label" type="Label" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/YellowPaint/TooDark"]
+custom_minimum_size = Vector2(300, 50)
+offset_left = -150.0
+offset_top = -25.0
+offset_right = 150.0
+offset_bottom = 25.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_font_sizes/font_size = 25
+text = "Too Dark"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TooBright" type="Node2D" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/YellowPaint"]
+modulate = Color(1, 1, 1, 1.4013e-45)
+position = Vector2(15.3862, -1.41839)
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.5, 0.5)
+scale_speed = 3.0
+pos_wobble = Vector2(100, 100)
+pos_speed = 4.0
+rot_wobble = 1.0
+rot_speed = 3.0
+
+[node name="Label" type="Label" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/YellowPaint/TooBright"]
+custom_minimum_size = Vector2(300, 50)
+offset_left = -150.0
+offset_top = -25.0
+offset_right = 150.0
+offset_bottom = 25.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_font_sizes/font_size = 25
+text = "Too Bright"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FlowerSad" type="Node2D" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/YellowPaint"]
+modulate = Color(1, 1, 1, 1.4013e-45)
+position = Vector2(15.3862, -1.41839)
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.5, 0.5)
+scale_speed = 3.0
+pos_wobble = Vector2(100, 100)
+pos_speed = 4.0
+rot_wobble = 1.0
+rot_speed = 3.0
+
+[node name="Label" type="Label" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/YellowPaint/FlowerSad"]
+custom_minimum_size = Vector2(300, 50)
+offset_left = -150.0
+offset_top = -25.0
+offset_right = 150.0
+offset_bottom = 25.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_font_sizes/font_size = 25
+text = "Sad Flower"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FlowerDead" type="Node2D" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/YellowPaint"]
+modulate = Color(1, 1, 1, 1.4013e-45)
+position = Vector2(15.3862, -1.41839)
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.5, 0.5)
+scale_speed = 3.0
+pos_wobble = Vector2(100, 100)
+pos_speed = 4.0
+rot_wobble = 1.0
+rot_speed = 3.0
+
+[node name="Label" type="Label" parent="Artist/ThoughtPalete/ThoughtPalette/ThoughtPalette2/YellowPaint/FlowerDead"]
+custom_minimum_size = Vector2(300, 50)
+offset_left = -150.0
+offset_top = -25.0
+offset_right = 150.0
+offset_bottom = 25.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_font_sizes/font_size = 25
+text = "Flower Dying"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BubBig" type="Node2D" parent="Artist/ThoughtPalete"]
+position = Vector2(-263, -45)
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.25, 0.25)
+scale_speed = 2.0
+pos_speed = 1.0
+rot_wobble = 0.5
+rot_speed = 1.0
+
+[node name="BubBig2" type="Sprite2D" parent="Artist/ThoughtPalete/BubBig"]
+texture = ExtResource("83_yysqy")
+
+[node name="Shadow" parent="Artist/ThoughtPalete/BubBig/BubBig2" instance=ExtResource("91_jbvwl")]
+
+[node name="BubSmall" type="Node2D" parent="Artist/ThoughtPalete"]
+position = Vector2(-171, 20)
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.25, 0.25)
+scale_speed = 2.0
+pos_wobble = Vector2(5, 5)
+pos_speed = 1.0
+rot_wobble = 0.5
+rot_speed = 1.0
+
+[node name="BubSmall2" type="Sprite2D" parent="Artist/ThoughtPalete/BubSmall"]
+texture = ExtResource("84_n5t1e")
+
+[node name="Shadow" parent="Artist/ThoughtPalete/BubSmall/BubSmall2" instance=ExtResource("91_jbvwl")]
+
+[node name="Floor" type="Node2D" parent="Artist"]
+position = Vector2(8, 387)
+
+[connection signal="button_down" from="CentreFrame/Background/WobbleWateringCan/WateringCanLogic/Button" to="CentreFrame/Background/WobbleWateringCan/WateringCanLogic" method="_on_button_button_down"]
+[connection signal="button_up" from="CentreFrame/Background/WobbleWateringCan/WateringCanLogic/Button" to="CentreFrame/Background/WobbleWateringCan/WateringCanLogic" method="_on_button_button_up"]
+[connection signal="button_down" from="CentreFrame/Background/Foodtable/TeaLogic/Refill" to="CentreFrame/Background/Foodtable/TeaLogic" method="_on_refill_button_down"]
+[connection signal="button_up" from="CentreFrame/Background/Foodtable/TeaLogic/Refill" to="CentreFrame/Background/Foodtable/TeaLogic" method="_on_refill_button_up"]
+[connection signal="pressed" from="CentreFrame/Background/Foodtable/ApplePlateLogic/RefillButton" to="CentreFrame/Background/Foodtable/ApplePlateLogic" method="_on_refill_button_pressed"]
+[connection signal="toggled" from="CentreFrame/Background/FanLogic/ToggleFan" to="CentreFrame/Background/FanLogic" method="_on_toggle_fan_toggled"]
+[connection signal="toggled" from="CentreFrame/Background/LightBulbLogic/Button" to="CentreFrame/Background/LightBulbLogic" method="_on_button_toggled"]

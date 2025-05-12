@@ -1,14 +1,19 @@
-[gd_scene load_steps=149 format=3 uid="uid://th7k2rmqv11e"]
+[gd_scene load_steps=158 format=3 uid="uid://th7k2rmqv11e"]
 
 [ext_resource type="Script" uid="uid://p1aneh43gu6k" path="res://wobble_manager.gd" id="1_ycdy4"]
 [ext_resource type="Script" uid="uid://dqgvpkfhpvx7h" path="res://wobbly_hand.gd" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://pdq83124mdur" path="res://artist_game_logic.gd" id="4_vjgyh"]
 [ext_resource type="Script" uid="uid://ctsi1p0pbaa87" path="res://time_logic.gd" id="5_3exxq"]
 [ext_resource type="Material" uid="uid://bgwexps04l20a" path="res://lineboil.tres" id="5_dg77c"]
+[ext_resource type="AudioStream" uid="uid://da7cc2u831fcr" path="res://sfx/apple bite.mp3" id="5_oosfy"]
 [ext_resource type="Texture2D" uid="uid://bcipbl11dpd27" path="res://assets/bg/sidebars.png" id="6_41lik"]
+[ext_resource type="AudioStream" uid="uid://ce17rqgb3te3v" path="res://sfx/attempt jamsong ashykento.wav" id="6_nf4f2"]
+[ext_resource type="AudioStream" uid="uid://dmrr6mwwilxn8" path="res://sfx/gulp (drink tea).wav" id="7_xkvoa"]
 [ext_resource type="Texture2D" uid="uid://cfb371pxm7wmm" path="res://assets/props/timer plate.png" id="8_ppx11"]
+[ext_resource type="AudioStream" uid="uid://chf6b0wsn60qp" path="res://sfx/thirsty.mp3" id="8_t5kpo"]
 [ext_resource type="Material" uid="uid://b4nkphxws6l05" path="res://fillboil.tres" id="8_w48qg"]
 [ext_resource type="Texture2D" uid="uid://cthpp2nwguyp5" path="res://assets/bg/bg/wall.png" id="9_phcyf"]
+[ext_resource type="AudioStream" uid="uid://by4ga5s5bx056" path="res://sfx/tummy rumble (hungry).wav" id="9_pw0td"]
 [ext_resource type="Texture2D" uid="uid://dmtc65yxl5fvu" path="res://assets/cat/catbod.jpg" id="9_yaehf"]
 [ext_resource type="Texture2D" uid="uid://8cfjhrmaneou" path="res://assets/cat/cathead.jpg" id="10_074og"]
 [ext_resource type="Texture2D" uid="uid://c1p2ui3ckmwyr" path="res://assets/bg/bg/floor.png" id="10_birbe"]
@@ -90,6 +95,7 @@
 [ext_resource type="Texture2D" uid="uid://cmv4vruvrn72x" path="res://assets/props/lightbulb/toggle 2.png" id="39_am8a1"]
 [ext_resource type="Texture2D" uid="uid://mdabgssnstpo" path="res://assets/artist/2 head/L eye/L eyeball.png" id="39_c2n8d"]
 [ext_resource type="Texture2D" uid="uid://c0k1wsvj5808e" path="res://assets/artist/3 R braid/R braid.png" id="39_wu3dr"]
+[ext_resource type="AudioStream" uid="uid://bjysxmxh2yl3o" path="res://sfx/watering can watering (continuous).wav" id="40_37eu1"]
 [ext_resource type="Texture2D" uid="uid://bkl3jgclg7wy0" path="res://assets/artist/4 apron/apron splat.png" id="40_cyx1q"]
 [ext_resource type="Texture2D" uid="uid://c1i1riovm0djg" path="res://assets/artist/2 head/L eye/L eyebrow.png" id="40_wy5fy"]
 [ext_resource type="Texture2D" uid="uid://bbdocgqeyjvnw" path="res://assets/artist/4 apron/apron.png" id="41_0dhbp"]
@@ -105,6 +111,7 @@
 [ext_resource type="Texture2D" uid="uid://mrde58m81onb" path="res://assets/artist/4 bandana/bandanafill.png" id="45_c2n8d"]
 [ext_resource type="Texture2D" uid="uid://ctxtld4gcqele" path="res://assets/artist/2 head/r eye/R eye.png" id="45_f1p13"]
 [ext_resource type="Texture2D" uid="uid://cwbdu5avvw24h" path="res://assets/artist/2 head/r eye/R eyebag.png" id="46_4obbf"]
+[ext_resource type="AudioStream" uid="uid://yalwdqc1b2le" path="res://sfx/tea refill.wav" id="47_0wkqm"]
 [ext_resource type="Texture2D" uid="uid://bfnnsyvyglgbm" path="res://assets/artist/2 head/r eye/R eyeball.png" id="47_ovcoh"]
 [ext_resource type="Texture2D" uid="uid://c5wek3qn28pey" path="res://assets/artist/2 head/r eye/R eyebrow.png" id="48_ppx11"]
 [ext_resource type="Texture2D" uid="uid://ds2vgau4hxb0j" path="res://assets/artist/2 head/r eye/R eyefill.png" id="49_1yv1y"]
@@ -112,7 +119,9 @@
 [ext_resource type="Script" uid="uid://bppv0l17y0q1g" path="res://mouth.gd" id="50_rqtf5"]
 [ext_resource type="Texture2D" uid="uid://dyrtapa5vfoad" path="res://assets/artist/2 head/mouth/crazymouth.png" id="51_pjuso"]
 [ext_resource type="Texture2D" uid="uid://be6gr4tu21of" path="res://assets/artist/2 head/mouth/mouth.png" id="53_swlj1"]
+[ext_resource type="AudioStream" uid="uid://b5ho66s8o3bfh" path="res://sfx/add apple.wav" id="53_ve5sr"]
 [ext_resource type="Texture2D" uid="uid://dqyeelo88dxtm" path="res://assets/artist/2 head/mouth/pensive mouth.png" id="54_yysqy"]
+[ext_resource type="AudioStream" uid="uid://ck0xq1w356v7d" path="res://sfx/fan whir.wav" id="60_5s44m"]
 [ext_resource type="Texture2D" uid="uid://bvok18cdap074" path="res://assets/artist/2 shirt/wiggly shirt fill.png" id="69_yysqy"]
 [ext_resource type="Texture2D" uid="uid://devxcml50b6gh" path="res://assets/artist/2 shirt/wiggly shirt.png" id="70_n5t1e"]
 [ext_resource type="Script" uid="uid://c8hm8aj0pu7rh" path="res://average_rotation.gd" id="78_23xmf"]
@@ -236,6 +245,27 @@ enviornment_stat = 1.0
 time_to_refocus = 1.0
 time_since_distraction = 6.47
 
+[node name="AppleBite" type="AudioStreamPlayer2D" parent="ArtistGameLogic"]
+position = Vector2(482, 500)
+stream = ExtResource("5_oosfy")
+
+[node name="AttemptJamsongAshykento" type="AudioStreamPlayer2D" parent="ArtistGameLogic"]
+position = Vector2(482, 500)
+stream = ExtResource("6_nf4f2")
+autoplay = true
+
+[node name="Gulp(drinkTea)" type="AudioStreamPlayer2D" parent="ArtistGameLogic"]
+position = Vector2(482, 500)
+stream = ExtResource("7_xkvoa")
+
+[node name="Thirsty" type="AudioStreamPlayer2D" parent="ArtistGameLogic"]
+position = Vector2(482, 500)
+stream = ExtResource("8_t5kpo")
+
+[node name="TummyRumble(hungry)" type="AudioStreamPlayer2D" parent="ArtistGameLogic"]
+position = Vector2(482, 500)
+stream = ExtResource("9_pw0td")
+
 [node name="CentreFrame" type="Node2D" parent="."]
 position = Vector2(960, 540)
 
@@ -326,7 +356,7 @@ color = Color(0, 1, 0, 1)
 [node name="PaintingTip" type="Sprite2D" parent="CentreFrame/Background/Easel/CanvasPlacehold/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
 modulate = Color(1, 0, 0, 1)
-position = Vector2(255.258, 71.508)
+position = Vector2(101.766, 85.1528)
 rotation = -0.638762
 texture = ExtResource("16_qwt6e")
 script = ExtResource("17_off2o")
@@ -412,7 +442,7 @@ show_behind_parent = true
 material = ExtResource("5_dg77c")
 position = Vector2(7, -30)
 rotation = -1.4344
-points = PackedVector2Array(9.4, 0, 18.7948, 0.313626, 28.1493, 1.23745, 37.3719, 3.05484, 46.2902, 6.02531, 54.6371, 10.3484, 62.0668, 16.1069, 68.2171, 23.2156, 72.8079, 31.4183, 75.7306, 40.3524, 77.0746, 49.6558, 77.0745, 59.0558, 76.012, 68.3956, 74.1211, 77.6034, 71.5313, 86.6396, 68.2616, 95.4526, 64.2671, 103.962, 59.523, 112.077, 54.1122, 119.763, 48.279, 127.134)
+points = PackedVector2Array(9.4, 0, 18.7947, 0.314572, 28.149, 1.24036, 37.3744, 3.04407, 46.3196, 5.93246, 54.7861, 10.0163, 62.5675, 15.2899, 69.4948, 21.6438, 75.4603, 28.9083, 80.4007, 36.9053, 84.2506, 45.4808, 86.8899, 54.5026, 88.1198, 63.8218, 87.6915, 73.212, 85.3977, 82.3279, 81.1983, 90.7377, 75.3032, 98.0594, 68.1346, 104.14, 60.1862, 109.158, 51.8915, 113.58)
 width = 51.0
 texture = ExtResource("15_23xmf")
 texture_mode = 2
@@ -433,8 +463,8 @@ midpoint = NodePath("Midpoint")
 [node name="FlowerTip" type="Node2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem"]
 show_behind_parent = true
 use_parent_material = true
-position = Vector2(59.523, 112.077)
-rotation = 2.09983
+position = Vector2(68.1346, 104.14)
+rotation = 2.43814
 
 [node name="PetalClusterFill" type="Sprite2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem/FlowerTip"]
 show_behind_parent = true
@@ -464,8 +494,8 @@ offset = Vector2(54.2349, -3.74451)
 [node name="Midpoint" type="Node2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem"]
 show_behind_parent = true
 use_parent_material = true
-position = Vector2(75.7306, 40.3524)
-rotation = 1.25463
+position = Vector2(80.4007, 36.9053)
+rotation = 1.0174
 
 [node name="Leaf" type="Sprite2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem/Midpoint"]
 use_parent_material = true
@@ -484,6 +514,10 @@ rot_speed = 2.0
 [node name="WateringCanLogic" type="Node2D" parent="CentreFrame/Background/WobbleWateringCan"]
 unique_name_in_owner = true
 script = ExtResource("26_rt5wr")
+
+[node name="WateringCanWatering(continuous)" type="AudioStreamPlayer2D" parent="CentreFrame/Background/WobbleWateringCan/WateringCanLogic"]
+position = Vector2(-1040, -73)
+stream = ExtResource("40_37eu1")
 
 [node name="Button" type="Button" parent="CentreFrame/Background/WobbleWateringCan/WateringCanLogic"]
 modulate = Color(1, 1, 1, 0)
@@ -557,6 +591,10 @@ unique_name_in_owner = true
 position = Vector2(-708, 208)
 script = ExtResource("32_asu84")
 
+[node name="TeaRefill" type="AudioStreamPlayer2D" parent="CentreFrame/Background/Foodtable/TeaLogic"]
+position = Vector2(230, -248)
+stream = ExtResource("47_0wkqm")
+
 [node name="MugFill" type="Sprite2D" parent="CentreFrame/Background/Foodtable/TeaLogic"]
 material = ExtResource("8_w48qg")
 position = Vector2(8, -55)
@@ -587,6 +625,10 @@ unique_name_in_owner = true
 position = Vector2(-559, 194)
 script = ExtResource("37_qwt6e")
 apple_count = 3
+
+[node name="AddApple" type="AudioStreamPlayer2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic"]
+position = Vector2(81, -234)
+stream = ExtResource("53_ve5sr")
 
 [node name="Plate" type="Sprite2D" parent="CentreFrame/Background/Foodtable/ApplePlateLogic"]
 position = Vector2(0.999939, -2)
@@ -709,6 +751,10 @@ offset_right = 598.0
 offset_bottom = 55.0
 toggle_mode = true
 
+[node name="FanWhir" type="AudioStreamPlayer2D" parent="CentreFrame/Background/FanLogic"]
+position = Vector2(-204, 441)
+stream = ExtResource("60_5s44m")
+
 [node name="LightBulbLogic" type="Node2D" parent="CentreFrame/Background"]
 unique_name_in_owner = true
 position = Vector2(712, -540)
@@ -820,7 +866,7 @@ position = Vector2(79, 32)
 texture = ExtResource("18_f6a44")
 
 [node name="LArm" type="Node2D" parent="Artist"]
-position = Vector2(-9.56024, -187.791)
+position = Vector2(-31.3845, -180.348)
 script = ExtResource("27_23xmf")
 rotation_multiplier = -1.0
 
@@ -837,7 +883,7 @@ rot_speed = 2.0
 position = Vector2(27, 0)
 rotation = -3.14159
 scale = Vector2(1, -1)
-points = PackedVector2Array(10.8531, 0.543107, 21.6653, 1.62916, 32.4087, 3.26163, 43.0534, 5.44665, 53.5676, 8.1918, 63.917, 11.5047, 74.0647, 15.3916, 83.9721, 19.8556, 93.5992, 24.8958, 102.906, 30.5061, 111.852, 36.6741, 120.402, 43.3815, 128.521, 50.6038, 136.182, 58.3109, 143.361, 66.4679, 150.044, 75.0369, 156.221, 83.9774, 161.889, 93.2484, 167.054, 102.809, 171.724, 112.621, 175.914, 122.648, 179.64, 132.856, 182.922, 143.215, 185.778, 153.699, 188.228, 164.286, 190.287, 174.956, 191.968, 185.692, 193.282, 196.479, 194.234, 207.304, 194.825, 218.154)
+points = PackedVector2Array(10.8531, 0.543107, 21.6645, 1.6378, 32.4054, 3.28612, 43.0476, 5.48355, 53.5642, 8.21926, 63.9311, 11.4769, 74.1271, 15.2353, 84.1346, 19.4702, 93.9396, 24.1551, 103.531, 29.2626, 112.901, 34.766, 122.043, 40.6399, 130.953, 46.8617, 139.624, 53.4114, 148.05, 60.2727, 156.224, 67.4331, 164.135, 74.8832, 171.768, 82.6172, 179.107, 90.6317, 186.128, 98.9252, 192.807, 107.497, 199.113, 116.347, 205.013, 125.472, 210.471, 134.869, 215.447, 144.529, 219.902, 154.441, 223.797, 164.585, 227.094, 174.94, 229.756, 185.476, 231.753, 196.157)
 default_color = Color(1, 1, 1, 0)
 script = ExtResource("2_h2yge")
 line_points = 30
@@ -854,8 +900,8 @@ otherLines = [NodePath("ArmFill"), NodePath("ArmLine")]
 arm_tip_index = 1
 
 [node name="ArmTip" type="Node2D" parent="Artist/LArm/IdleArmWiggle/LArm"]
-position = Vector2(194.234, 207.304)
-rotation = 1.48308
+position = Vector2(229.756, 185.476)
+rotation = 1.32329
 scale = Vector2(-1, 1)
 
 [node name="LHandfill" type="Sprite2D" parent="Artist/LArm/IdleArmWiggle/LArm/ArmTip"]
@@ -870,7 +916,7 @@ texture = ExtResource("21_uypp3")
 
 [node name="ArmFill" type="Line2D" parent="Artist/LArm/IdleArmWiggle/LArm"]
 material = ExtResource("8_w48qg")
-points = PackedVector2Array(10.8531, 0.543107, 21.6653, 1.62916, 32.4087, 3.26163, 43.0534, 5.44665, 53.5676, 8.1918, 63.917, 11.5047, 74.0647, 15.3916, 83.9721, 19.8556, 93.5992, 24.8958, 102.906, 30.5061, 111.852, 36.6741, 120.402, 43.3815, 128.521, 50.6038, 136.182, 58.3109, 143.361, 66.4679, 150.044, 75.0369, 156.221, 83.9774, 161.889, 93.2484, 167.054, 102.809, 171.724, 112.621, 175.914, 122.648, 179.64, 132.856, 182.922, 143.215, 185.778, 153.699, 188.228, 164.286, 190.287, 174.956, 191.968, 185.692, 193.282, 196.479, 194.234, 207.304, 194.825, 218.154)
+points = PackedVector2Array(10.8531, 0.543107, 21.6645, 1.6378, 32.4054, 3.28612, 43.0476, 5.48355, 53.5642, 8.21926, 63.9311, 11.4769, 74.1271, 15.2353, 84.1346, 19.4702, 93.9396, 24.1551, 103.531, 29.2626, 112.901, 34.766, 122.043, 40.6399, 130.953, 46.8617, 139.624, 53.4114, 148.05, 60.2727, 156.224, 67.4331, 164.135, 74.8832, 171.768, 82.6172, 179.107, 90.6317, 186.128, 98.9252, 192.807, 107.497, 199.113, 116.347, 205.013, 125.472, 210.471, 134.869, 215.447, 144.529, 219.902, 154.441, 223.797, 164.585, 227.094, 174.94, 229.756, 185.476, 231.753, 196.157)
 width = 195.0
 texture = ExtResource("21_rqtf5")
 texture_mode = 2
@@ -878,13 +924,13 @@ texture_mode = 2
 [node name="ArmLine" type="Line2D" parent="Artist/LArm/IdleArmWiggle/LArm"]
 material = ExtResource("5_dg77c")
 position = Vector2(1, 0)
-points = PackedVector2Array(10.8531, 0.543107, 21.6653, 1.62916, 32.4087, 3.26163, 43.0534, 5.44665, 53.5676, 8.1918, 63.917, 11.5047, 74.0647, 15.3916, 83.9721, 19.8556, 93.5992, 24.8958, 102.906, 30.5061, 111.852, 36.6741, 120.402, 43.3815, 128.521, 50.6038, 136.182, 58.3109, 143.361, 66.4679, 150.044, 75.0369, 156.221, 83.9774, 161.889, 93.2484, 167.054, 102.809, 171.724, 112.621, 175.914, 122.648, 179.64, 132.856, 182.922, 143.215, 185.778, 153.699, 188.228, 164.286, 190.287, 174.956, 191.968, 185.692, 193.282, 196.479, 194.234, 207.304, 194.825, 218.154)
+points = PackedVector2Array(10.8531, 0.543107, 21.6645, 1.6378, 32.4054, 3.28612, 43.0476, 5.48355, 53.5642, 8.21926, 63.9311, 11.4769, 74.1271, 15.2353, 84.1346, 19.4702, 93.9396, 24.1551, 103.531, 29.2626, 112.901, 34.766, 122.043, 40.6399, 130.953, 46.8617, 139.624, 53.4114, 148.05, 60.2727, 156.224, 67.4331, 164.135, 74.8832, 171.768, 82.6172, 179.107, 90.6317, 186.128, 98.9252, 192.807, 107.497, 199.113, 116.347, 205.013, 125.472, 210.471, 134.869, 215.447, 144.529, 219.902, 154.441, 223.797, 164.585, 227.094, 174.94, 229.756, 185.476, 231.753, 196.157)
 width = 195.0
 texture = ExtResource("22_1vm84")
 texture_mode = 2
 
 [node name="RArm" type="Node2D" parent="Artist"]
-position = Vector2(49.0286, -180.838)
+position = Vector2(27.1389, -187.832)
 rotation = 1.0472
 scale = Vector2(0.999998, 0.999998)
 script = ExtResource("27_23xmf")
@@ -901,7 +947,7 @@ rot_speed = 2.0
 
 [node name="RArm" type="Line2D" parent="Artist/RArm/IdleArmWiggle" node_paths=PackedStringArray("arm_tip", "otherLines")]
 position = Vector2(-23, -6)
-points = PackedVector2Array(10.8597, -0.389306, 21.6997, -1.15006, 32.5069, -2.28541, 43.265, -3.81789, 53.9518, -5.78651, 64.5372, -8.24273, 74.9809, -11.2453, 85.2307, -14.8545, 95.2227, -19.1257, 104.882, -24.1033, 114.127, -29.815, 122.87, -36.2676, 131.03, -43.4446, 138.532, -51.3062, 145.319, -59.7924, 151.357, -68.827, 156.638, -78.3246, 161.178, -88.1969, 165.025, -98.3599, 168.248, -108.738, 170.933, -119.268, 173.184, -129.899, 175.11, -140.593, 176.827, -151.323, 178.444, -162.069, 180.067, -172.814, 181.792, -183.543, 183.697, -194.241, 185.849, -204.892, 188.292, -215.481)
+points = PackedVector2Array(10.8597, -0.389306, 21.7027, -1.10529, 32.5242, -2.09588, 43.3213, -3.3235, 54.0915, -4.76783, 64.8307, -6.42728, 75.5314, -8.31931, 86.1812, -10.4795, 96.7611, -12.9595, 107.243, -15.8238, 117.59, -19.1452, 127.75, -22.9998, 137.659, -27.4607, 147.238, -32.5917, 156.396, -38.4407, 165.034, -45.0341, 173.048, -52.3726, 180.34, -60.4297, 186.821, -69.152, 192.424, -78.4631, 197.104, -88.2701, 200.85, -98.4709, 203.677, -108.963, 205.634, -119.652, 206.792, -130.457, 207.245, -141.314, 207.101, -152.18, 206.477, -163.029, 205.495, -173.851, 204.273, -184.649)
 default_color = Color(1, 1, 1, 0)
 script = ExtResource("2_h2yge")
 line_points = 30
@@ -918,8 +964,8 @@ otherLines = [NodePath("ArmFill"), NodePath("ArmLine"), NodePath("ArmSplat")]
 arm_tip_index = 0
 
 [node name="ArmTip" type="Node2D" parent="Artist/RArm/IdleArmWiggle/RArm"]
-position = Vector2(188.292, -215.481)
-rotation = -0.849873
+position = Vector2(204.273, -184.649)
+rotation = -1.50071
 
 [node name="Brushtip" type="Sprite2D" parent="Artist/RArm/IdleArmWiggle/RArm/ArmTip"]
 material = ExtResource("5_dg77c")
@@ -946,21 +992,21 @@ texture = ExtResource("25_4w656")
 
 [node name="ArmFill" type="Line2D" parent="Artist/RArm/IdleArmWiggle/RArm"]
 material = ExtResource("8_w48qg")
-points = PackedVector2Array(10.8597, -0.389306, 21.6997, -1.15006, 32.5069, -2.28541, 43.265, -3.81789, 53.9518, -5.78651, 64.5372, -8.24273, 74.9809, -11.2453, 85.2307, -14.8545, 95.2227, -19.1257, 104.882, -24.1033, 114.127, -29.815, 122.87, -36.2676, 131.03, -43.4446, 138.532, -51.3062, 145.319, -59.7924, 151.357, -68.827, 156.638, -78.3246, 161.178, -88.1969, 165.025, -98.3599, 168.248, -108.738, 170.933, -119.268, 173.184, -129.899, 175.11, -140.593, 176.827, -151.323, 178.444, -162.069, 180.067, -172.814, 181.792, -183.543, 183.697, -194.241, 185.849, -204.892, 188.292, -215.481)
+points = PackedVector2Array(10.8597, -0.389306, 21.7027, -1.10529, 32.5242, -2.09588, 43.3213, -3.3235, 54.0915, -4.76783, 64.8307, -6.42728, 75.5314, -8.31931, 86.1812, -10.4795, 96.7611, -12.9595, 107.243, -15.8238, 117.59, -19.1452, 127.75, -22.9998, 137.659, -27.4607, 147.238, -32.5917, 156.396, -38.4407, 165.034, -45.0341, 173.048, -52.3726, 180.34, -60.4297, 186.821, -69.152, 192.424, -78.4631, 197.104, -88.2701, 200.85, -98.4709, 203.677, -108.963, 205.634, -119.652, 206.792, -130.457, 207.245, -141.314, 207.101, -152.18, 206.477, -163.029, 205.495, -173.851, 204.273, -184.649)
 width = 198.0
 texture = ExtResource("30_cyx1q")
 texture_mode = 2
 
 [node name="ArmLine" type="Line2D" parent="Artist/RArm/IdleArmWiggle/RArm"]
 position = Vector2(1, 0)
-points = PackedVector2Array(10.8597, -0.389306, 21.6997, -1.15006, 32.5069, -2.28541, 43.265, -3.81789, 53.9518, -5.78651, 64.5372, -8.24273, 74.9809, -11.2453, 85.2307, -14.8545, 95.2227, -19.1257, 104.882, -24.1033, 114.127, -29.815, 122.87, -36.2676, 131.03, -43.4446, 138.532, -51.3062, 145.319, -59.7924, 151.357, -68.827, 156.638, -78.3246, 161.178, -88.1969, 165.025, -98.3599, 168.248, -108.738, 170.933, -119.268, 173.184, -129.899, 175.11, -140.593, 176.827, -151.323, 178.444, -162.069, 180.067, -172.814, 181.792, -183.543, 183.697, -194.241, 185.849, -204.892, 188.292, -215.481)
+points = PackedVector2Array(10.8597, -0.389306, 21.7027, -1.10529, 32.5242, -2.09588, 43.3213, -3.3235, 54.0915, -4.76783, 64.8307, -6.42728, 75.5314, -8.31931, 86.1812, -10.4795, 96.7611, -12.9595, 107.243, -15.8238, 117.59, -19.1452, 127.75, -22.9998, 137.659, -27.4607, 147.238, -32.5917, 156.396, -38.4407, 165.034, -45.0341, 173.048, -52.3726, 180.34, -60.4297, 186.821, -69.152, 192.424, -78.4631, 197.104, -88.2701, 200.85, -98.4709, 203.677, -108.963, 205.634, -119.652, 206.792, -130.457, 207.245, -141.314, 207.101, -152.18, 206.477, -163.029, 205.495, -173.851, 204.273, -184.649)
 width = 198.0
 texture = ExtResource("32_jx0wj")
 texture_mode = 2
 
 [node name="ArmSplat" type="Line2D" parent="Artist/RArm/IdleArmWiggle/RArm"]
 position = Vector2(1, 0)
-points = PackedVector2Array(10.8597, -0.389306, 21.6997, -1.15006, 32.5069, -2.28541, 43.265, -3.81789, 53.9518, -5.78651, 64.5372, -8.24273, 74.9809, -11.2453, 85.2307, -14.8545, 95.2227, -19.1257, 104.882, -24.1033, 114.127, -29.815, 122.87, -36.2676, 131.03, -43.4446, 138.532, -51.3062, 145.319, -59.7924, 151.357, -68.827, 156.638, -78.3246, 161.178, -88.1969, 165.025, -98.3599, 168.248, -108.738, 170.933, -119.268, 173.184, -129.899, 175.11, -140.593, 176.827, -151.323, 178.444, -162.069, 180.067, -172.814, 181.792, -183.543, 183.697, -194.241, 185.849, -204.892, 188.292, -215.481)
+points = PackedVector2Array(10.8597, -0.389306, 21.7027, -1.10529, 32.5242, -2.09588, 43.3213, -3.3235, 54.0915, -4.76783, 64.8307, -6.42728, 75.5314, -8.31931, 86.1812, -10.4795, 96.7611, -12.9595, 107.243, -15.8238, 117.59, -19.1452, 127.75, -22.9998, 137.659, -27.4607, 147.238, -32.5917, 156.396, -38.4407, 165.034, -45.0341, 173.048, -52.3726, 180.34, -60.4297, 186.821, -69.152, 192.424, -78.4631, 197.104, -88.2701, 200.85, -98.4709, 203.677, -108.963, 205.634, -119.652, 206.792, -130.457, 207.245, -141.314, 207.101, -152.18, 206.477, -163.029, 205.495, -173.851, 204.273, -184.649)
 width = 198.0
 texture = ExtResource("31_0dhbp")
 texture_mode = 2
@@ -979,7 +1025,7 @@ position = Vector2(79, 54)
 texture = ExtResource("30_ruth0")
 
 [node name="Head" type="Node2D" parent="Artist"]
-position = Vector2(15.0319, -242.273)
+position = Vector2(-20.7607, -239.171)
 script = ExtResource("41_pjuso")
 stiffness = 30.0
 enthusiasm = 0.01
@@ -1238,7 +1284,7 @@ update_scale = false
 [node name="BodyWiggle" type="Line2D" parent="Artist/Shirt-Body" node_paths=PackedStringArray("arm_tip", "otherLines")]
 position = Vector2(5, 33)
 rotation = -1.57079
-points = PackedVector2Array(13.1, 0.00162337, 26.2, 0.0285976, 39.2996, 0.12355, 52.3978, 0.341327, 65.4917, 0.740347, 78.5765, 1.37317, 91.6452, 2.2776, 104.691, 3.46973, 117.708, 4.93992, 130.696, 6.65253, 143.658, 8.54959, 156.603, 10.5586, 169.542, 12.6007, 182.489, 14.5986, 195.453, 16.485, 208.438, 18.2115, 221.447, 19.7553, 234.475, 21.1236, 247.518, 22.3534, 260.567, 23.5066)
+points = PackedVector2Array(13.0999, 0.0441508, 26.1993, 0.174741, 39.297, 0.420862, 52.3917, 0.791813, 65.4829, 1.27342, 78.5711, 1.82782, 91.6588, 2.39676, 104.749, 2.90805, 117.843, 3.28433, 130.942, 3.45296, 144.042, 3.35587, 157.136, 2.95553, 170.216, 2.2377, 183.276, 1.21344, 196.312, -0.0820178, 209.324, -1.59387, 222.318, -3.25573, 235.302, -5.00038, 248.281, -6.77219, 261.262, -8.5398)
 width = 1.0
 script = ExtResource("2_h2yge")
 line_length = 262.0
@@ -1255,21 +1301,21 @@ arm_tip_index = 3
 
 [node name="ShirtFill" type="Line2D" parent="Artist/Shirt-Body/BodyWiggle"]
 material = ExtResource("8_w48qg")
-points = PackedVector2Array(13.1, 0.00162337, 26.2, 0.0285976, 39.2996, 0.12355, 52.3978, 0.341327, 65.4917, 0.740347, 78.5765, 1.37317, 91.6452, 2.2776, 104.691, 3.46973, 117.708, 4.93992, 130.696, 6.65253, 143.658, 8.54959, 156.603, 10.5586, 169.542, 12.6007, 182.489, 14.5986, 195.453, 16.485, 208.438, 18.2115, 221.447, 19.7553, 234.475, 21.1236, 247.518, 22.3534, 260.567, 23.5066)
+points = PackedVector2Array(13.0999, 0.0441508, 26.1993, 0.174741, 39.297, 0.420862, 52.3917, 0.791813, 65.4829, 1.27342, 78.5711, 1.82782, 91.6588, 2.39676, 104.749, 2.90805, 117.843, 3.28433, 130.942, 3.45296, 144.042, 3.35587, 157.136, 2.95553, 170.216, 2.2377, 183.276, 1.21344, 196.312, -0.0820178, 209.324, -1.59387, 222.318, -3.25573, 235.302, -5.00038, 248.281, -6.77219, 261.262, -8.5398)
 width = 202.0
 texture = ExtResource("69_yysqy")
 texture_mode = 2
 
 [node name="ShirtLines" type="Line2D" parent="Artist/Shirt-Body/BodyWiggle"]
 material = ExtResource("5_dg77c")
-points = PackedVector2Array(13.1, 0.00162337, 26.2, 0.0285976, 39.2996, 0.12355, 52.3978, 0.341327, 65.4917, 0.740347, 78.5765, 1.37317, 91.6452, 2.2776, 104.691, 3.46973, 117.708, 4.93992, 130.696, 6.65253, 143.658, 8.54959, 156.603, 10.5586, 169.542, 12.6007, 182.489, 14.5986, 195.453, 16.485, 208.438, 18.2115, 221.447, 19.7553, 234.475, 21.1236, 247.518, 22.3534, 260.567, 23.5066)
+points = PackedVector2Array(13.0999, 0.0441508, 26.1993, 0.174741, 39.297, 0.420862, 52.3917, 0.791813, 65.4829, 1.27342, 78.5711, 1.82782, 91.6588, 2.39676, 104.749, 2.90805, 117.843, 3.28433, 130.942, 3.45296, 144.042, 3.35587, 157.136, 2.95553, 170.216, 2.2377, 183.276, 1.21344, 196.312, -0.0820178, 209.324, -1.59387, 222.318, -3.25573, 235.302, -5.00038, 248.281, -6.77219, 261.262, -8.5398)
 width = 202.0
 texture = ExtResource("70_n5t1e")
 texture_mode = 2
 
 [node name="Shoulders" type="Node2D" parent="Artist/Shirt-Body/BodyWiggle"]
-position = Vector2(221.447, 19.7553)
-rotation = 0.118123
+position = Vector2(222.318, -3.25573)
+rotation = -0.127202
 
 [node name="MoveLArm" type="RemoteTransform2D" parent="Artist/Shirt-Body/BodyWiggle/Shoulders"]
 position = Vector2(-4.69577, -34.0005)
@@ -1311,7 +1357,7 @@ position = Vector2(0.299957, -0.000488281)
 rotation = 1.57079
 
 [node name="LBraid" type="Node2D" parent="Artist"]
-position = Vector2(-45.9681, -268.273)
+position = Vector2(-81.7607, -265.171)
 
 [node name="IdleBraidWiggle" type="Node2D" parent="Artist/LBraid"]
 script = ExtResource("13_birbe")
@@ -1337,7 +1383,7 @@ position = Vector2(151, 300)
 texture = ExtResource("35_ntx8l")
 
 [node name="RBraid" type="Node2D" parent="Artist"]
-position = Vector2(76.0319, -273.273)
+position = Vector2(40.2393, -270.171)
 
 [node name="IdleBraidWiggle" type="Node2D" parent="Artist/RBraid"]
 script = ExtResource("13_birbe")
@@ -1363,9 +1409,9 @@ position = Vector2(29, 305)
 texture = ExtResource("38_1vm84")
 
 [node name="Apron" type="Node2D" parent="Artist" node_paths=PackedStringArray("first", "second")]
-position = Vector2(20.366, -202.366)
-rotation = 0.0590615
-scale = Vector2(0.999831, 0.999831)
+position = Vector2(-5.89404, -201.754)
+rotation = -0.0636012
+scale = Vector2(0.99983, 0.99983)
 script = ExtResource("78_23xmf")
 first = NodePath("../Shirt-Body/BodyWiggle/Shoulders/ShouldersUpright")
 second = NodePath("../Shirt-Body")
@@ -1387,9 +1433,9 @@ position = Vector2(80, 235)
 texture = ExtResource("40_cyx1q")
 
 [node name="Bandana" type="Node2D" parent="Artist" node_paths=PackedStringArray("first", "second")]
-position = Vector2(17.7579, -222.816)
-rotation = 0.0354138
-scale = Vector2(0.999834, 0.999834)
+position = Vector2(-13.3907, -220.958)
+rotation = -0.0381319
+scale = Vector2(0.999828, 0.999828)
 script = ExtResource("78_23xmf")
 first = NodePath("../Head")
 second = NodePath("../Shirt-Body/BodyWiggle/Shoulders/ShouldersUpright")
@@ -1411,7 +1457,7 @@ position = Vector2(80, 248)
 texture = ExtResource("43_kkkcx")
 
 [node name="ThoughtPalete" type="Node2D" parent="Artist"]
-position = Vector2(15.0319, -280.273)
+position = Vector2(-20.7607, -277.171)
 script = ExtResource("13_birbe")
 rot_wobble = 0.1
 

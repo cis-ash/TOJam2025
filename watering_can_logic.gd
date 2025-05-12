@@ -24,4 +24,5 @@ func update_emitters_and_flower():
 	drop_2.emitting = watering
 	drop_3.emitting = watering
 	flower_logic.being_watered = watering
+	$"WateringCanWatering(continuous)".playing = watering
 	pass

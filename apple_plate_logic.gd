@@ -33,6 +33,7 @@ func _on_refill_button_pressed() -> void:
 	apple_count = clamp(apple_count, 0, 3)
 	bop_plate()
 	%ArtistGameLogic.distract()
+	$AddApple.play(0.0)
 	pass # Replace with function body.
 
 func bop_plate():
