@@ -1,0 +1,53 @@
+[gd_scene load_steps=10 format=3 uid="uid://do0q2qqqph23x"]
+
+[ext_resource type="Texture2D" uid="uid://b1wj5pwfia0kh" path="res://assets/menu/bg texture.png" id="2_iqepy"]
+[ext_resource type="Texture2D" uid="uid://drglbnar3xwgf" path="res://assets/menu/paint splot.png" id="3_h1wq0"]
+[ext_resource type="Texture2D" uid="uid://v0bmg1nydy2c" path="res://assets/menu/calendar.png" id="4_dwrpx"]
+[ext_resource type="Texture2D" uid="uid://cp4new1pvbryw" path="res://assets/menu/canvas.png" id="5_g7jxm"]
+[ext_resource type="Texture2D" uid="uid://dfdfmx7jqhxj0" path="res://assets/menu/play.png" id="6_jspdm"]
+[ext_resource type="Texture2D" uid="uid://tjofkytlbkqi" path="res://assets/menu/artist.png" id="7_oxnod"]
+[ext_resource type="Texture2D" uid="uid://biny2md3h87v8" path="res://assets/menu/eyes.png" id="8_gd0jp"]
+[ext_resource type="Texture2D" uid="uid://cqlej5cuync8a" path="res://assets/menu/eyeballs.png" id="9_4ndjb"]
+[ext_resource type="Script" uid="uid://cff17b8q8juxw" path="res://eyes.gd" id="9_iqepy"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="BgTexture" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_iqepy")
+
+[node name="PaintSplot" type="Sprite2D" parent="."]
+position = Vector2(1327, 592)
+texture = ExtResource("3_h1wq0")
+
+[node name="Calendar" type="Sprite2D" parent="."]
+position = Vector2(1167, 287)
+texture = ExtResource("4_dwrpx")
+
+[node name="Canvas" type="Sprite2D" parent="."]
+position = Vector2(1638, 600)
+texture = ExtResource("5_g7jxm")
+
+[node name="Play" type="Sprite2D" parent="Canvas"]
+position = Vector2(11, -127)
+texture = ExtResource("6_jspdm")
+
+[node name="Artist" type="Sprite2D" parent="."]
+position = Vector2(1354, 668)
+texture = ExtResource("7_oxnod")
+
+[node name="Eyes" type="Sprite2D" parent="Artist"]
+position = Vector2(74, -273)
+texture = ExtResource("8_gd0jp")
+
+[node name="EyeballParent" type="Node2D" parent="Artist/Eyes"]
+position = Vector2(3, -1)
+rotation = -0.394122
+script = ExtResource("9_iqepy")
+height = 7.0
+mult = 0.003
+
+[node name="Eyeballs" type="Sprite2D" parent="Artist/Eyes/EyeballParent"]
+position = Vector2(-9.09398, -6.23452)
+rotation = 0.394122
+texture = ExtResource("9_4ndjb")
