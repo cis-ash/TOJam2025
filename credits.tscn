@@ -1,0 +1,148 @@
+[gd_scene load_steps=18 format=3 uid="uid://cw07tyi8jbptg"]
+
+[ext_resource type="Texture2D" uid="uid://bmr2ftetlc33f" path="res://assets/credits/credit layout.jpg" id="1_3w3uj"]
+[ext_resource type="Material" uid="uid://olecsuqs084s" path="res://fillboil_credits.tres" id="2_rle8t"]
+[ext_resource type="Texture2D" uid="uid://b06glm600n48i" path="res://assets/credits/ashy/ashy colour.png" id="3_xcmwb"]
+[ext_resource type="Material" uid="uid://c1urc7a6n87ov" path="res://lineboil_credits.tres" id="4_fa2y2"]
+[ext_resource type="Texture2D" uid="uid://bri8qirm0kx4i" path="res://assets/credits/ashy/ashy credits.png" id="5_hh5ci"]
+[ext_resource type="Script" uid="uid://d368y5pglr3m6" path="res://wibbler.gd" id="6_3wb5j"]
+[ext_resource type="Texture2D" uid="uid://bytulois5ql45" path="res://assets/credits/ashy/ashy eyeballs.png" id="7_e03yg"]
+[ext_resource type="Script" uid="uid://cff17b8q8juxw" path="res://eyes.gd" id="8_rle8t"]
+[ext_resource type="Texture2D" uid="uid://drppyxpu4h5hv" path="res://assets/credits/ashy/ashy lineart.png" id="8_yxhg5"]
+[ext_resource type="Texture2D" uid="uid://560x32nxawsn" path="res://assets/credits/june/june colour.png" id="9_12gt1"]
+[ext_resource type="Texture2D" uid="uid://dfrjfoxi46ro1" path="res://assets/credits/june/june credits.png" id="10_g3ady"]
+[ext_resource type="Texture2D" uid="uid://dtddbih7fy4rq" path="res://assets/credits/june/june eyeballs.png" id="11_gq1oh"]
+[ext_resource type="Texture2D" uid="uid://cimrhytmauujc" path="res://assets/credits/june/june lineart.png" id="12_lbcn2"]
+[ext_resource type="Texture2D" uid="uid://bs3e6pb6oegh1" path="res://assets/credits/kento/kento colour.png" id="13_iu8rb"]
+[ext_resource type="Texture2D" uid="uid://ut0tsusff8mb" path="res://assets/credits/kento/kento credits.png" id="14_jqnn0"]
+[ext_resource type="Texture2D" uid="uid://dkba26ab5gfh0" path="res://assets/credits/kento/kento eyeballs.png" id="15_pjqfb"]
+[ext_resource type="Texture2D" uid="uid://dni21q0bvqwn4" path="res://assets/credits/kento/kento lineart.png" id="16_43rh8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CreditLayout" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("1_3w3uj")
+
+[node name="Ashy" type="Node2D" parent="."]
+position = Vector2(501, 1080)
+script = ExtResource("6_3wb5j")
+scale_speed = 0.5
+pos_wobble = Vector2(10, 0)
+rot_wobble = 0.0
+rot_speed = 0.0
+
+[node name="AshyColour" type="Sprite2D" parent="Ashy"]
+material = ExtResource("2_rle8t")
+position = Vector2(-128, -375)
+texture = ExtResource("3_xcmwb")
+
+[node name="AshyCredits" type="Sprite2D" parent="Ashy"]
+material = ExtResource("4_fa2y2")
+position = Vector2(-41, -494)
+texture = ExtResource("5_hh5ci")
+offset = Vector2(0, -342)
+script = ExtResource("6_3wb5j")
+pos_wobble = Vector2(5, 5)
+pos_speed = 1.0
+rot_wobble = 0.5
+
+[node name="AshyLineart" type="Sprite2D" parent="Ashy"]
+material = ExtResource("4_fa2y2")
+position = Vector2(-93, -361)
+texture = ExtResource("8_yxhg5")
+
+[node name="EyeballParent" type="Node2D" parent="Ashy"]
+position = Vector2(-49, -507)
+rotation = 0.102758
+script = ExtResource("8_rle8t")
+width = 30.0
+height = 30.0
+mult = 0.002
+
+[node name="Eyeballs" type="Sprite2D" parent="Ashy/EyeballParent"]
+material = ExtResource("4_fa2y2")
+position = Vector2(21.2673, -21.159)
+rotation = -0.102758
+texture = ExtResource("7_e03yg")
+
+[node name="Juneau" type="Node2D" parent="."]
+position = Vector2(995, 1080)
+script = ExtResource("6_3wb5j")
+scale_speed = 0.5
+pos_wobble = Vector2(10, 0)
+rot_wobble = 0.0
+rot_speed = 0.0
+
+[node name="JuneColour" type="Sprite2D" parent="Juneau"]
+material = ExtResource("2_rle8t")
+position = Vector2(-3, -339)
+texture = ExtResource("9_12gt1")
+
+[node name="JuneCredits" type="Sprite2D" parent="Juneau"]
+material = ExtResource("4_fa2y2")
+position = Vector2(-26, -505)
+texture = ExtResource("10_g3ady")
+offset = Vector2(41, -353)
+script = ExtResource("6_3wb5j")
+pos_wobble = Vector2(5, 5)
+pos_speed = 1.0
+rot_wobble = 0.5
+
+[node name="JuneLineart" type="Sprite2D" parent="Juneau"]
+material = ExtResource("4_fa2y2")
+position = Vector2(10, -358)
+texture = ExtResource("12_lbcn2")
+
+[node name="EyeballParent" type="Node2D" parent="Juneau"]
+position = Vector2(-32, -524)
+script = ExtResource("8_rle8t")
+height = 10.0
+mult = 0.002
+
+[node name="Eyeballs" type="Sprite2D" parent="Juneau/EyeballParent"]
+material = ExtResource("4_fa2y2")
+position = Vector2(10.9937, -8.35372)
+texture = ExtResource("11_gq1oh")
+
+[node name="Kento" type="Node2D" parent="."]
+position = Vector2(1501, 1080)
+script = ExtResource("6_3wb5j")
+scale_speed = 0.5
+pos_wobble = Vector2(10, 0)
+rot_wobble = 0.0
+rot_speed = 0.0
+
+[node name="KentoColour" type="Sprite2D" parent="Kento"]
+material = ExtResource("2_rle8t")
+position = Vector2(-3, -330)
+texture = ExtResource("13_iu8rb")
+
+[node name="KentoCredits" type="Sprite2D" parent="Kento"]
+material = ExtResource("4_fa2y2")
+position = Vector2(-58, -435)
+texture = ExtResource("14_jqnn0")
+offset = Vector2(49, -334)
+script = ExtResource("6_3wb5j")
+pos_wobble = Vector2(5, 5)
+pos_speed = 1.0
+rot_wobble = 0.5
+
+[node name="KentoLineart" type="Sprite2D" parent="Kento"]
+material = ExtResource("4_fa2y2")
+position = Vector2(29, -327)
+texture = ExtResource("16_43rh8")
+
+[node name="EyeballParent" type="Node2D" parent="Kento"]
+position = Vector2(-43, -454)
+rotation = 0.34685
+script = ExtResource("8_rle8t")
+height = 5.0
+mult = 0.002
+
+[node name="Eyeballs" type="Sprite2D" parent="Kento/EyeballParent"]
+material = ExtResource("4_fa2y2")
+position = Vector2(-5.5055, -4.80683)
+rotation = -0.34685
+texture = ExtResource("15_pjqfb")
