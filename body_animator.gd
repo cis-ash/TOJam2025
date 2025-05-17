@@ -58,6 +58,7 @@ var leg_spd : float = 0.0
 @export var shivering = false
 @onready var start_pos : Vector2 = global_position
 @onready var body_wiggle: WobblyLine = $"Shirt-Body/BodyWiggle"
+@onready var teeth_chatter: AudioStreamPlayer2D = $Head/TeethChatter
 
 func _process(delta: float) -> void:
 	var shiver_offset = Vector2.ZERO
@@ -67,6 +68,8 @@ func _process(delta: float) -> void:
 	
 	global_position = start_pos + shiver_offset
 	time += delta
+	
+	teeth_chatter.volume_linear = lerp(teeth_chatter.volume_linear, 1.0 if shivering else 0.0, delta * 5.0)
 	
 	# breathing
 	breathing = sin(time * breathing_speed * TAU)

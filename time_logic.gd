@@ -9,6 +9,7 @@ class_name TimeLogic
 @export var night_time : bool = false
 
 @onready var day_night_mult: Sprite2D = $DayNightMult
+@onready var nighttime_ambient: AudioStreamPlayer2D = $NighttimeAmbient
 
 
 @export var smoothstep_width : float = 0.1
@@ -22,12 +23,14 @@ func _process(delta: float) -> void:
 	#else:
 		#time = 0.0
 	night_time = not (wrapf(time, 0.0, 1.0) > 0.75 or  wrapf(time, 0.0, 1.0) < 0.25)
-	update_visuals()
+	update_visuals(delta)
 	pass
 
 
-func update_visuals():
+func update_visuals(delta : float):
 	timer_plate.rotation = TAU * time
 	var day_shifted : float = wrapf(time - 0.0, 0.0, 1.0)
-	day_night_mult.material.set_shader_parameter("day", smoothstep(0.25 - smoothstep_width, 0.25 + smoothstep_width, day_shifted) * (1.0 - smoothstep(0.75 - smoothstep_width, 0.75 + smoothstep_width, day_shifted)));
+	var night_value = smoothstep(0.25 - smoothstep_width, 0.25 + smoothstep_width, day_shifted) * (1.0 - smoothstep(0.75 - smoothstep_width, 0.75 + smoothstep_width, day_shifted))
+	day_night_mult.material.set_shader_parameter("day", night_value);
+	nighttime_ambient.volume_linear = night_value
 	pass
