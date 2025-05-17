@@ -48,6 +48,6 @@ height = 7.0
 mult = 0.003
 
 [node name="Eyeballs" type="Sprite2D" parent="Artist/Eyes/EyeballParent"]
-position = Vector2(-9.09398, -6.23452)
+position = Vector2(-14.0152, -4.99377)
 rotation = 0.394122
 texture = ExtResource("9_4ndjb")

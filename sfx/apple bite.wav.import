@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cyk8m4ua2k5uc"
+path="res://.godot/imported/apple bite.wav-bab5a4e149c9385597aab3a106d774c9.sample"
+
+[deps]
+
+source_file="res://sfx/apple bite.wav"
+dest_files=["res://.godot/imported/apple bite.wav-bab5a4e149c9385597aab3a106d774c9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

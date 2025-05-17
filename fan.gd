@@ -18,12 +18,21 @@ func _process(delta: float) -> void:
 			speed = 0.0
 	
 	spinny.rotate(speed * delta)
+	fanbience.volume_linear = lerp(fanbience.volume_linear, (1.0 if spinning else 0.0), delta * 5.0)
 	pass
+
+@onready var fan_off: AudioStreamPlayer2D = $FanOff
+@onready var fan_on: AudioStreamPlayer2D = $FanOn
+@onready var fanbience: AudioStreamPlayer2D = $Fanbience
 
 
 func _on_toggle_fan_toggled(toggled_on: bool) -> void:
 	spinning = !spinning
 	toggle.scale_speed -= 50.0
 	%ArtistGameLogic.distract()
-	$FanWhir.playing = spinning
+	#$FanWhir.playing = spinning
+	if toggled_on:
+		fan_on.play()
+	else:
+		fan_off.play()
 	pass # Replace with function body.

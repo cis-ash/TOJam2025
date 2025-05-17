@@ -54,7 +54,7 @@ position = Vector2(-93, -361)
 texture = ExtResource("8_yxhg5")
 
 [node name="EyeballParent" type="Node2D" parent="Ashy"]
-position = Vector2(-49, -507)
+position = Vector2(-49, -513)
 rotation = 0.102758
 script = ExtResource("8_rle8t")
 width = 30.0
@@ -63,7 +63,7 @@ mult = 0.002
 
 [node name="Eyeballs" type="Sprite2D" parent="Ashy/EyeballParent"]
 material = ExtResource("4_fa2y2")
-position = Vector2(21.2673, -21.159)
+position = Vector2(29.6674, -4.45486)
 rotation = -0.102758
 texture = ExtResource("7_e03yg")
 
@@ -96,14 +96,14 @@ position = Vector2(10, -358)
 texture = ExtResource("12_lbcn2")
 
 [node name="EyeballParent" type="Node2D" parent="Juneau"]
-position = Vector2(-32, -524)
+position = Vector2(-32, -530)
 script = ExtResource("8_rle8t")
 height = 10.0
 mult = 0.002
 
 [node name="Eyeballs" type="Sprite2D" parent="Juneau/EyeballParent"]
 material = ExtResource("4_fa2y2")
-position = Vector2(10.9937, -8.35372)
+position = Vector2(13.2396, -0.440046)
 texture = ExtResource("11_gq1oh")
 
 [node name="Kento" type="Node2D" parent="."]
@@ -135,7 +135,7 @@ position = Vector2(29, -327)
 texture = ExtResource("16_43rh8")
 
 [node name="EyeballParent" type="Node2D" parent="Kento"]
-position = Vector2(-43, -454)
+position = Vector2(-43, -460)
 rotation = 0.34685
 script = ExtResource("8_rle8t")
 height = 5.0
@@ -143,6 +143,6 @@ mult = 0.002
 
 [node name="Eyeballs" type="Sprite2D" parent="Kento/EyeballParent"]
 material = ExtResource("4_fa2y2")
-position = Vector2(-5.5055, -4.80683)
+position = Vector2(-7.56138, -0.232719)
 rotation = -0.34685
 texture = ExtResource("15_pjqfb")

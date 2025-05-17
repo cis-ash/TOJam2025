@@ -13,6 +13,9 @@ class_name TimeLogic
 
 @export var smoothstep_width : float = 0.1
 
+func _ready() -> void:
+	time = 0.0
+
 func _process(delta: float) -> void:
 	if (ticking):
 		time += delta / seconds_in_a_day

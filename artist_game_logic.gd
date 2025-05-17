@@ -42,6 +42,7 @@ func _ready() -> void:
 	snack_and_sip()
 	randomize_temperature()
 	time_logic.ticking = true
+	$AttemptJamsongAshykento.play()
 	pass
 
 func snack_and_sip():
