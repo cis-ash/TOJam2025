@@ -46,7 +46,6 @@ func _ready() -> void:
 	snack_and_sip()
 	randomize_temperature()
 	hide_tutorial()
-	$AttemptJamsongAshykento.play()
 	$"../CentreFrame/Tutorial".visible = true
 	painting_progress = 0.0
 	painting_tip.visible = false
@@ -59,6 +58,8 @@ func hide_tutorial():
 	time_logic.ticking = true
 	playing = true
 	painting_tip.visible = true
+	$AttemptJamsongAshykento.play()
+
 
 func end_game(): 
 	%TimeLogic.ticking = false

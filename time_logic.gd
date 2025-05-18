@@ -9,7 +9,7 @@ class_name TimeLogic
 @export var night_time : bool = false
 
 @onready var day_night_mult: Sprite2D = $DayNightMult
-@onready var nighttime_ambient: AudioStreamPlayer2D = $NighttimeAmbient
+@onready var nighttime_ambient: AudioStreamPlayer = $NighttimeAmbient
 
 
 @export var smoothstep_width : float = 0.1
