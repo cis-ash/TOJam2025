@@ -53,7 +53,7 @@ animations = [{
 script = ExtResource("1_yxhg5")
 
 [node name="Credits" type="Node2D" parent="."]
-position = Vector2(2.00003, 420)
+position = Vector2(3.05176e-05, 420)
 rotation = 1.57079
 scale = Vector2(1.41441, 1.41441)
 
@@ -63,6 +63,7 @@ sprite_frames = SubResource("SpriteFrames_jqnn0")
 metadata/_edit_lock_ = true
 
 [node name="CreditsButton" type="Button" parent="Credits"]
+modulate = Color(1, 1, 1, 0)
 offset_left = -269.0
 offset_top = -110.0
 offset_right = 228.0
@@ -76,7 +77,8 @@ scale_wobble = Vector2(0.2, 0.2)
 scale_speed = 2.0
 pos_speed = 1.0
 rot_wobble = 0.5
-rot_speed = 2.0
+rot_speed = 4.0
+use_def_rot = true
 
 [node name="Label" type="Label" parent="Credits/Wiggle"]
 modulate = Color(0, 0, 0, 1)
@@ -152,7 +154,7 @@ mult = 0.002
 
 [node name="Eyeballs" type="Sprite2D" parent="AshContainer/Ashy/EyeballParent"]
 material = ExtResource("4_fa2y2")
-position = Vector2(-24.4909, -17.3261)
+position = Vector2(3.49309, -22.6321)
 rotation = -0.102758
 texture = ExtResource("7_e03yg")
 
@@ -195,7 +197,7 @@ mult = 0.002
 
 [node name="Eyeballs" type="Sprite2D" parent="JuneContainer/Juneau/EyeballParent"]
 material = ExtResource("4_fa2y2")
-position = Vector2(-17.7798, -4.57924)
+position = Vector2(-15.2387, -6.47651)
 texture = ExtResource("11_gq1oh")
 
 [node name="KentoContainer" type="Node2D" parent="."]
@@ -238,7 +240,7 @@ mult = 0.002
 
 [node name="Eyeballs" type="Sprite2D" parent="KentoContainer/Kento/EyeballParent"]
 material = ExtResource("4_fa2y2")
-position = Vector2(-19.981, -0.217731)
+position = Vector2(-19.9229, -0.438626)
 rotation = -0.34685
 texture = ExtResource("15_pjqfb")
 

@@ -21,6 +21,7 @@ func _ready() -> void:
 
 @onready var l_eye: Eye = $Head/IdleHeadMotion/LEye
 @onready var r_eye: Eye = $Head/IdleHeadMotion/REye
+@onready var mouth: Mouth = $Head/IdleHeadMotion/Mouth
 
 var tiredness : float = 0.0
 
@@ -109,12 +110,23 @@ func _process(delta: float) -> void:
 	l_arm.line_length = Interpolator.good_lerp(l_arm.line_length, l_target_length, 0.01, delta)
 	l_arm.total_bend = Interpolator.good_lerp(l_arm.total_bend, l_target_bend, 0.005, delta)
 	
+	var concentration : float = 0.0
 	if not distracted:
-		drawing_speed += delta / 5.0
-		drawing_speed = clamp(drawing_speed, 0.0, 4.0)
+		drawing_speed += delta / 9.0
+		var _max_drawing_speed : float = 5.0
+		drawing_speed = clamp(drawing_speed, 0.0, _max_drawing_speed)
+		concentration = pow(drawing_speed, 1.5) / pow(_max_drawing_speed, 1.5)
+		l_eye.look_at_global($"../CentreFrame/Background/Easel/CanvasPlacehold".global_position)
+		r_eye.look_at_global($"../CentreFrame/Background/Easel/CanvasPlacehold".global_position)
+		l_eye.eyebrow_angle = Interpolator.good_lerp(l_eye.eyebrow_angle, lerp(-0.35, 0.6, concentration), 0.05, delta)
+		r_eye.eyebrow_angle = l_eye.eyebrow_angle
 	else:
 		drawing_speed = 0.0
-	
+		l_eye.eyebrow_angle = Interpolator.good_lerp(l_eye.eyebrow_angle, -1.0, 0.05, delta)
+		r_eye.eyebrow_angle = l_eye.eyebrow_angle
+		l_eye.look_at_global(get_global_mouse_position())
+		r_eye.look_at_global(get_global_mouse_position())
+	%Gaugehand.rotation_degrees = lerp(-128.5, 112.0, concentration + (randf() * 0.01 * concentration))
 	
 	r_arm.sine_speed = Interpolator.good_lerp(r_arm.sine_speed, -drawing_speed, 0.1, delta)
 	r_arm.total_bend = Interpolator.good_lerp(r_arm.total_bend, r_target_bend, 0.2, delta)
@@ -124,7 +136,21 @@ func _process(delta: float) -> void:
 	body_wiggle.total_bend = Interpolator.good_lerp(body_wiggle.total_bend, tiredness * 1.5, 0.2, delta)
 	l_eye.tiredness = tiredness
 	r_eye.tiredness = tiredness
+	l_eye.eye_state = Eye.EYE_TYPE.CALM if tiredness < 0.25 else Eye.EYE_TYPE.TIRED
+	r_eye.eye_state = l_eye.eye_state
+	
+	if game_logic.hungry or game_logic.thirsty or (not game_logic.comfy_temperature):
+		mouth.set_mouth(Mouth.MOUTHSHAPE.CRAZY)
+		l_eye.eye_state = Eye.EYE_TYPE.CRAZY
+		r_eye.eye_state = l_eye.eye_state
+	elif distracted:
+		mouth.set_mouth(Mouth.MOUTHSHAPE.PENSIVE)
+	elif game_logic.subject_well_lit and game_logic.flower_ok:
+		mouth.set_mouth(Mouth.MOUTHSHAPE.NORMAL)
+	else:
+		mouth.set_mouth(Mouth.MOUTHSHAPE.SAD)
 	pass
+@onready var game_logic: GameLogic = %ArtistGameLogic
 
 var drawing_speed = 0.5
 #func bop_head():

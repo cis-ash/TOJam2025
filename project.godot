@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TOJam2025"
-run/main_scene="uid://th7k2rmqv11e"
+run/main_scene="uid://do0q2qqqph23x"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -38,4 +38,5 @@ common/physics_interpolation=true
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(1, 1, 1, 1)

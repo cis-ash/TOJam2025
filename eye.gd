@@ -10,6 +10,7 @@ enum EYE_TYPE {CALM, CRAZY, TIRED}
 @export var eyebrow_angle : float
 @export var eyeball_offset : Vector2
 
+
 @export var open_eye : Node2D
 @export var closed_eye : Node2D
 @export var eyebag : Node2D
@@ -23,6 +24,15 @@ enum EYE_TYPE {CALM, CRAZY, TIRED}
 func _process(delta: float) -> void:
 	update_eye()
 	pass
+@onready var pos: Node2D = $Pos
+
+func look_at_global(global : Vector2):
+	var _to_target = (global - pos.global_position) * 0.002
+	_to_target = _to_target.normalized() * min(_to_target.length(), 1.0)
+	_to_target *= Vector2(15.0, 5.0)
+	_to_target += Vector2(-10.0, 0.0)
+	eyeball_offset = _to_target
+	#print(name, eyeball_offset)
 
 func update_eye():
 	open_eye.visible = not blinking

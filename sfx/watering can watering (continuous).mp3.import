@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxl4x7bxwp8xp"
+path="res://.godot/imported/watering can watering (continuous).mp3-1457bd0aa2155c09308bd4d33d4b4faf.mp3str"
+
+[deps]
+
+source_file="res://sfx/watering can watering (continuous).mp3"
+dest_files=["res://.godot/imported/watering can watering (continuous).mp3-1457bd0aa2155c09308bd4d33d4b4faf.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

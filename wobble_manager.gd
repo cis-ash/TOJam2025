@@ -1,5 +1,6 @@
 @tool
 extends Node2D
+class_name WobbleManager
 
 @export var fill_material : ShaderMaterial
 @export var line_material : ShaderMaterial

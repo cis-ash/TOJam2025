@@ -1,8 +1,9 @@
 extends Node2D
 
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $TitleWiggle/AnimatedSprite2D
 
-
+func _ready() -> void:
+	animated_sprite_2d.frame = 0
 
 func _on_title_button_mouse_entered() -> void:
 	animated_sprite_2d.speed_scale = 1.0

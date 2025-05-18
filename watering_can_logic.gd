@@ -9,8 +9,11 @@ class_name WateringCan
 @onready var flower_logic: Flower = %FlowerLogic
 @onready var sound: AudioStreamPlayer2D = $"WateringCanWatering(continuous)"
 
+func _ready() -> void:
+	sound.volume_linear = 0.0
 func _process(delta: float) -> void:
-	sound.volume_linear = lerp(sound.volume_linear, (1.0 if watering else 0.0), delta * 10.0)
+	var _target_volume : float = (1.0 if watering else 0.0)
+	sound.volume_linear = lerp(sound.volume_linear, _target_volume, delta * 10.0)
 
 
 func _on_button_button_down() -> void:

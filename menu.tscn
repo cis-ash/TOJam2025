@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://do0q2qqqph23x"]
+[gd_scene load_steps=67 format=3 uid="uid://do0q2qqqph23x"]
 
 [ext_resource type="Script" uid="uid://col1qqjspe6ox" path="res://menu.gd" id="1_m2708"]
 [ext_resource type="Texture2D" uid="uid://b1wj5pwfia0kh" path="res://assets/menu/bg texture.png" id="2_iqepy"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bhfbioy6r4tst" path="res://assets/menu/heartlocket/heart locket-01.png" id="11_dl4fq"]
 [ext_resource type="Script" uid="uid://cr6x3phglcj2k" path="res://title.gd" id="12_5xags"]
 [ext_resource type="Texture2D" uid="uid://d2jmb5o8pr3uo" path="res://assets/menu/heartlocket/heart locket-02.png" id="12_8bala"]
+[ext_resource type="Script" uid="uid://d368y5pglr3m6" path="res://wibbler.gd" id="13_gyv6s"]
 [ext_resource type="Texture2D" uid="uid://d0jaeoelhwwsf" path="res://assets/menu/heartlocket/heart locket-03.png" id="13_xmvw1"]
 [ext_resource type="Texture2D" uid="uid://6fth0b5dx70i" path="res://assets/menu/heartlocket/heart locket-04.png" id="14_dgv8b"]
 [ext_resource type="Texture2D" uid="uid://bsyqa7pa1p6f1" path="res://assets/menu/heartlocket/heart locket-05.png" id="15_oha31"]
@@ -254,10 +255,11 @@ scale = Vector2(1.41441, 1.41441)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Credits"]
 position = Vector2(1, -46)
 sprite_frames = SubResource("SpriteFrames_7215o")
-frame_progress = 0.630714
+frame_progress = 0.000909674
 metadata/_edit_lock_ = true
 
 [node name="CreditsButton" type="Button" parent="Credits"]
+modulate = Color(1, 1, 1, 0)
 offset_left = -228.0
 offset_top = -110.0
 offset_right = 228.0
@@ -266,14 +268,23 @@ offset_bottom = 8.0
 [node name="Title" type="Node2D" parent="."]
 script = ExtResource("12_5xags")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Title"]
+[node name="TitleWiggle" type="Node2D" parent="Title"]
+position = Vector2(494, 488)
+script = ExtResource("13_gyv6s")
+scale_speed = 0.5
+pos_wobble = Vector2(20, 20)
+pos_speed = 1.0
+rot_wobble = 0.2
+rot_speed = 2.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Title/TitleWiggle"]
 material = SubResource("CanvasItemMaterial_ego87")
-position = Vector2(474, 416)
 rotation = -0.133829
-scale = Vector2(2.09503, 2.09503)
+scale = Vector2(2.35852, 2.35852)
 sprite_frames = SubResource("SpriteFrames_v0y64")
 
-[node name="TitleButton" type="Button" parent="Title/AnimatedSprite2D"]
+[node name="TitleButton" type="Button" parent="Title/TitleWiggle/AnimatedSprite2D"]
+modulate = Color(1, 1, 1, 0)
 offset_left = -223.0
 offset_top = -166.0
 offset_right = 231.0
@@ -334,7 +345,7 @@ height = 7.0
 mult = 0.003
 
 [node name="Eyeballs" type="Sprite2D" parent="Artist/Eyes/EyeballParent"]
-position = Vector2(19.9728, 0.365109)
+position = Vector2(-12.5828, -5.44104)
 rotation = 0.394122
 texture = ExtResource("9_4ndjb")
 metadata/_edit_lock_ = true
@@ -342,8 +353,8 @@ metadata/_edit_lock_ = true
 [connection signal="mouse_entered" from="Credits/CreditsButton" to="." method="_on_credits_button_mouse_entered"]
 [connection signal="mouse_exited" from="Credits/CreditsButton" to="." method="_on_credits_button_mouse_exited"]
 [connection signal="pressed" from="Credits/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="mouse_entered" from="Title/AnimatedSprite2D/TitleButton" to="Title" method="_on_title_button_mouse_entered"]
-[connection signal="mouse_exited" from="Title/AnimatedSprite2D/TitleButton" to="Title" method="_on_title_button_mouse_exited"]
+[connection signal="mouse_entered" from="Title/TitleWiggle/AnimatedSprite2D/TitleButton" to="Title" method="_on_title_button_mouse_entered"]
+[connection signal="mouse_exited" from="Title/TitleWiggle/AnimatedSprite2D/TitleButton" to="Title" method="_on_title_button_mouse_exited"]
 [connection signal="mouse_entered" from="Canvas/PlayButton" to="." method="_on_play_button_mouse_entered"]
 [connection signal="mouse_exited" from="Canvas/PlayButton" to="." method="_on_play_button_mouse_exited"]
 [connection signal="pressed" from="Canvas/PlayButton" to="." method="_on_play_button_pressed"]

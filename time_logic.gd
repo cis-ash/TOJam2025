@@ -13,17 +13,24 @@ class_name TimeLogic
 
 
 @export var smoothstep_width : float = 0.1
+@onready var calendar: AnimatedSprite2D = %Calendar
 
 func _ready() -> void:
 	time = 0.0
 
+
 func _process(delta: float) -> void:
 	if (ticking):
 		time += delta / seconds_in_a_day
+		if time > 3.0:
+			print("END THE GAME")
+			%ArtistGameLogic.end_game()
+		calendar.frame = round(time)
 	#else:
 		#time = 0.0
 	night_time = not (wrapf(time, 0.0, 1.0) > 0.75 or  wrapf(time, 0.0, 1.0) < 0.25)
 	update_visuals(delta)
+	
 	pass
 
 

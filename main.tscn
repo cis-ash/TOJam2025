@@ -1,11 +1,10 @@
-[gd_scene load_steps=172 format=3 uid="uid://th7k2rmqv11e"]
+[gd_scene load_steps=198 format=3 uid="uid://th7k2rmqv11e"]
 
 [ext_resource type="Script" uid="uid://p1aneh43gu6k" path="res://wobble_manager.gd" id="1_ycdy4"]
 [ext_resource type="Script" uid="uid://dqgvpkfhpvx7h" path="res://wobbly_hand.gd" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://pdq83124mdur" path="res://artist_game_logic.gd" id="4_vjgyh"]
 [ext_resource type="Script" uid="uid://ctsi1p0pbaa87" path="res://time_logic.gd" id="5_3exxq"]
 [ext_resource type="Material" uid="uid://bgwexps04l20a" path="res://lineboil.tres" id="5_dg77c"]
-[ext_resource type="AudioStream" uid="uid://da7cc2u831fcr" path="res://sfx/apple bite.mp3" id="5_oosfy"]
 [ext_resource type="Texture2D" uid="uid://bcipbl11dpd27" path="res://assets/bg/sidebars.png" id="6_41lik"]
 [ext_resource type="AudioStream" uid="uid://duxwps5elxft1" path="res://sfx/final song.mp3" id="6_g3y5b"]
 [ext_resource type="AudioStream" uid="uid://dmrr6mwwilxn8" path="res://sfx/gulp (drink tea).wav" id="7_xkvoa"]
@@ -42,18 +41,25 @@
 [ext_resource type="Texture2D" uid="uid://v0bmg1nydy2c" path="res://assets/menu/calendar.png" id="18_37eu1"]
 [ext_resource type="Texture2D" uid="uid://b0fperwf6kixi" path="res://assets/artist/0 feet/R foot.png" id="18_f6a44"]
 [ext_resource type="Texture2D" uid="uid://d2lmbr7o43wg2" path="res://assets/paintings/BAD PAINT.PNG" id="18_s4o1y"]
+[ext_resource type="Texture2D" uid="uid://gushy70dldrq" path="res://assets/bg/calendars/calendar strike1.png" id="19_1tiwm"]
 [ext_resource type="Script" uid="uid://x7vynf24kdku" path="res://flower_logic.gd" id="19_smeu8"]
 [ext_resource type="Texture2D" uid="uid://oukvyw7y4351" path="res://assets/props/vase/petal cluster fill.png" id="19_sn1fb"]
 [ext_resource type="Texture2D" uid="uid://dmrvwa3lsegut" path="res://assets/bg/window/window shadow.png" id="19_swlj1"]
+[ext_resource type="Texture2D" uid="uid://c1rwn6n2f4jfx" path="res://assets/bg/calendars/calendar strike2.png" id="20_xxpw2"]
 [ext_resource type="Texture2D" uid="uid://ib05o8jh04f6" path="res://assets/props/vase/petalone fill.png" id="20_yvsr8"]
 [ext_resource type="Texture2D" uid="uid://ctttilm6iatov" path="res://assets/bg/window/timer border.png" id="20_yysqy"]
+[ext_resource type="Texture2D" uid="uid://bvvng1gaaeq6x" path="res://assets/artist/speedgauge.png" id="21_oy6td"]
+[ext_resource type="Texture2D" uid="uid://bps326h8gckwv" path="res://assets/bg/easel/in_progress_noise.png" id="21_p5pln"]
 [ext_resource type="Texture2D" uid="uid://x7d5fret1u81" path="res://assets/artist/0 L arm/L arm fill wobbly.png" id="21_rqtf5"]
 [ext_resource type="Texture2D" uid="uid://d2seek15js2bf" path="res://assets/props/droplets/droplet1_white.png" id="21_s4o1y"]
 [ext_resource type="Texture2D" uid="uid://ceywrvev3n3rq" path="res://assets/artist/0 L arm/L hand.png" id="21_uypp3"]
 [ext_resource type="Texture2D" uid="uid://oownmflhr476" path="res://assets/props/vase/petaltwo fill.png" id="21_vieuh"]
+[ext_resource type="Texture2D" uid="uid://dg6u6j7d3eurq" path="res://assets/bg/calendars/calendar strike3.png" id="21_wghq8"]
 [ext_resource type="Texture2D" uid="uid://bn5xk36dm1mou" path="res://assets/artist/0 L arm/L arm wobbly.png" id="22_1vm84"]
 [ext_resource type="Script" uid="uid://hp1ko5opacog" path="res://body_animator.gd" id="22_5yh34"]
 [ext_resource type="Texture2D" uid="uid://b7ue6i3wovoux" path="res://assets/artist/0 L arm/L handfill.png" id="22_blkrb"]
+[ext_resource type="Texture2D" uid="uid://d2t0wwnytiymo" path="res://assets/artist/gaugehand.png" id="22_fe76k"]
+[ext_resource type="Texture2D" uid="uid://mro2wdt1qdke" path="res://assets/bg/easel/in_progress.png" id="22_oiuw5"]
 [ext_resource type="Texture2D" uid="uid://db7cgjf6wqgjy" path="res://assets/props/vase/leaf.png" id="23_yjja3"]
 [ext_resource type="Texture2D" uid="uid://cqrm0wig4um8m" path="res://assets/artist/0 R arm/brushtip.png" id="24_6iyjs"]
 [ext_resource type="Texture2D" uid="uid://x3ehn333b7y2" path="res://assets/artist/0 R arm/hand splat.png" id="25_4w656"]
@@ -100,7 +106,6 @@
 [ext_resource type="Texture2D" uid="uid://cmv4vruvrn72x" path="res://assets/props/lightbulb/toggle 2.png" id="39_am8a1"]
 [ext_resource type="Texture2D" uid="uid://mdabgssnstpo" path="res://assets/artist/2 head/L eye/L eyeball.png" id="39_c2n8d"]
 [ext_resource type="Texture2D" uid="uid://c0k1wsvj5808e" path="res://assets/artist/3 R braid/R braid.png" id="39_wu3dr"]
-[ext_resource type="AudioStream" uid="uid://bjysxmxh2yl3o" path="res://sfx/watering can watering (continuous).wav" id="40_37eu1"]
 [ext_resource type="Texture2D" uid="uid://bkl3jgclg7wy0" path="res://assets/artist/4 apron/apron splat.png" id="40_cyx1q"]
 [ext_resource type="Texture2D" uid="uid://c1i1riovm0djg" path="res://assets/artist/2 head/L eye/L eyebrow.png" id="40_wy5fy"]
 [ext_resource type="Texture2D" uid="uid://bbdocgqeyjvnw" path="res://assets/artist/4 apron/apron.png" id="41_0dhbp"]
@@ -116,6 +121,7 @@
 [ext_resource type="Texture2D" uid="uid://mrde58m81onb" path="res://assets/artist/4 bandana/bandanafill.png" id="45_c2n8d"]
 [ext_resource type="Texture2D" uid="uid://ctxtld4gcqele" path="res://assets/artist/2 head/r eye/R eye.png" id="45_f1p13"]
 [ext_resource type="Texture2D" uid="uid://cwbdu5avvw24h" path="res://assets/artist/2 head/r eye/R eyebag.png" id="46_4obbf"]
+[ext_resource type="AudioStream" uid="uid://bxl4x7bxwp8xp" path="res://sfx/watering can watering (continuous).mp3" id="46_p5pln"]
 [ext_resource type="AudioStream" uid="uid://yalwdqc1b2le" path="res://sfx/tea refill.wav" id="47_0wkqm"]
 [ext_resource type="Texture2D" uid="uid://bfnnsyvyglgbm" path="res://assets/artist/2 head/r eye/R eyeball.png" id="47_ovcoh"]
 [ext_resource type="Texture2D" uid="uid://c5wek3qn28pey" path="res://assets/artist/2 head/r eye/R eyebrow.png" id="48_ppx11"]
@@ -126,7 +132,6 @@
 [ext_resource type="Texture2D" uid="uid://be6gr4tu21of" path="res://assets/artist/2 head/mouth/mouth.png" id="53_swlj1"]
 [ext_resource type="AudioStream" uid="uid://b5ho66s8o3bfh" path="res://sfx/add apple.wav" id="53_ve5sr"]
 [ext_resource type="Texture2D" uid="uid://dqyeelo88dxtm" path="res://assets/artist/2 head/mouth/pensive mouth.png" id="54_yysqy"]
-[ext_resource type="AudioStream" uid="uid://ck0xq1w356v7d" path="res://sfx/fan whir.wav" id="60_5s44m"]
 [ext_resource type="AudioStream" uid="uid://cl1ocibxs8u6v" path="res://sfx/fan off.wav" id="61_ibca3"]
 [ext_resource type="AudioStream" uid="uid://c5qdkal04sbfp" path="res://sfx/fan on.wav" id="62_g3y5b"]
 [ext_resource type="AudioStream" uid="uid://cucehah6us8he" path="res://sfx/fanbience.wav" id="63_g3y5b"]
@@ -134,6 +139,7 @@
 [ext_resource type="AudioStream" uid="uid://cfrnxsts3myu7" path="res://sfx/light on!.wav" id="68_5s44m"]
 [ext_resource type="Texture2D" uid="uid://bvok18cdap074" path="res://assets/artist/2 shirt/wiggly shirt fill.png" id="69_yysqy"]
 [ext_resource type="Texture2D" uid="uid://devxcml50b6gh" path="res://assets/artist/2 shirt/wiggly shirt.png" id="70_n5t1e"]
+[ext_resource type="Texture2D" uid="uid://b37s06ps71fet" path="res://assets/tutorial.png" id="72_4qxq8"]
 [ext_resource type="Script" uid="uid://c8hm8aj0pu7rh" path="res://average_rotation.gd" id="78_23xmf"]
 [ext_resource type="Texture2D" uid="uid://cbp68uriynrc7" path="res://assets/props/thought palette/thought palette.png" id="79_5yh34"]
 [ext_resource type="Texture2D" uid="uid://b2lo4wi100lif" path="res://assets/props/thought palette/blue paint.png" id="80_pjuso"]
@@ -149,8 +155,65 @@
 [ext_resource type="Texture2D" uid="uid://dmip1jva8g4af" path="res://assets/props/thought palette/blue paint overlay.png" id="105_tko6h"]
 [ext_resource type="Texture2D" uid="uid://cpxjm04s0ck1i" path="res://assets/props/thought palette/red paint overlay.png" id="108_smeu8"]
 [ext_resource type="Texture2D" uid="uid://sr17q1n2aivp" path="res://assets/props/thought palette/yellow paint overlay.png" id="110_f3y11"]
-[ext_resource type="FontFile" uid="uid://cgsrwdkufra6g" path="res://gill-sans-ultra-bold.ttf" id="124_3exxq"]
 [ext_resource type="AudioStream" uid="uid://ba1nwrm1vf5jf" path="res://sfx/nighttime ambient.mp3" id="150_1slqb"]
+[ext_resource type="Script" uid="uid://b0u2i61fcosnb" path="res://feedback_scene.gd" id="152_y0aao"]
+[ext_resource type="Texture2D" uid="uid://der07172peb5w" path="res://assets/feedback/placement sketch.png" id="153_nycv6"]
+[ext_resource type="Texture2D" uid="uid://cvd8kf08stm7l" path="res://assets/feedback/bg.png" id="154_x4ftd"]
+[ext_resource type="Texture2D" uid="uid://csm7j61ky011j" path="res://assets/feedback/feedback paper.png" id="155_arf1h"]
+[ext_resource type="Texture2D" uid="uid://kjlmshqcuny7" path="res://assets/feedback/happyface 1.png" id="156_s0om5"]
+[ext_resource type="Script" uid="uid://c5wnnebh6atgv" path="res://feedback.gd" id="156_x4ftd"]
+[ext_resource type="Texture2D" uid="uid://bf5x1fjbygicn" path="res://assets/feedback/happyface 2.png" id="157_gkfde"]
+[ext_resource type="Texture2D" uid="uid://dvoto14w6lwyl" path="res://assets/feedback/happyface 3.png" id="158_4qxq8"]
+[ext_resource type="Texture2D" uid="uid://dwmmonwksacsv" path="res://assets/feedback/sadface 1.png" id="159_ryg4g"]
+[ext_resource type="Texture2D" uid="uid://cmwyh1qf5r1t0" path="res://assets/feedback/sadface 2.png" id="160_oy6td"]
+[ext_resource type="Texture2D" uid="uid://ba3y01ikcisr1" path="res://assets/feedback/sadface 3.png" id="161_fe76k"]
+[ext_resource type="Texture2D" uid="uid://b00n635xr6yix" path="res://assets/feedback/bubble1.png" id="162_p5pln"]
+[ext_resource type="Texture2D" uid="uid://dnv0knfwoqsj4" path="res://assets/feedback/bubble2.png" id="163_oiuw5"]
+[ext_resource type="Texture2D" uid="uid://blqtwyabwg02q" path="res://assets/feedback/bubble3.png" id="164_mldrc"]
+[ext_resource type="Texture2D" uid="uid://lprew6j0032b" path="res://assets/feedback/menu postit.png" id="165_1tiwm"]
+[ext_resource type="FontFile" uid="uid://ga3cs5fkle4l" path="res://ashcanbb_reg.otf" id="166_arf1h"]
+[ext_resource type="Script" uid="uid://bg1dks3hguxub" path="res://postit_note.gd" id="167_gkfde"]
+[ext_resource type="FontFile" uid="uid://hc4igy3uaka1" path="res://ashcanbb_bold.otf" id="169_4qxq8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k08w7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_37eu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1tiwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xxpw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wghq8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Shader" id="Shader_asu84"]
+code = "shader_type canvas_item;
+uniform sampler2D mask_texture;
+uniform float fraction = 0.0;
+uniform float margin = 0.1;
+
+void fragment() {
+	float original_alpha = texture(TEXTURE, UV).a;
+	float mask = texture(mask_texture, UV).r;
+	float mix_amount = smoothstep(mask - margin, mask + margin, fraction);
+	COLOR.a = min(original_alpha, mix_amount);
+
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mldrc"]
+shader = SubResource("Shader_asu84")
+shader_parameter/mask_texture = ExtResource("21_p5pln")
+shader_parameter/fraction = 0.0
+shader_parameter/margin = 0.05
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1iygd"]
 shader = ExtResource("16_tttfs")
@@ -184,20 +247,6 @@ point_count = 2
 [sub_resource type="Curve" id="Curve_d5iia"]
 _data = [Vector2(0, 0), 0.0, 18.7865, 0, 0, Vector2(0.164773, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -4.32127, 0.0, 0, 0]
 point_count = 3
-
-[sub_resource type="Shader" id="Shader_asu84"]
-code = "shader_type canvas_item;
-uniform sampler2D mask_texture;
-uniform float fraction = 0.0;
-uniform float margin = 0.1;
-
-void fragment() {
-	float original_alpha = texture(TEXTURE, UV).a;
-	float mask = texture(mask_texture, UV).r;
-	float mix_amount = smoothstep(mask - margin, mask + margin, fraction);
-	COLOR.a = min(original_alpha, mix_amount);
-
-}"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qwt6e"]
 shader = SubResource("Shader_asu84")
@@ -249,6 +298,9 @@ shader_parameter/daymult = ExtResource("11_t5kpo")
 shader_parameter/nightmult = ExtResource("12_pw0td")
 shader_parameter/day = 0.0
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_xxpw2"]
+viewport_path = NodePath("CentreFrame/Background/Easel/CanvasPlacehold/SubViewportContainer/SubViewport")
+
 [node name="Node2D" type="Node2D"]
 
 [node name="WobbleManager" type="Node2D" parent="."]
@@ -256,7 +308,7 @@ unique_name_in_owner = true
 script = ExtResource("1_ycdy4")
 fill_material = ExtResource("8_w48qg")
 line_material = ExtResource("5_dg77c")
-line_boil = 1.0
+fill_offset = 1.0
 
 [node name="ArtistGameLogic" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -265,10 +317,6 @@ mind_stat = 1.0
 enviornment_stat = 1.0
 time_to_refocus = 1.0
 time_since_distraction = 6.47
-
-[node name="AppleBite" type="AudioStreamPlayer2D" parent="ArtistGameLogic"]
-position = Vector2(482, 500)
-stream = ExtResource("5_oosfy")
 
 [node name="AttemptJamsongAshykento" type="AudioStreamPlayer2D" parent="ArtistGameLogic"]
 position = Vector2(482, 500)
@@ -334,15 +382,34 @@ texture = ExtResource("20_yysqy")
 visible = false
 texture = ExtResource("13_jbvwl")
 
-[node name="Calendar" type="Sprite2D" parent="CentreFrame/Background"]
+[node name="Calendar" type="AnimatedSprite2D" parent="CentreFrame/Background"]
+unique_name_in_owner = true
 position = Vector2(-605, -274)
 rotation = 0.0675917
-texture = ExtResource("18_37eu1")
+sprite_frames = SubResource("SpriteFrames_k08w7")
 
 [node name="Easel" type="Sprite2D" parent="CentreFrame/Background"]
 texture = ExtResource("11_f1p13")
 
 [node name="Shadow" parent="CentreFrame/Background/Easel" instance=ExtResource("91_jbvwl")]
+
+[node name="InProgress" type="Sprite2D" parent="CentreFrame/Background/Easel"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_mldrc")
+position = Vector2(177, 184)
+texture = ExtResource("22_oiuw5")
+
+[node name="Speedgauge" type="Sprite2D" parent="CentreFrame/Background/Easel"]
+position = Vector2(17, -289)
+rotation = -0.487152
+scale = Vector2(0.309078, 0.309078)
+texture = ExtResource("21_oy6td")
+
+[node name="Gaugehand" type="Sprite2D" parent="CentreFrame/Background/Easel/Speedgauge"]
+unique_name_in_owner = true
+position = Vector2(-4, -15)
+texture = ExtResource("22_fe76k")
+offset = Vector2(19, -61)
 
 [node name="CanvasPlacehold" type="Sprite2D" parent="CentreFrame/Background/Easel"]
 position = Vector2(175, -65)
@@ -375,8 +442,8 @@ color = Color(0, 1, 0, 1)
 
 [node name="PaintingTip" type="Sprite2D" parent="CentreFrame/Background/Easel/CanvasPlacehold/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
-modulate = Color(1, 0, 0, 1)
-position = Vector2(35.0368, 209.721)
+modulate = Color(1, 0, 1, 0.145098)
+position = Vector2(279.555, 180.932)
 rotation = -0.638762
 texture = ExtResource("16_qwt6e")
 script = ExtResource("17_off2o")
@@ -449,8 +516,10 @@ texture = ExtResource("15_1yv1y")
 unique_name_in_owner = true
 position = Vector2(-5, 85)
 script = ExtResource("19_smeu8")
-freshness = 0.902917
-time_to_wilt = 40.0
+freshness = 0.0
+sad = true
+very_sad = true
+time_to_wilt = 60.0
 first_petal_threshold = 0.3
 second_petal_threshold = 0.1
 fresh_bend_curve = SubResource("Curve_smeu8")
@@ -460,13 +529,13 @@ show_behind_parent = true
 material = ExtResource("5_dg77c")
 position = Vector2(7, -30)
 rotation = -1.4344
-points = PackedVector2Array(9.4, 0, 18.8, 0.00117901, 28.2, -0.00500636, 37.5999, -0.0427757, 46.9994, -0.145787, 56.3974, -0.336324, 65.7938, -0.59583, 75.1907, -0.83884, 84.5905, -0.903682, 93.9845, -0.569387, 103.335, 0.399026, 112.563, 2.18494, 121.576, 4.85567, 130.311, 8.32917, 138.788, 12.3901, 147.118, 16.7463, 155.449, 21.1, 163.897, 25.2222, 172.496, 29.0192, 181.197, 32.5749)
+points = PackedVector2Array(9.4, 0, 18.7948, 0.312172, 28.1512, 1.21663, 37.3911, 2.94432, 46.3891, 5.66381, 54.9788, 9.48165, 62.9545, 14.4565, 70.0578, 20.613, 75.955, 27.9331, 80.2247, 36.3074, 82.395, 45.4534, 82.059, 54.8474, 79.051, 63.7532, 73.5836, 71.3996, 66.2212, 77.2438, 57.6726, 81.153, 48.5425, 83.3892, 39.2014, 84.4395, 29.8091, 84.8199, 20.4099, 84.942)
 width = 51.0
 texture = ExtResource("15_23xmf")
 texture_mode = 2
 script = ExtResource("2_h2yge")
 line_length = 188.0
-total_bend = 0.0339183
+total_bend = 4.0
 sine_speed = -0.1
 sine_width = 7.0
 sine_bend = 3.0
@@ -481,8 +550,8 @@ midpoint = NodePath("Midpoint")
 [node name="FlowerTip" type="Node2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem"]
 show_behind_parent = true
 use_parent_material = true
-position = Vector2(163.897, 25.2222)
-rotation = 0.453953
+position = Vector2(39.2014, 84.4395)
+rotation = 3.02963
 
 [node name="PetalClusterFill" type="Sprite2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem/FlowerTip"]
 show_behind_parent = true
@@ -496,7 +565,7 @@ show_behind_parent = true
 use_parent_material = true
 position = Vector2(-0.0371933, -0.474365)
 rotation = 1.45442
-scale = Vector2(0.999482, 0.999482)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("20_yvsr8")
 offset = Vector2(34.2549, 38.978)
 
@@ -505,15 +574,15 @@ show_behind_parent = true
 use_parent_material = true
 position = Vector2(0.624746, -0.332924)
 rotation = 1.43508
-scale = Vector2(0.999482, 0.999482)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("21_vieuh")
 offset = Vector2(54.2349, -3.74451)
 
 [node name="Midpoint" type="Node2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem"]
 show_behind_parent = true
 use_parent_material = true
-position = Vector2(93.9845, -0.569387)
-rotation = 0.0355708
+position = Vector2(80.2247, 36.3074)
+rotation = 1.09929
 
 [node name="Leaf" type="Sprite2D" parent="CentreFrame/Background/WobbleVase/Vase/Stem/Midpoint"]
 use_parent_material = true
@@ -535,7 +604,7 @@ script = ExtResource("26_rt5wr")
 
 [node name="WateringCanWatering(continuous)" type="AudioStreamPlayer2D" parent="CentreFrame/Background/WobbleWateringCan/WateringCanLogic"]
 position = Vector2(-1040, -73)
-stream = ExtResource("40_37eu1")
+stream = ExtResource("46_p5pln")
 volume_db = -80.0
 autoplay = true
 
@@ -771,11 +840,6 @@ offset_right = 598.0
 offset_bottom = 55.0
 toggle_mode = true
 
-[node name="FanWhir" type="AudioStreamPlayer2D" parent="CentreFrame/Background/FanLogic"]
-visible = false
-position = Vector2(-204, 441)
-stream = ExtResource("60_5s44m")
-
 [node name="FanOff" type="AudioStreamPlayer2D" parent="CentreFrame/Background/FanLogic"]
 position = Vector2(-279, 446)
 stream = ExtResource("61_ibca3")
@@ -860,6 +924,9 @@ offset_right = -14.0
 offset_bottom = 380.0
 toggle_mode = true
 
+[node name="Tutorial" type="Sprite2D" parent="CentreFrame"]
+texture = ExtResource("72_4qxq8")
+
 [node name="Cat" type="Node2D" parent="."]
 visible = false
 position = Vector2(1522, 989)
@@ -917,7 +984,7 @@ position = Vector2(79, 32)
 texture = ExtResource("18_f6a44")
 
 [node name="LArm" type="Node2D" parent="Artist"]
-position = Vector2(-42.2972, -183.992)
+position = Vector2(-47.5726, -180.374)
 script = ExtResource("27_23xmf")
 rotation_multiplier = -1.0
 
@@ -934,7 +1001,7 @@ rot_speed = 2.0
 position = Vector2(27, 0)
 rotation = -3.14159
 scale = Vector2(1, -1)
-points = PackedVector2Array(10.8531, 0.543107, 21.6655, 1.62781, 32.4094, 3.25638, 43.0557, 5.43404, 53.5728, 8.16779, 63.9272, 11.4651, 74.0824, 15.3324, 84, 19.7737, 93.6401, 24.7891, 102.962, 30.3736, 111.926, 36.5166, 120.493, 43.2012, 128.629, 50.4043, 136.305, 58.097, 143.494, 66.2454, 150.179, 74.8121, 156.35, 83.7566, 162.002, 93.0378, 167.138, 102.614, 171.766, 112.446, 175.899, 122.496, 179.554, 132.73, 182.75, 143.116, 185.508, 153.627, 187.847, 164.239, 189.785, 174.931, 191.338, 185.686, 192.518, 196.489, 193.332, 207.325, 193.784, 218.182)
+points = PackedVector2Array(10.8531, 0.543107, 21.667, 1.61229, 32.4186, 3.18977, 43.0865, 5.2585, 53.651, 7.8034, 64.0928, 10.8122, 74.3926, 14.276, 84.5301, 18.1897, 94.4829, 22.5514, 104.227, 27.3624, 113.733, 32.6258, 122.973, 38.3463, 131.91, 44.5281, 140.507, 51.1742, 148.724, 58.2845, 156.52, 65.8552, 163.85, 73.8769, 170.673, 82.3345, 176.948, 91.2066, 182.637, 100.465, 187.708, 110.076, 192.134, 120, 195.898, 130.195, 198.986, 140.613, 201.397, 151.209, 203.135, 161.936, 204.213, 172.749, 204.65, 183.607, 204.472, 194.472, 203.706, 205.312)
 default_color = Color(1, 1, 1, 0)
 script = ExtResource("2_h2yge")
 line_points = 30
@@ -951,8 +1018,8 @@ otherLines = [NodePath("ArmFill"), NodePath("ArmLine")]
 arm_tip_index = 1
 
 [node name="ArmTip" type="Node2D" parent="Artist/LArm/IdleArmWiggle/LArm"]
-position = Vector2(193.332, 207.325)
-rotation = 1.4958
+position = Vector2(204.472, 194.472)
+rotation = 1.58724
 scale = Vector2(-1, 1)
 
 [node name="LHandfill" type="Sprite2D" parent="Artist/LArm/IdleArmWiggle/LArm/ArmTip"]
@@ -967,7 +1034,7 @@ texture = ExtResource("21_uypp3")
 
 [node name="ArmFill" type="Line2D" parent="Artist/LArm/IdleArmWiggle/LArm"]
 material = ExtResource("8_w48qg")
-points = PackedVector2Array(10.8531, 0.543107, 21.6655, 1.62781, 32.4094, 3.25638, 43.0557, 5.43404, 53.5728, 8.16779, 63.9272, 11.4651, 74.0824, 15.3324, 84, 19.7737, 93.6401, 24.7891, 102.962, 30.3736, 111.926, 36.5166, 120.493, 43.2012, 128.629, 50.4043, 136.305, 58.097, 143.494, 66.2454, 150.179, 74.8121, 156.35, 83.7566, 162.002, 93.0378, 167.138, 102.614, 171.766, 112.446, 175.899, 122.496, 179.554, 132.73, 182.75, 143.116, 185.508, 153.627, 187.847, 164.239, 189.785, 174.931, 191.338, 185.686, 192.518, 196.489, 193.332, 207.325, 193.784, 218.182)
+points = PackedVector2Array(10.8531, 0.543107, 21.667, 1.61229, 32.4186, 3.18977, 43.0865, 5.2585, 53.651, 7.8034, 64.0928, 10.8122, 74.3926, 14.276, 84.5301, 18.1897, 94.4829, 22.5514, 104.227, 27.3624, 113.733, 32.6258, 122.973, 38.3463, 131.91, 44.5281, 140.507, 51.1742, 148.724, 58.2845, 156.52, 65.8552, 163.85, 73.8769, 170.673, 82.3345, 176.948, 91.2066, 182.637, 100.465, 187.708, 110.076, 192.134, 120, 195.898, 130.195, 198.986, 140.613, 201.397, 151.209, 203.135, 161.936, 204.213, 172.749, 204.65, 183.607, 204.472, 194.472, 203.706, 205.312)
 width = 195.0
 texture = ExtResource("21_rqtf5")
 texture_mode = 2
@@ -975,13 +1042,13 @@ texture_mode = 2
 [node name="ArmLine" type="Line2D" parent="Artist/LArm/IdleArmWiggle/LArm"]
 material = ExtResource("5_dg77c")
 position = Vector2(1, 0)
-points = PackedVector2Array(10.8531, 0.543107, 21.6655, 1.62781, 32.4094, 3.25638, 43.0557, 5.43404, 53.5728, 8.16779, 63.9272, 11.4651, 74.0824, 15.3324, 84, 19.7737, 93.6401, 24.7891, 102.962, 30.3736, 111.926, 36.5166, 120.493, 43.2012, 128.629, 50.4043, 136.305, 58.097, 143.494, 66.2454, 150.179, 74.8121, 156.35, 83.7566, 162.002, 93.0378, 167.138, 102.614, 171.766, 112.446, 175.899, 122.496, 179.554, 132.73, 182.75, 143.116, 185.508, 153.627, 187.847, 164.239, 189.785, 174.931, 191.338, 185.686, 192.518, 196.489, 193.332, 207.325, 193.784, 218.182)
+points = PackedVector2Array(10.8531, 0.543107, 21.667, 1.61229, 32.4186, 3.18977, 43.0865, 5.2585, 53.651, 7.8034, 64.0928, 10.8122, 74.3926, 14.276, 84.5301, 18.1897, 94.4829, 22.5514, 104.227, 27.3624, 113.733, 32.6258, 122.973, 38.3463, 131.91, 44.5281, 140.507, 51.1742, 148.724, 58.2845, 156.52, 65.8552, 163.85, 73.8769, 170.673, 82.3345, 176.948, 91.2066, 182.637, 100.465, 187.708, 110.076, 192.134, 120, 195.898, 130.195, 198.986, 140.613, 201.397, 151.209, 203.135, 161.936, 204.213, 172.749, 204.65, 183.607, 204.472, 194.472, 203.706, 205.312)
 width = 195.0
 texture = ExtResource("22_1vm84")
 texture_mode = 2
 
 [node name="RArm" type="Node2D" parent="Artist"]
-position = Vector2(16.6973, -184.791)
+position = Vector2(11.1142, -186.444)
 rotation = 1.0472
 scale = Vector2(0.999998, 0.999998)
 script = ExtResource("27_23xmf")
@@ -998,7 +1065,7 @@ rot_speed = 2.0
 
 [node name="RArm" type="Line2D" parent="Artist/RArm/IdleArmWiggle" node_paths=PackedStringArray("arm_tip", "otherLines")]
 position = Vector2(-23, -6)
-points = PackedVector2Array(10.8597, -0.389306, 21.7007, -1.13559, 32.516, -2.1912, 43.3038, -3.49813, 54.0671, -4.99323, 64.8123, -6.6133, 75.5473, -8.29985, 86.2796, -10.0033, 97.0151, -11.6868, 107.757, -13.3289, 118.506, -14.9259, 129.259, -16.4934, 140.011, -18.0657, 150.755, -19.6962, 161.478, -21.4545, 172.165, -23.4248, 182.79, -25.7014, 193.32, -28.3847, 203.708, -31.5758, 213.891, -35.3703, 223.79, -39.852, 233.313, -45.0862, 242.354, -51.1141, 250.803, -57.9482, 258.549, -65.57, 265.49, -73.931, 271.543, -82.9556, 276.649, -92.5478, 280.779, -102.599, 283.936, -112.997)
+points = PackedVector2Array(10.8597, -0.389306, 21.6947, -1.21784, 32.4803, -2.54276, 43.1832, -4.42233, 53.7613, -6.90972, 64.1652, -10.0474, 74.3403, -13.8621, 84.2315, -18.3617, 93.7884, -23.5339, 102.97, -29.3463, 111.75, -35.7487, 120.121, -42.6774, 128.096, -50.0592, 135.706, -57.8159, 143.003, -65.8682, 150.052, -74.1389, 156.927, -82.5543, 163.708, -91.0455, 170.474, -99.5482, 177.3, -108.004, 184.249, -116.359, 191.37, -124.566, 198.7, -132.589, 206.256, -140.398, 214.041, -147.979, 222.043, -155.332, 230.234, -162.473, 238.578, -169.435, 247.028, -176.267, 255.53, -183.034)
 default_color = Color(1, 1, 1, 0)
 script = ExtResource("2_h2yge")
 line_points = 30
@@ -1015,8 +1082,8 @@ otherLines = [NodePath("ArmFill"), NodePath("ArmLine"), NodePath("ArmSplat")]
 arm_tip_index = 0
 
 [node name="ArmTip" type="Node2D" parent="Artist/RArm/IdleArmWiggle/RArm"]
-position = Vector2(283.936, -112.997)
-rotation = -1.67717
+position = Vector2(255.53, -183.034)
+rotation = -0.412756
 
 [node name="Brushtip" type="Sprite2D" parent="Artist/RArm/IdleArmWiggle/RArm/ArmTip"]
 material = ExtResource("5_dg77c")
@@ -1043,21 +1110,21 @@ texture = ExtResource("25_4w656")
 
 [node name="ArmFill" type="Line2D" parent="Artist/RArm/IdleArmWiggle/RArm"]
 material = ExtResource("8_w48qg")
-points = PackedVector2Array(10.8597, -0.389306, 21.7007, -1.13559, 32.516, -2.1912, 43.3038, -3.49813, 54.0671, -4.99323, 64.8123, -6.6133, 75.5473, -8.29985, 86.2796, -10.0033, 97.0151, -11.6868, 107.757, -13.3289, 118.506, -14.9259, 129.259, -16.4934, 140.011, -18.0657, 150.755, -19.6962, 161.478, -21.4545, 172.165, -23.4248, 182.79, -25.7014, 193.32, -28.3847, 203.708, -31.5758, 213.891, -35.3703, 223.79, -39.852, 233.313, -45.0862, 242.354, -51.1141, 250.803, -57.9482, 258.549, -65.57, 265.49, -73.931, 271.543, -82.9556, 276.649, -92.5478, 280.779, -102.599, 283.936, -112.997)
+points = PackedVector2Array(10.8597, -0.389306, 21.6947, -1.21784, 32.4803, -2.54276, 43.1832, -4.42233, 53.7613, -6.90972, 64.1652, -10.0474, 74.3403, -13.8621, 84.2315, -18.3617, 93.7884, -23.5339, 102.97, -29.3463, 111.75, -35.7487, 120.121, -42.6774, 128.096, -50.0592, 135.706, -57.8159, 143.003, -65.8682, 150.052, -74.1389, 156.927, -82.5543, 163.708, -91.0455, 170.474, -99.5482, 177.3, -108.004, 184.249, -116.359, 191.37, -124.566, 198.7, -132.589, 206.256, -140.398, 214.041, -147.979, 222.043, -155.332, 230.234, -162.473, 238.578, -169.435, 247.028, -176.267, 255.53, -183.034)
 width = 198.0
 texture = ExtResource("30_cyx1q")
 texture_mode = 2
 
 [node name="ArmLine" type="Line2D" parent="Artist/RArm/IdleArmWiggle/RArm"]
 position = Vector2(1, 0)
-points = PackedVector2Array(10.8597, -0.389306, 21.7007, -1.13559, 32.516, -2.1912, 43.3038, -3.49813, 54.0671, -4.99323, 64.8123, -6.6133, 75.5473, -8.29985, 86.2796, -10.0033, 97.0151, -11.6868, 107.757, -13.3289, 118.506, -14.9259, 129.259, -16.4934, 140.011, -18.0657, 150.755, -19.6962, 161.478, -21.4545, 172.165, -23.4248, 182.79, -25.7014, 193.32, -28.3847, 203.708, -31.5758, 213.891, -35.3703, 223.79, -39.852, 233.313, -45.0862, 242.354, -51.1141, 250.803, -57.9482, 258.549, -65.57, 265.49, -73.931, 271.543, -82.9556, 276.649, -92.5478, 280.779, -102.599, 283.936, -112.997)
+points = PackedVector2Array(10.8597, -0.389306, 21.6947, -1.21784, 32.4803, -2.54276, 43.1832, -4.42233, 53.7613, -6.90972, 64.1652, -10.0474, 74.3403, -13.8621, 84.2315, -18.3617, 93.7884, -23.5339, 102.97, -29.3463, 111.75, -35.7487, 120.121, -42.6774, 128.096, -50.0592, 135.706, -57.8159, 143.003, -65.8682, 150.052, -74.1389, 156.927, -82.5543, 163.708, -91.0455, 170.474, -99.5482, 177.3, -108.004, 184.249, -116.359, 191.37, -124.566, 198.7, -132.589, 206.256, -140.398, 214.041, -147.979, 222.043, -155.332, 230.234, -162.473, 238.578, -169.435, 247.028, -176.267, 255.53, -183.034)
 width = 198.0
 texture = ExtResource("32_jx0wj")
 texture_mode = 2
 
 [node name="ArmSplat" type="Line2D" parent="Artist/RArm/IdleArmWiggle/RArm"]
 position = Vector2(1, 0)
-points = PackedVector2Array(10.8597, -0.389306, 21.7007, -1.13559, 32.516, -2.1912, 43.3038, -3.49813, 54.0671, -4.99323, 64.8123, -6.6133, 75.5473, -8.29985, 86.2796, -10.0033, 97.0151, -11.6868, 107.757, -13.3289, 118.506, -14.9259, 129.259, -16.4934, 140.011, -18.0657, 150.755, -19.6962, 161.478, -21.4545, 172.165, -23.4248, 182.79, -25.7014, 193.32, -28.3847, 203.708, -31.5758, 213.891, -35.3703, 223.79, -39.852, 233.313, -45.0862, 242.354, -51.1141, 250.803, -57.9482, 258.549, -65.57, 265.49, -73.931, 271.543, -82.9556, 276.649, -92.5478, 280.779, -102.599, 283.936, -112.997)
+points = PackedVector2Array(10.8597, -0.389306, 21.6947, -1.21784, 32.4803, -2.54276, 43.1832, -4.42233, 53.7613, -6.90972, 64.1652, -10.0474, 74.3403, -13.8621, 84.2315, -18.3617, 93.7884, -23.5339, 102.97, -29.3463, 111.75, -35.7487, 120.121, -42.6774, 128.096, -50.0592, 135.706, -57.8159, 143.003, -65.8682, 150.052, -74.1389, 156.927, -82.5543, 163.708, -91.0455, 170.474, -99.5482, 177.3, -108.004, 184.249, -116.359, 191.37, -124.566, 198.7, -132.589, 206.256, -140.398, 214.041, -147.979, 222.043, -155.332, 230.234, -162.473, 238.578, -169.435, 247.028, -176.267, 255.53, -183.034)
 width = 198.0
 texture = ExtResource("31_0dhbp")
 texture_mode = 2
@@ -1076,7 +1143,7 @@ position = Vector2(79, 54)
 texture = ExtResource("30_ruth0")
 
 [node name="Head" type="Node2D" parent="Artist"]
-position = Vector2(-25.0711, -241.23)
+position = Vector2(-35.5332, -238.923)
 script = ExtResource("41_pjuso")
 stiffness = 30.0
 enthusiasm = 0.01
@@ -1198,6 +1265,9 @@ tired_eye = NodePath("Blink/LTiredblink")
 eyebrow = NodePath("LEyebrow")
 eyeball = NodePath("Open/LEyeball")
 
+[node name="Pos" type="Node2D" parent="Artist/Head/IdleHeadMotion/LEye"]
+position = Vector2(-93.7122, -327.778)
+
 [node name="Open" type="Node2D" parent="Artist/Head/IdleHeadMotion/LEye"]
 
 [node name="LEyefill" type="Sprite2D" parent="Artist/Head/IdleHeadMotion/LEye/Open"]
@@ -1296,6 +1366,9 @@ position = Vector2(-51, -340)
 texture = ExtResource("48_ppx11")
 offset = Vector2(51, 340)
 
+[node name="Pos" type="Node2D" parent="Artist/Head/IdleHeadMotion/REye"]
+position = Vector2(-93.7122, -327.778)
+
 [node name="Mouth" type="Node2D" parent="Artist/Head/IdleHeadMotion"]
 z_index = 1
 position = Vector2(90, 274)
@@ -1340,7 +1413,7 @@ update_scale = false
 [node name="BodyWiggle" type="Line2D" parent="Artist/Shirt-Body" node_paths=PackedStringArray("arm_tip", "otherLines")]
 position = Vector2(5, 33)
 rotation = -1.57079
-points = PackedVector2Array(13.1, -0.0284054, 26.1996, -0.129647, 39.2976, -0.354722, 52.3916, -0.751932, 65.4776, -1.35788, 78.5511, -2.19004, 91.6088, -3.24193, 104.65, -4.48182, 117.678, -5.85511, 130.699, -7.29008, 143.722, -8.70644, 156.756, -10.0248, 169.805, -11.1746, 182.872, -12.1015, 195.955, -12.7739, 209.049, -13.1873, 222.147, -13.3648, 235.247, -13.3538, 248.347, -13.2179, 261.445, -13.0248)
+points = PackedVector2Array(13.1, -0.00649116, 26.1999, -0.04768, 39.2994, -0.169058, 52.3969, -0.426042, 65.4892, -0.874989, 78.571, -1.56381, 91.6358, -2.52353, 104.677, -3.76211, 117.691, -5.26151, 130.678, -6.97851, 143.644, -8.84935, 156.598, -10.7981, 169.553, -12.7449, 182.518, -14.6143, 195.504, -16.3431, 208.512, -17.8892, 221.543, -19.2372, 234.591, -20.4016, 247.651, -21.4254, 260.717, -22.3738)
 width = 1.0
 script = ExtResource("2_h2yge")
 line_length = 262.0
@@ -1357,21 +1430,21 @@ arm_tip_index = 3
 
 [node name="ShirtFill" type="Line2D" parent="Artist/Shirt-Body/BodyWiggle"]
 material = ExtResource("8_w48qg")
-points = PackedVector2Array(13.1, -0.0284054, 26.1996, -0.129647, 39.2976, -0.354722, 52.3916, -0.751932, 65.4776, -1.35788, 78.5511, -2.19004, 91.6088, -3.24193, 104.65, -4.48182, 117.678, -5.85511, 130.699, -7.29008, 143.722, -8.70644, 156.756, -10.0248, 169.805, -11.1746, 182.872, -12.1015, 195.955, -12.7739, 209.049, -13.1873, 222.147, -13.3648, 235.247, -13.3538, 248.347, -13.2179, 261.445, -13.0248)
+points = PackedVector2Array(13.1, -0.00649116, 26.1999, -0.04768, 39.2994, -0.169058, 52.3969, -0.426042, 65.4892, -0.874989, 78.571, -1.56381, 91.6358, -2.52353, 104.677, -3.76211, 117.691, -5.26151, 130.678, -6.97851, 143.644, -8.84935, 156.598, -10.7981, 169.553, -12.7449, 182.518, -14.6143, 195.504, -16.3431, 208.512, -17.8892, 221.543, -19.2372, 234.591, -20.4016, 247.651, -21.4254, 260.717, -22.3738)
 width = 202.0
 texture = ExtResource("69_yysqy")
 texture_mode = 2
 
 [node name="ShirtLines" type="Line2D" parent="Artist/Shirt-Body/BodyWiggle"]
 material = ExtResource("5_dg77c")
-points = PackedVector2Array(13.1, -0.0284054, 26.1996, -0.129647, 39.2976, -0.354722, 52.3916, -0.751932, 65.4776, -1.35788, 78.5511, -2.19004, 91.6088, -3.24193, 104.65, -4.48182, 117.678, -5.85511, 130.699, -7.29008, 143.722, -8.70644, 156.756, -10.0248, 169.805, -11.1746, 182.872, -12.1015, 195.955, -12.7739, 209.049, -13.1873, 222.147, -13.3648, 235.247, -13.3538, 248.347, -13.2179, 261.445, -13.0248)
+points = PackedVector2Array(13.1, -0.00649116, 26.1999, -0.04768, 39.2994, -0.169058, 52.3969, -0.426042, 65.4892, -0.874989, 78.571, -1.56381, 91.6358, -2.52353, 104.677, -3.76211, 117.691, -5.26151, 130.678, -6.97851, 143.644, -8.84935, 156.598, -10.7981, 169.553, -12.7449, 182.518, -14.6143, 195.504, -16.3431, 208.512, -17.8892, 221.543, -19.2372, 234.591, -20.4016, 247.651, -21.4254, 260.717, -22.3738)
 width = 202.0
 texture = ExtResource("70_n5t1e")
 texture_mode = 2
 
 [node name="Shoulders" type="Node2D" parent="Artist/Shirt-Body/BodyWiggle"]
-position = Vector2(222.147, -13.3648)
-rotation = -0.0135525
+position = Vector2(221.543, -19.2372)
+rotation = -0.103082
 
 [node name="MoveLArm" type="RemoteTransform2D" parent="Artist/Shirt-Body/BodyWiggle/Shoulders"]
 position = Vector2(-4.69577, -34.0005)
@@ -1413,7 +1486,7 @@ position = Vector2(0.299957, -0.000488281)
 rotation = 1.57079
 
 [node name="LBraid" type="Node2D" parent="Artist"]
-position = Vector2(-86.0711, -267.23)
+position = Vector2(-96.5332, -264.923)
 
 [node name="IdleBraidWiggle" type="Node2D" parent="Artist/LBraid"]
 script = ExtResource("13_birbe")
@@ -1439,7 +1512,7 @@ position = Vector2(151, 300)
 texture = ExtResource("35_ntx8l")
 
 [node name="RBraid" type="Node2D" parent="Artist"]
-position = Vector2(35.9289, -272.23)
+position = Vector2(25.4668, -269.923)
 
 [node name="IdleBraidWiggle" type="Node2D" parent="Artist/RBraid"]
 script = ExtResource("13_birbe")
@@ -1465,9 +1538,9 @@ position = Vector2(29, 305)
 texture = ExtResource("38_1vm84")
 
 [node name="Apron" type="Node2D" parent="Artist" node_paths=PackedStringArray("first", "second")]
-position = Vector2(-14.5436, -202.369)
-rotation = -0.00677626
-scale = Vector2(0.999831, 0.999831)
+position = Vector2(-21.5734, -201.159)
+rotation = -0.0515409
+scale = Vector2(0.999833, 0.999833)
 script = ExtResource("78_23xmf")
 first = NodePath("../Shirt-Body/BodyWiggle/Shoulders/ShouldersUpright")
 second = NodePath("../Shirt-Body")
@@ -1489,8 +1562,8 @@ position = Vector2(80, 235)
 texture = ExtResource("40_cyx1q")
 
 [node name="Bandana" type="Node2D" parent="Artist" node_paths=PackedStringArray("first", "second")]
-position = Vector2(-19.8141, -222.3)
-rotation = -0.00406572
+position = Vector2(-28.6047, -220.539)
+rotation = -0.0309092
 scale = Vector2(0.999836, 0.999836)
 script = ExtResource("78_23xmf")
 first = NodePath("../Head")
@@ -1513,7 +1586,7 @@ position = Vector2(80, 248)
 texture = ExtResource("43_kkkcx")
 
 [node name="ThoughtPalete" type="Node2D" parent="Artist"]
-position = Vector2(-25.0711, -279.23)
+position = Vector2(-35.5332, -276.923)
 script = ExtResource("13_birbe")
 rot_wobble = 0.1
 
@@ -1565,7 +1638,7 @@ offset_right = 150.0
 offset_bottom = 25.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_fonts/font = ExtResource("169_4qxq8")
 theme_override_font_sizes/font_size = 25
 text = "Hungry"
 horizontal_alignment = 1
@@ -1591,7 +1664,7 @@ offset_right = 150.0
 offset_bottom = 25.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_fonts/font = ExtResource("169_4qxq8")
 theme_override_font_sizes/font_size = 25
 text = "Thirsty"
 horizontal_alignment = 1
@@ -1616,7 +1689,7 @@ offset_right = 150.0
 offset_bottom = 25.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_fonts/font = ExtResource("169_4qxq8")
 theme_override_font_sizes/font_size = 25
 text = "Cold"
 horizontal_alignment = 1
@@ -1642,7 +1715,7 @@ offset_right = 150.0
 offset_bottom = 25.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_fonts/font = ExtResource("169_4qxq8")
 theme_override_font_sizes/font_size = 25
 text = "Hot"
 horizontal_alignment = 1
@@ -1687,7 +1760,7 @@ offset_right = 150.0
 offset_bottom = 25.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_fonts/font = ExtResource("169_4qxq8")
 theme_override_font_sizes/font_size = 25
 text = "Too Dark"
 horizontal_alignment = 1
@@ -1712,7 +1785,7 @@ offset_right = 150.0
 offset_bottom = 25.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_fonts/font = ExtResource("169_4qxq8")
 theme_override_font_sizes/font_size = 25
 text = "Too Bright"
 horizontal_alignment = 1
@@ -1737,7 +1810,7 @@ offset_right = 150.0
 offset_bottom = 25.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_fonts/font = ExtResource("169_4qxq8")
 theme_override_font_sizes/font_size = 25
 text = "Sad Flower"
 horizontal_alignment = 1
@@ -1762,7 +1835,7 @@ offset_right = 150.0
 offset_bottom = 25.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("124_3exxq")
+theme_override_fonts/font = ExtResource("169_4qxq8")
 theme_override_font_sizes/font_size = 25
 text = "Flower Dying"
 horizontal_alignment = 1
@@ -1812,12 +1885,284 @@ z_index = 8
 z_as_relative = false
 material = SubResource("ShaderMaterial_37eu1")
 texture = ExtResource("11_t5kpo")
+metadata/_edit_lock_ = true
 
 [node name="NighttimeAmbient" type="AudioStreamPlayer2D" parent="TimeLogic"]
 position = Vector2(457, -301)
 stream = ExtResource("150_1slqb")
 volume_db = inf_neg
 autoplay = true
+
+[node name="FeedbackScene" type="Node2D" parent="."]
+z_index = 9
+position = Vector2(-1400, 540)
+script = ExtResource("152_y0aao")
+
+[node name="PlacementSketch" type="Sprite2D" parent="FeedbackScene"]
+texture = ExtResource("153_nycv6")
+
+[node name="Bg" type="Sprite2D" parent="FeedbackScene"]
+position = Vector2(-265, -1)
+texture = ExtResource("154_x4ftd")
+
+[node name="CanvasWiggle" type="Node2D" parent="FeedbackScene"]
+position = Vector2(-465, -2)
+script = ExtResource("13_birbe")
+pos_wobble = Vector2(5, 5)
+
+[node name="FilledCanvas" type="Sprite2D" parent="FeedbackScene/CanvasWiggle"]
+material = SubResource("ShaderMaterial_1iygd")
+position = Vector2(-8, 11)
+rotation = -0.0164941
+scale = Vector2(1.85835, 1.85835)
+texture = SubResource("ViewportTexture_xxpw2")
+script = ExtResource("13_birbe")
+pos_wobble = Vector2(5, 5)
+
+[node name="EmptyCanvas" type="Sprite2D" parent="FeedbackScene/CanvasWiggle/FilledCanvas"]
+show_behind_parent = true
+texture = ExtResource("12_4obbf")
+
+[node name="WigglePaper" type="Node2D" parent="FeedbackScene"]
+position = Vector2(713, -51)
+script = ExtResource("13_birbe")
+
+[node name="FeedbackPaper" type="Sprite2D" parent="FeedbackScene/WigglePaper"]
+position = Vector2(-5, 10)
+scale = Vector2(1.93683, 1.93683)
+texture = ExtResource("155_arf1h")
+offset = Vector2(4.13043, 76.93)
+
+[node name="Feedback1" type="Node2D" parent="FeedbackScene"]
+position = Vector2(238, -367)
+script = ExtResource("156_x4ftd")
+
+[node name="Face" type="Node2D" parent="FeedbackScene/Feedback1"]
+
+[node name="HappyFace" type="Node2D" parent="FeedbackScene/Feedback1/Face"]
+position = Vector2(0, 4)
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 5.0
+pos_wobble = Vector2(2, 2)
+rot_wobble = 0.5
+rot_speed = 2.0
+
+[node name="Happyface1" type="Sprite2D" parent="FeedbackScene/Feedback1/Face/HappyFace"]
+texture = ExtResource("156_s0om5")
+
+[node name="SadFace" type="Node2D" parent="FeedbackScene/Feedback1/Face"]
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 5.0
+pos_wobble = Vector2(2, 2)
+rot_wobble = 0.5
+rot_speed = 2.0
+
+[node name="Sadface1" type="Sprite2D" parent="FeedbackScene/Feedback1/Face/SadFace"]
+texture = ExtResource("159_ryg4g")
+
+[node name="Bubble" type="Node2D" parent="FeedbackScene/Feedback1"]
+
+[node name="BubbleWibbler" type="Node2D" parent="FeedbackScene/Feedback1/Bubble"]
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0, 0)
+scale_speed = 0.5
+pos_wobble = Vector2(5, 5)
+pos_speed = 1.0
+
+[node name="Bubble1" type="Sprite2D" parent="FeedbackScene/Feedback1/Bubble/BubbleWibbler"]
+position = Vector2(365, 30)
+scale = Vector2(0.965232, 0.965232)
+texture = ExtResource("162_p5pln")
+
+[node name="Label" type="Label" parent="FeedbackScene/Feedback1/Bubble/BubbleWibbler"]
+offset_left = 185.0
+offset_top = -22.0
+offset_right = 610.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -2
+theme_override_fonts/font = ExtResource("166_arf1h")
+theme_override_font_sizes/font_size = 30
+text = "A buddy of mine needs a logo for his pocket knife business, you should talk to him."
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="Feedback2" type="Node2D" parent="FeedbackScene"]
+position = Vector2(231, -139)
+script = ExtResource("156_x4ftd")
+
+[node name="Face" type="Node2D" parent="FeedbackScene/Feedback2"]
+
+[node name="HappyFace" type="Node2D" parent="FeedbackScene/Feedback2/Face"]
+position = Vector2(0, 4)
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 5.0
+pos_wobble = Vector2(2, 2)
+rot_wobble = 0.5
+rot_speed = 2.0
+
+[node name="Happyface2" type="Sprite2D" parent="FeedbackScene/Feedback2/Face/HappyFace"]
+texture = ExtResource("157_gkfde")
+
+[node name="SadFace" type="Node2D" parent="FeedbackScene/Feedback2/Face"]
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 5.0
+pos_wobble = Vector2(2, 2)
+rot_wobble = 0.5
+rot_speed = 2.0
+
+[node name="Sadface2" type="Sprite2D" parent="FeedbackScene/Feedback2/Face/SadFace"]
+texture = ExtResource("160_oy6td")
+
+[node name="Bubble" type="Node2D" parent="FeedbackScene/Feedback2"]
+
+[node name="BubbleWibbler" type="Node2D" parent="FeedbackScene/Feedback2/Bubble"]
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0, 0)
+scale_speed = 0.5
+pos_wobble = Vector2(5, 5)
+pos_speed = 1.0
+
+[node name="Bubble2" type="Sprite2D" parent="FeedbackScene/Feedback2/Bubble/BubbleWibbler"]
+position = Vector2(382, 51)
+scale = Vector2(0.965232, 0.965232)
+texture = ExtResource("163_oiuw5")
+
+[node name="Label" type="Label" parent="FeedbackScene/Feedback2/Bubble/BubbleWibbler"]
+offset_left = 185.0
+offset_top = -24.0
+offset_right = 639.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("166_arf1h")
+theme_override_font_sizes/font_size = 30
+text = "A buddy of mine needs a logo for his pocket knife business, you should talk to him."
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+clip_text = true
+
+[node name="Feedback3" type="Node2D" parent="FeedbackScene"]
+position = Vector2(231, 90)
+script = ExtResource("156_x4ftd")
+
+[node name="Face" type="Node2D" parent="FeedbackScene/Feedback3"]
+
+[node name="HappyFace" type="Node2D" parent="FeedbackScene/Feedback3/Face"]
+position = Vector2(0, 4)
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 5.0
+pos_wobble = Vector2(2, 2)
+rot_wobble = 0.5
+rot_speed = 2.0
+
+[node name="Happyface3" type="Sprite2D" parent="FeedbackScene/Feedback3/Face/HappyFace"]
+texture = ExtResource("158_4qxq8")
+
+[node name="SadFace" type="Node2D" parent="FeedbackScene/Feedback3/Face"]
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0.2, 0.2)
+scale_speed = 5.0
+pos_wobble = Vector2(2, 2)
+rot_wobble = 0.5
+rot_speed = 2.0
+
+[node name="Sadface3" type="Sprite2D" parent="FeedbackScene/Feedback3/Face/SadFace"]
+texture = ExtResource("161_fe76k")
+
+[node name="Bubble" type="Node2D" parent="FeedbackScene/Feedback3"]
+
+[node name="BubbleWibbler" type="Node2D" parent="FeedbackScene/Feedback3/Bubble"]
+script = ExtResource("13_birbe")
+scale_wobble = Vector2(0, 0)
+scale_speed = 0.5
+pos_wobble = Vector2(5, 5)
+pos_speed = 1.0
+
+[node name="Bubble3" type="Sprite2D" parent="FeedbackScene/Feedback3/Bubble/BubbleWibbler"]
+position = Vector2(389, 58)
+scale = Vector2(0.937735, 0.937735)
+texture = ExtResource("164_mldrc")
+
+[node name="Label" type="Label" parent="FeedbackScene/Feedback3/Bubble/BubbleWibbler"]
+offset_left = 154.0
+offset_top = -3.0
+offset_right = 675.0
+offset_bottom = 123.0
+rotation = 0.0111806
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("166_arf1h")
+theme_override_font_sizes/font_size = 32
+text = "A buddy of mine needs a logo for his pocket knife business, you should talk to him."
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="PostitNote" type="Node2D" parent="FeedbackScene"]
+position = Vector2(624, 1000)
+script = ExtResource("167_gkfde")
+
+[node name="MenuPostit" type="Sprite2D" parent="FeedbackScene/PostitNote"]
+position = Vector2(3, -2)
+rotation = 0.261799
+texture = ExtResource("165_1tiwm")
+script = ExtResource("13_birbe")
+scale_speed = 1.0
+pos_speed = 2.0
+rot_wobble = 0.1
+rot_speed = 1.0
+use_def_rot = true
+
+[node name="Shadow" parent="FeedbackScene/PostitNote/MenuPostit" instance=ExtResource("91_jbvwl")]
+
+[node name="ToMenu" type="Label" parent="FeedbackScene/PostitNote/MenuPostit"]
+modulate = Color(0.237539, 0.237539, 0.237539, 1)
+offset_left = -175.037
+offset_top = -123.92
+offset_right = 278.963
+offset_bottom = 55.0804
+rotation = -0.157556
+theme_override_constants/line_spacing = 20
+theme_override_fonts/font = ExtResource("169_4qxq8")
+theme_override_font_sizes/font_size = 44
+text = "> To Menu!
+"
+
+[node name="ToCredits" type="Label" parent="FeedbackScene/PostitNote/MenuPostit"]
+modulate = Color(0.237539, 0.237539, 0.237539, 1)
+offset_left = -175.037
+offset_top = -123.92
+offset_right = 278.963
+offset_bottom = 55.0804
+rotation = -0.157556
+theme_override_constants/line_spacing = 20
+theme_override_fonts/font = ExtResource("169_4qxq8")
+theme_override_font_sizes/font_size = 44
+text = "
+> To Credits!"
+
+[node name="MenuButton" type="Button" parent="FeedbackScene/PostitNote/MenuPostit"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -193.0
+offset_top = -142.0
+offset_right = 119.0
+offset_bottom = -61.0
+rotation = -0.130223
+
+[node name="CreditsButton" type="Button" parent="FeedbackScene/PostitNote/MenuPostit"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -179.205
+offset_top = -54.4745
+offset_right = 163.795
+offset_bottom = 22.5255
+rotation = -0.126482
 
 [connection signal="button_down" from="CentreFrame/Background/WobbleWateringCan/WateringCanLogic/Button" to="CentreFrame/Background/WobbleWateringCan/WateringCanLogic" method="_on_button_button_down"]
 [connection signal="button_up" from="CentreFrame/Background/WobbleWateringCan/WateringCanLogic/Button" to="CentreFrame/Background/WobbleWateringCan/WateringCanLogic" method="_on_button_button_up"]
@@ -1826,3 +2171,9 @@ autoplay = true
 [connection signal="pressed" from="CentreFrame/Background/Foodtable/ApplePlateLogic/RefillButton" to="CentreFrame/Background/Foodtable/ApplePlateLogic" method="_on_refill_button_pressed"]
 [connection signal="toggled" from="CentreFrame/Background/FanLogic/ToggleFan" to="CentreFrame/Background/FanLogic" method="_on_toggle_fan_toggled"]
 [connection signal="toggled" from="CentreFrame/Background/LightBulbLogic/Button" to="CentreFrame/Background/LightBulbLogic" method="_on_button_toggled"]
+[connection signal="mouse_entered" from="FeedbackScene/PostitNote/MenuPostit/MenuButton" to="FeedbackScene/PostitNote" method="_on_menu_button_mouse_entered"]
+[connection signal="mouse_exited" from="FeedbackScene/PostitNote/MenuPostit/MenuButton" to="FeedbackScene/PostitNote" method="_on_menu_button_mouse_exited"]
+[connection signal="pressed" from="FeedbackScene/PostitNote/MenuPostit/MenuButton" to="FeedbackScene/PostitNote" method="_on_menu_button_pressed"]
+[connection signal="mouse_entered" from="FeedbackScene/PostitNote/MenuPostit/CreditsButton" to="FeedbackScene/PostitNote" method="_on_credits_button_mouse_entered"]
+[connection signal="mouse_exited" from="FeedbackScene/PostitNote/MenuPostit/CreditsButton" to="FeedbackScene/PostitNote" method="_on_credits_button_mouse_exited"]
+[connection signal="pressed" from="FeedbackScene/PostitNote/MenuPostit/CreditsButton" to="FeedbackScene/PostitNote" method="_on_credits_button_pressed"]

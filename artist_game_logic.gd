@@ -9,7 +9,7 @@ class_name GameLogic
 @onready var flower_logic: Flower = %FlowerLogic # used
 @onready var painting_tip: Sprite2D = %PaintingTip # should be affected by state
 @onready var thought_palete_logic: ThoughtPaleteLogic = %ThoughtPaleteLogic
-@onready var wobble_manager: Node2D = %WobbleManager # should be affected by state
+@onready var wobble_manager: WobbleManager = %WobbleManager # should be affected by state
 @onready var time_logic: TimeLogic = %TimeLogic # used
 @onready var sweat: Sweat = $"../Artist/Head/IdleHeadMotion/Sweat" # used
 
@@ -18,6 +18,7 @@ class_name GameLogic
 @export_range(0.0, 1.0) var mind_stat : float = 0.0
 @export_range(0.0, 1.0) var enviornment_stat : float = 0.0
 @export_range(0.0, 1.0) var painting_progress : float = 0.0
+@export_range(0.0, 1.0) var quality_of_work : float = 0.0
 
 @export_category("Needs")
 @export var wants_fan : bool = false
@@ -35,22 +36,43 @@ class_name GameLogic
 @export var time_to_refocus : float = 2.0
 @export var time_since_distraction : float = 6.0
 
+@export var days_of_painting_progress_needed : float = 10.0
+
 var playing = true
+
 
 func _ready() -> void:
 	# body loop
 	snack_and_sip()
 	randomize_temperature()
-	time_logic.ticking = true
+	hide_tutorial()
 	$AttemptJamsongAshykento.play()
+	$"../CentreFrame/Tutorial".visible = true
+	painting_progress = 0.0
+	painting_tip.visible = false
+	playing = false
 	pass
+
+func hide_tutorial():
+	await get_tree().create_timer(3.0).timeout
+	$"../CentreFrame/Tutorial".visible = false
+	time_logic.ticking = true
+	playing = true
+	painting_tip.visible = true
+
+func end_game(): 
+	%TimeLogic.ticking = false
+	playing = false
+	$"../FeedbackScene".activate(clamp(painting_progress, 0.0, 1.0) * (quality_of_work / painting_progress))
+	pass
+
 
 func snack_and_sip():
 	while playing:
-		await get_tree().create_timer(1.0 if hungry or thirsty else randf_range(10.0, 20.0)).timeout
-		await try_to_snack()
-		await get_tree().create_timer(1.0 if hungry or thirsty else randf_range(10.0, 20.0)).timeout
-		await try_to_drink()
+		await get_tree().create_timer(5.0 if hungry or thirsty else randf_range(10.0, 20.0)).timeout
+		if playing: await try_to_snack()
+		await get_tree().create_timer(5.0 if hungry or thirsty else randf_range(10.0, 20.0)).timeout
+		if playing: await try_to_drink()
 		pass
 	pass
 
@@ -63,7 +85,7 @@ func randomize_temperature():
 
 var _was_distracted : bool = false
 func _process(delta: float) -> void:
-	
+	if not playing: return
 	thought_palete_logic.body_meter = body_stat
 	thought_palete_logic.environment_meter = enviornment_stat
 	thought_palete_logic.mind_meter = mind_stat
@@ -72,7 +94,10 @@ func _process(delta: float) -> void:
 	update_needs()
 	
 	if !distracted:
-		painting_progress += delta / 60.0
+		var _progress = pow(artist.drawing_speed, 1.5) * delta / (days_of_painting_progress_needed * time_logic.seconds_in_a_day)
+		painting_progress += _progress
+		quality_of_work += _progress * mind_stat
+		%InProgress.material.set_shader_parameter("fraction", painting_progress);
 	
 	if !_was_distracted and distracted:
 		artist.distact()
@@ -113,11 +138,17 @@ func _process(delta: float) -> void:
 	body_stat = clamp(body_stat, 0.0, 1.0)
 	
 	#mind_stat = Interpolator.good_lerp(mind_stat, (body_stat + enviornment_stat) * 0.5, 0.1, delta)
-	mind_stat += (body_stat - 0.7) * delta * 0.2
-	mind_stat += (enviornment_stat - 0.7) * delta * 0.2
+	mind_stat += (body_stat - 0.7) * delta * 0.1
+	mind_stat += (enviornment_stat - 0.7) * delta * 0.1
 	mind_stat = clamp(mind_stat, 0.0, 1.0)
 	artist.tiredness = 1.0 - mind_stat
-	painting_tip.modulate = lerp(Color.RED, Color.BLUE, mind_stat)
+	
+	wobble_manager.line_boil = lerp(1.0, 0.1, enviornment_stat)
+	wobble_manager.fill_boil = lerp(1.0, 0.1, body_stat)
+	#wobble_manager.fill_offset = lerp(0.1, 0.0, mind_stat)
+	
+	var paint_color = Color(1.0 - mind_stat, 0.0, mind_stat, 0.03)
+	painting_tip.modulate = paint_color
 	painting_tip.visible = not distracted
 	pass
 
